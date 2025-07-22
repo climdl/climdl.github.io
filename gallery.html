@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gallery | Climate Dynamics Lab</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <img src="/images/icon.png" alt="Climate Dynamics Lab Logo" />
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <img class="logo" src="/images/logo.png" alt="Logo" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a class="active" href>Gallery</a></li>
+        <li><a href="highlights.html">Highlights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Static Hero -->
+    <div class="slideshow static-hero">
+      <img src="/images/img2.jpg" alt="People Hero" class="slide active" />
+    </div>
+    <div class="banner-text static-banner">
+      <h1>Gallery</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <section class="wrapper style1">
+        <div class="container">
+          <header class="major">
+            <h2>Photo Gallery</h2>
+            <br />
+            <p>Snapshots from our research, fieldwork, and lab moments.</p>
+            <br />
+          </header>
+
+          <div class="gallery-grid">
+            <!-- Mock images for testing -->
+            <div class="gallery-item">
+              <img src="images/pic01.jpg" alt="Fieldwork at Western Ghats" />
+              <div class="caption">Fieldwork at Western Ghats</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/pic02.jpg" alt="Monsoon Conference 2024" />
+              <div class="caption">Monsoon Conference 2024</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/pic03.jpg" alt="Lab Team 2023" />
+              <div class="caption">Lab Team 2023</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/pic04.jpg" alt="Data Analysis Workshop" />
+              <div class="caption">Data Analysis Workshop</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/pic05.jpg" alt="Field Instruments" />
+              <div class="caption">Field Instruments</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/pic06.jpg" alt="Group Discussion" />
+              <div class="caption">Group Discussion</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" alt="Expanded view" />
+      <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top row">
+          <!-- Logo Left -->
+          <div class="col-4 col-12-mobile footer-left">
+            <img
+              src="/images/logo2.png"
+              alt="Climate Dynamics Lab Logo"
+              class="footer-logo"
+            />
+          </div>
+
+          <!-- Contact Middle -->
+          <div class="col-4 col-12-mobile footer-center">
+            <h3>Climate Dynamics Lab</h3>
+            <br />
+            <p>
+              Centre for Atmospheric Sciences, IIT Delhi<br />
+              Hauz Khas, New Delhi - 110016, India<br />
+              <br />
+              <strong>Email:</strong>
+              <br />
+              <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">
+                sandeep.sukumaran@cas.iitd.ac.in
+              </a>
+            </p>
+          </div>
+
+          <!-- Social Right -->
+          <div class="col-4 col-12-mobile footer-right">
+            <ul class="icons">
+              <li><a href="#" class="icon brands fa-twitter"></a></li>
+              <li><a href="#" class="icon brands fa-linkedin-in"></a></li>
+              <li><a href="#" class="icon brands fa-github"></a></li>
+              <li><a href="#" class="icon brands fa-researchgate"></a></li>
+              <li><a href="#" class="icon brands fa-google"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <ul class="menu">
+            <li>
+              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Hamburger toggle
+      document.querySelector(".menu-toggle").onclick = () =>
+        document.querySelector(".navbar ul").classList.toggle("show");
+
+      // === Slideshow ===
+      const slides = document.querySelectorAll(".slideshow .slide");
+      let currentSlide = 0;
+
+      setInterval(() => {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }, 4000);
+
+      // === Carousel ===
+      const reel = document.querySelector(".carousel .reel");
+      const forward = document.querySelector(".carousel .forward");
+      const backward = document.querySelector(".carousel .backward");
+
+      if (reel && forward && backward) {
+        let scrollX = 0;
+        const cardWidth = 360 + 60;
+
+        forward.addEventListener("click", () => {
+          scrollX -= cardWidth;
+          const maxScroll = -(
+            reel.scrollWidth - reel.parentElement.clientWidth
+          );
+          if (scrollX < maxScroll) scrollX = maxScroll;
+          reel.style.transform = `translateX(${scrollX}px)`;
+        });
+
+        backward.addEventListener("click", () => {
+          scrollX += cardWidth;
+          if (scrollX > 0) scrollX = 0;
+          reel.style.transform = `translateX(${scrollX}px)`;
+        });
+      }
+
+      // === Loader ===
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+
+      // Simple Lightbox JS
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+      const galleryItems = document.querySelectorAll(".gallery-item img");
+      const closeBtn = document.querySelector(".close");
+
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          lightbox.style.display = "block";
+          lightboxImg.src = item.src;
+          lightboxCaption.textContent = item.alt;
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          lightbox.style.display = "none";
+        }
+      });
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+  </body>
+</html>

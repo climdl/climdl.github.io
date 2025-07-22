@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Website</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".navbar ul");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <img src="/images/icon.png" alt="Climate Dynamics Lab Logo" />
+    </div>
+
+    <!-- Your wrapper starts here -->
+    <div class="wrapper">
+      <nav class="navbar">
+        <img class="logo" src="/images/logo.png" alt="Logo" />
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="highlights.html">Highlights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- ✅ Slideshow background -->
+      <div class="slideshow">
+        <img src="/images/bluemarble.png" class="slide active" />
+        <img src="/images/earthview.png" class="slide" />
+        <img src="/images/darby.jpg" class="slide" />
+      </div>
+
+      <!-- ✅ Banner on the left, overlaying slideshow -->
+      <div class="banner-text">
+        <p>Welcome!</p>
+        <h1>Climate Dynamics Lab</h1>
+        <h2>Centre for Atmospheric Sciences, IIT Delhi</h2>
+      </div>
+    </div>
+
+    <section id="intro">
+      <header>
+        <h2>Exploring the Atmosphere, Charting Modern Frontiers!</h2>
+        <p>
+          At the Climate Dynamics Lab, we explore the complex and fascinating
+          world of the Indian summer monsoon — a lifeline for millions across
+          South Asia. Led by Dr. S. Sandeep, Associate Professor at the Centre
+          for Atmospheric Sciences, IIT Delhi, our research bridges climate
+          science, data analysis, and cutting-edge machine learning to better
+          understand and predict monsoon behavior in a changing climate. Our
+          work dives deep into the origins of monsoon systems, the impact of
+          global warming on rainfall patterns, and how polar changes might
+          ripple all the way to South Asia. We also harness the power of
+          artificial intelligence to track weather systems and uncover patterns
+          hidden in vast climate datasets. By blending atmospheric science with
+          modern tools, we aim to improve seasonal forecasting, enhance disaster
+          preparedness, and contribute to global climate resilience. Explore our
+          research, meet our team, and see how we’re working at the intersection
+          of science and society to decode one of nature’s most powerful climate
+          systems.
+        </p>
+      </header>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- About PI -->
+      <section class="wrapper style1 special">
+        <div class="container">
+          <header>
+            <h2>Meet Our PI</h2>
+          </header>
+          <div class="row">
+            <div class="col-4 col-12-mobile">
+              <a href="people.html#pi" class="image featured">
+                <img
+                  src="images/prof_sandeep.png"
+                  alt="Prof. Sandeep Sukumaran"
+                />
+              </a>
+            </div>
+            <div class="col-8 col-12-mobile">
+              <h3>Prof. Sandeep Sukumaran</h3>
+              <h4>Associate Professor, CAS, IIT Delhi</h4>
+              <p>
+                Prof. Sandeep is an atmospheric scientist specializing in
+                tropical climate dynamics. He earned his PhD from IIT Kharagpur
+                and held postdoctoral positions at IISc Bangalore, University of
+                Oslo, and NYU Abu Dhabi.
+              </p>
+              <h4>Research Areas:</h4>
+              <ul>
+                <li>Indian summer monsoon dynamics</li>
+                <li>Climate change and monsoon variability</li>
+                <li>AI/ML applications in weather and climate</li>
+              </ul>
+              <br />
+              <a href="people.html#pi" class="button">Full Profile</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carousel -->
+      <section class="carousel" aria-label="Research Highlights">
+        <span class="backward">&larr;</span>
+        <div class="reel">
+          <article>
+            <a href="research.html#monsoon-systems" class="image featured">
+              <img src="images/img2.jpg" alt="Monsoon Systems" />
+            </a>
+            <header>
+              <h3>
+                <a href="research.html#monsoon-systems"
+                  >Genesis of Monsoon LPS</a
+                >
+              </h3>
+            </header>
+            <p>
+              Investigating the formation and evolution of monsoon depressions
+              that drive rainfall variability.
+            </p>
+          </article>
+
+          <article>
+            <a href="research.html#dry-air" class="image featured"
+              ><img
+                src="images/img2.jpg"
+                alt="Atmospheric cross-section showing dry air intrusion into monsoon region"
+            /></a>
+            <header>
+              <h3>
+                <a href="research.html#dry-air"
+                  >Dynamics of Dry Air Intrusion
+                </a>
+              </h3>
+            </header>
+            <p>
+              Examining how mid-latitude dry air affects monsoon convection and
+              rainfall patterns.
+            </p>
+          </article>
+
+          <article>
+            <a href="research.html#future-monsoon" class="image featured"
+              ><img
+                src="images/img2.jpg"
+                alt="Climate model projections showing future changes in monsoon rainfall patterns"
+            /></a>
+            <header>
+              <h3>
+                <a href="research.html#future-monsoon"
+                  >Future of Indian Summer Monsoon
+                </a>
+              </h3>
+            </header>
+            <p>
+              Assessing monsoon response to global warming using climate model
+              projections.
+            </p>
+          </article>
+
+          <article>
+            <a href="research.html#ai-monsoon" class="image featured"
+              ><img
+                src="images/img2.jpg"
+                alt="Neural network architecture diagram for monsoon prediction system"
+            /></a>
+            <header>
+              <h3>
+                <a href="research.html#ai-monsoon"
+                  >Deep Learning for Monsoon Prediction
+                </a>
+              </h3>
+            </header>
+            <p>
+              Developing AI-based techniques to improve monsoon forecasting
+              skill.
+            </p>
+          </article>
+
+          <article>
+            <a href="research.html#cyclone-monsoon" class="image featured"
+              ><img
+                src="images/img2.jpg"
+                alt="Satellite image showing tropical cyclone embedded in monsoon circulation"
+            /></a>
+            <header>
+              <h3>
+                <a href="research.html#cyclone-monsoon"
+                  >Tropical Cyclone-Monsoon Interaction</a
+                >
+              </h3>
+            </header>
+            <p>
+              Understanding how cyclones modulate large-scale monsoon
+              circulation.
+            </p>
+          </article>
+        </div>
+        <span class="forward">&rarr;</span>
+      </section>
+
+      <!-- Mission -->
+      <section class="wrapper style2">
+        <article class="container special">
+          <a href="research.html" class="image featured">
+            <img src="images/team.jpeg" alt="Lab Team" />
+          </a>
+          <header>
+            <h2>Our Mission</h2>
+            <p>
+              Advancing understanding of tropical climate dynamics through
+              cutting-edge research.
+            </p>
+          </header>
+          <p>
+            The Climate Dynamics Lab at IIT Delhi is dedicated to unraveling the
+            complex mechanisms governing the Indian monsoon system and its
+            response to climate change. We employ a multidisciplinary approach
+            combining high-resolution climate modeling, observational data
+            analysis, and machine learning techniques to address fundamental
+            questions about monsoon variability, extreme weather events, and
+            long-term climate trends. Our research aims to improve predictive
+            understanding of the monsoon system and contribute to climate
+            resilience in the region.
+          </p>
+          <footer>
+            <a href="research.html" class="button">Explore Our Research</a>
+          </footer>
+        </article>
+      </section>
+
+      <!-- Research Themes -->
+      <section class="wrapper style1">
+        <div class="container special" id="research-themes">
+          <header>
+            <h2>Research Themes</h2>
+            <p>Key areas of investigation in our laboratory</p>
+          </header>
+          <div class="row">
+            <article class="col-4 col-12-mobile special">
+              <a href="research.html#monsoon-dynamics" class="image featured"
+                ><img
+                  src="images/img2.jpg"
+                  alt="Animation of monsoon winds and precipitation patterns over South Asia"
+              /></a>
+              <header>
+                <h3>
+                  <a href="research.html#monsoon-dynamics">Monsoon Dynamics</a>
+                </h3>
+              </header>
+              <p>
+                Investigating the physical processes governing the Indian summer
+                monsoon, including intraseasonal variability, monsoon breaks,
+                and the role of large-scale circulation patterns.
+              </p>
+            </article>
+            <article class="col-4 col-12-mobile special">
+              <a href="research.html#climate-change" class="image featured"
+                ><img
+                  src="images/img3.jpg"
+                  alt="Graph showing global temperature trends and projected monsoon changes"
+              /></a>
+              <header>
+                <h3>
+                  <a href="research.html#climate-change"
+                    >Climate Change & Future Projections</a
+                  >
+                </h3>
+              </header>
+              <p>
+                Assessing how global warming affects monsoon characteristics and
+                developing regional climate scenarios to understand future
+                changes in precipitation patterns.
+              </p>
+            </article>
+            <article class="col-4 col-12-mobile special">
+              <a href="research.html#ai-applications" class="image featured"
+                ><img
+                  src="images/img1.jpg"
+                  alt="Machine learning model applied to weather prediction data visualization"
+              /></a>
+              <header>
+                <h3>
+                  <a href="research.html#ai-applications"
+                    >AI/ML in Atmospheric Sciences</a
+                  >
+                </h3>
+              </header>
+              <p>
+                Developing machine learning algorithms for weather prediction,
+                climate model emulation, and extreme event detection to enhance
+                traditional approaches.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top row">
+          <!-- Logo Left -->
+          <div class="col-4 col-12-mobile footer-left">
+            <img
+              src="/images/logo2.png"
+              alt="Climate Dynamics Lab Logo"
+              class="footer-logo"
+            />
+          </div>
+
+          <!-- Contact Middle -->
+          <div class="col-4 col-12-mobile footer-center">
+            <h3>Climate Dynamics Lab</h3>
+            <br />
+            <p>
+              Centre for Atmospheric Sciences, IIT Delhi<br />
+              Hauz Khas, New Delhi - 110016, India<br />
+              <br />
+              <strong>Email:</strong>
+              <br />
+              <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">
+                sandeep.sukumaran@cas.iitd.ac.in
+              </a>
+            </p>
+          </div>
+
+          <!-- Social Right -->
+          <div class="col-4 col-12-mobile footer-right">
+            <ul class="icons">
+              <li><a href="#" class="icon brands fa-twitter"></a></li>
+              <li><a href="#" class="icon brands fa-linkedin-in"></a></li>
+              <li><a href="#" class="icon brands fa-github"></a></li>
+              <li><a href="#" class="icon brands fa-researchgate"></a></li>
+              <li><a href="#" class="icon brands fa-google"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <ul class="menu">
+            <li>
+              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Hamburger toggle
+      document.querySelector(".menu-toggle").onclick = () =>
+        document.querySelector(".navbar ul").classList.toggle("show");
+
+      // === Slideshow ===
+      const slides = document.querySelectorAll(".slideshow .slide");
+      let currentSlide = 0;
+
+      setInterval(() => {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }, 4000);
+
+      // === Carousel ===
+      const reel = document.querySelector(".carousel .reel");
+      const forward = document.querySelector(".carousel .forward");
+      const backward = document.querySelector(".carousel .backward");
+
+      if (reel && forward && backward) {
+        let scrollX = 0;
+        const cardWidth = 360 + 60;
+
+        forward.addEventListener("click", () => {
+          scrollX -= cardWidth;
+          const maxScroll = -(
+            reel.scrollWidth - reel.parentElement.clientWidth
+          );
+          if (scrollX < maxScroll) scrollX = maxScroll;
+          reel.style.transform = `translateX(${scrollX}px)`;
+        });
+
+        backward.addEventListener("click", () => {
+          scrollX += cardWidth;
+          if (scrollX > 0) scrollX = 0;
+          reel.style.transform = `translateX(${scrollX}px)`;
+        });
+      }
+
+      // === Loader ===
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+  </body>
+</html>
+
+<!-- Scripts -->
+<!-- <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script> -->
