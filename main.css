@@ -730,7 +730,7 @@ body {
   height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #002b56;
+  border: 0px solid #002b56;
   margin-bottom: 1em;
 }
 
