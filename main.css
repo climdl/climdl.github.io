@@ -709,13 +709,25 @@ body {
 }
 
 /* === Team member card === */
+
+a.team-member-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Remove underline from everything inside, but DO NOT override color */
+a.team-member-link * {
+  text-decoration: none;
+}
+
 .team-member {
   background: #fdfdff;
   border-radius: 10px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-  flex: 0 1 300px;
-  max-width: 340px;
-  padding: 2em;
+  flex: 0 1 250px;
+  max-width: 280px;
+  min-height: 480px;
+  padding: 1.2em;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -726,8 +738,8 @@ body {
 }
 
 .team-member .profile-image {
-  width: 160px;
-  height: 160px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
   border: 0px solid #002b56;
