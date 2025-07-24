@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pankaj Lal Sahu - Climate Dynamics Lab</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- General Resets and Body Styles --- */
+        :root {
+            --primary-color: #0d2c54; /* Deep Blue */
+            --secondary-color: #1a508b; /* Lighter Blue for accents */
+            --text-color: #34495e; /* Slate Grey */
+            --light-text-color: #7f8c8d; /* Lighter Grey */
+            --bg-color: #f8f9fa; /* Soft off-white */
+            --container-bg: #ffffff;
+            --border-color: #e9ecef;
+            --shadow: 0 8px 30px rgba(0, 30, 80, 0.08);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 2em auto;
+            padding: 2.5em;
+            background-color: var(--container-bg);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* --- Typography & Links --- */
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+
+        h2 { font-size: 2.5rem; letter-spacing: -1px; }
+        h3 { font-size: 1.75rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.4em; }
+        h4 { margin: 0; font-weight: 500; font-size: 1.1rem; color: var(--light-text-color); }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+            position: relative;
+        }
+        
+        li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block; 
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+
+        /* --- Header Section --- */
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            align-items: center;
+            gap: 2.5em;
+            margin-bottom: 3em;
+            padding: 2em;
+            background: linear-gradient(135deg, #f0f4f8, #e6e9f0); /* Subtle gradient */
+            border-radius: 12px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--container-bg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            flex: 1; /* Allows info to take remaining space */
+        }
+        
+        .social-links {
+            margin-top: 1.2em;
+        }
+        .social-links a {
+            margin-right: 1em;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0.7;
+        }
+        .social-links a:hover img {
+            transform: translateY(-3px);
+            opacity: 1;
+        }
+
+        /* --- Generic Section Styling --- */
+        section {
+            margin-bottom: 3em;
+        }
+
+        .bio p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 1em;
+        }
+        
+        /* --- Research Highlights (Modern Grid Gallery) --- */
+        .highlight-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5em;
+        }
+        .highlight-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease;
+        }
+        .highlight-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        .highlight-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .highlight-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 44, 84, 0.8); /* Semi-transparent dark blue */
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            font-weight: 500;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-out;
+        }
+        .highlight-item:hover .caption {
+            transform: translateY(0);
+        }
+
+        /* --- Skills Section (Tags/Pills) --- */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8em;
+            padding-left: 0;
+        }
+        .skills-list li {
+            padding: 0.5em 1.2em;
+            margin: 0;
+            background-color: #eef2f7;
+            color: var(--secondary-color);
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .skills-list li::before {
+             display: none; /* Remove bullet for skills */
+        }
+
+        /* --- Publications & Conferences --- */
+        .publications li, .conferences li {
+            margin-bottom: 1.5em;
+        }
+        .publications a {
+            display: block; /* Make the title link take full width */
+            font-size: 1.1rem;
+            margin-bottom: 0.2em;
+        }
+        .publications span, .conferences span {
+            font-style: italic;
+            color: var(--light-text-color);
+        }
+        
+.pdf-preview-wrapper {
+    display: block;
+    overflow: hidden;
+    height: 320px; /* 80% of 400px image height */
+    position: relative;
+}
+
+.pdf-preview-wrapper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top; /* <-- ensures the top of image is visible */
+    transform: translateY(0); /* No vertical shift needed anymore */
+    transition: transform 0.5s ease;
+}
+
+.pdf-preview-wrapper:hover img {
+    transform: translateY(-20%); /* Reveals rest on hover */
+}
+
+        /* --- Footer/Contact Section --- */
+        .contact {
+            text-align: center;
+            padding: 2em;
+            background-color: #f0f4f8;
+            border-radius: 12px;
+            margin-top: 2em;
+        }
+        .contact p {
+            margin: 0.5em 0;
+            font-size: 1.05rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="profile-header">
+        <img src="images/pankaj.jpg" alt="Pankaj Lal Sahu" class="profile-image" />
+        <div class="profile-info">
+            <h2>Pankaj Lal Sahu</h2>
+            <h4>PhD Scholar, Climate Dynamics Lab</h4>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/pankaj-lal-sahu-9b9039136/" target="_blank" title="LinkedIn">
+                    <img src="icons/linkedin.png" alt="LinkedIn" />
+                </a>
+                <a href="https://scholar.google.com/citations?user=U60DZIUAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                    <img src="icons/gs.png" alt="Google Scholar" />
+                </a>
+                <a href="https://orcid.org/0009-0009-2730-3638" target="_blank" title="ORCID">
+                    <img src="icons/orcid.png" alt="ORCID" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bio">
+            <h3>About Me</h3>
+            <p>
+                I'm a Ph.D. scholar at the Centre for Atmospheric Sciences, IIT Delhi, where my research revolves around understanding and predicting 
+                extreme weather events — especially tropical cyclones and the Indian Summer Monsoon — through the lens of machine learning and climate 
+                dynamics. With a background in mechanical engineering and a master's in climate science from IIT Bhubaneswar, I’ve always been intrigued by 
+                the powerful, chaotic systems that drive our weather. My current work aims to improve the forecasting of tropical cyclones and monsoon 
+                variability by integrating physical principles with data-driven models.
+            </p>
+            <p>
+                By combining reanalysis data, theoretical frameworks, and AI-based tools, I aim to improve our ability to simulate and forecast cyclone 
+                structure, track, and intensity. I’m particularly interested in how global machine learning models represent (or fail to represent) key 
+                dynamic features like warm-core structure, asymmetric inflow, and eyewall processes — and how we can correct or enhance these models 
+                through physics-informed approaches.
+            </p>
+            <p>
+                Whether it’s tracing the life cycle of a cyclone over the Bay of Bengal or exploring how AI can strengthen early warning systems, I’m 
+                fascinated by the challenge of unraveling the science behind extreme weather. From experimenting with neural networks to interpreting 
+                reanalysis datasets or watching storms evolve in real time — I find excitement in every piece of the puzzle.
+            </p>
+            <p>
+                Outside the lab, I'm always excited to chat about open-source tools, cyclone forecasting, or the monsoon’s latest surprises — preferably 
+                over a strong cup of coffee.
+
+            </p>
+        </section>
+
+        <section class="research-interests">
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Tropical cyclones</li>
+                <li>Weather forecasting</li>
+                <li>Indian summer monsoon</li>
+                <li>AI/ML</li>
+            </ul>
+        </section>
+        
+<section id="research-highlights" style="padding: 2rem 1rem; background-color: #f9f9f9;">
+  <div class="container" style="max-width: 1000px; margin: auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Research Highlights</h2>
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+    <!--
+      Our research on <strong>AI-powered monsoon forecasting</strong> at <strong>IIT Delhi</strong> has gained national attention.
+      The model can predict monsoon activity up to <strong>18 days in advance</strong> — a significant leap in weather prediction capability.
+      -->
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+      <!-- Article 1 -->
+      <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="https://timesofindia.indiatimes.com/city/delhi/cloud-computing-iit-delhi-ai-model-forecasts-monsoon-18-days-in-advance/articleshow/122053574.cms" target="_blank">
+          <img src="images/pankaj_toi.png" alt="TOI article" style="width: 100%; height: auto;" />
+        </a>
+        <div style="padding: 1rem;">
+          <h3 style="font-size: 1.1rem; margin: 0;">
+            <a href="https://timesofindia.indiatimes.com/city/delhi/cloud-computing-iit-delhi-ai-model-forecasts-monsoon-18-days-in-advance/articleshow/122053574.cms" target="_blank">
+              IIT Delhi AI model forecasts monsoon 18 days in advance – TOI
+            </a>
+          </h3>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html" target="_blank">
+          <img src="images/pankaj_bs.png" alt="Business Standard article" style="width: 100%; height: auto;" />
+        </a>
+        <div style="padding: 1rem;">
+          <h3 style="font-size: 1.1rem; margin: 0;">
+            <a href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html" target="_blank">
+              AI transforming meteorological prediction – Business Standard
+            </a>
+          </h3>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html" target="_blank">
+          <img src="images/pankaj_week.png" alt="The Week article" style="width: 100%; height: auto;" />
+        </a>
+        <div style="padding: 1rem;">
+          <h3 style="font-size: 1.1rem; margin: 0;">
+            <a href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html" target="_blank">
+              IIT AI model improves weather accuracy – The Week (PTI)
+            </a>
+          </h3>
+        </div>
+      </div>
+
+      <!-- More articles... -->
+      <!-- Article 4 -->
+      <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+        <a href="https://www.abplive.com/education/iit-delhi-ai-model-weather-prediction-tool-monsoon-mood-18-days-in-advance-ann-2969393" target="_blank">
+          <img src="images/pankaj_abp.png" alt="The Week article" style="width: 100%; height: auto;" />
+        </a>
+        <div style="padding: 1rem;">
+          <h3 style="font-size: 1.1rem; margin: 0;">
+            <a href="https://www.abplive.com/education/iit-delhi-ai-model-weather-prediction-tool-monsoon-mood-18-days-in-advance-ann-2969393" target="_blank">
+                       अब 18 दिन पहले ही पता चल जाएगा मॉनसून का मूड, IIT दिल्ली ने बनाया नया AI मॉडल – ABP News
+            </a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+        <section class="publications">
+            <h3>Publications</h3>
+            <ul>
+                <li>
+                    Sahu, P. L., S. Sandeep, and H. Kodamana (2025)
+                    <a href="https://doi.org/10.1029/2025JH000594" target="_blank">
+                        Evaluating Global Machine Learning Models for Tropical Cyclone Dynamics and Thermodynamics
+                    </a>
+                    <span>JGR: Machine Learning and Computation</span>
+                </li>
+                <li>
+                    Sahu, P. L., S. Pattnaik, and P. Rath (2024)
+                    <a href="https://link.springer.com/article/10.1007/s12524-024-01930-1" target="_blank">
+                        Factors driving intensification of pre-monsoon tropical cyclones over the Bay of Bengal: a comparative study of cyclones fani and 
+                        yaas
+                    </a>
+                    <span>Journal of the Indian Society of Remote Sensing</span>
+                </li>
+                <li>
+                    Sahu, P. L., S. Pattnaik (2024)
+                    <a href="https://link.springer.com/article/10.1007/s00703-024-01036-w" target="_blank">
+                        Investigation about the cause of the intense pre-monsoon cyclonic system over the Bay of Bengal
+                    </a>
+                    <span>Meteorology and Atmospheric Physics</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="education">
+            <h3>Education</h3>
+            <ul>
+                <li>Ph.D. in Atmospheric Sciences (Present) – IIT Delhi, India</li>
+                <li>M.Tech in Climate Science (2023) – IIT Bhubaneswar, India</li>
+                <li>B.Tech in Mechanical Engineering (2021) – Bansal Institute of Science and Technology, Bhopal</li>
+            </ul>
+        </section>
+
+        <section class="conferences">
+            <h3>Conference Presentations</h3>
+            <ul>
+                <li>“Sahu, P. L., Sandeep, S., & Kodamana, H. (2025). Strengths and Weaknesses of Global Machine Learning Weather Prediction Models in 
+                Forecasting Tropical Cyclones.” – <span>IWM-8, 2025, IITM Pune, India</span></li>
+                <li>“Sahu, P.L., & Pattnaik, S. (2024). Investigating the Causes of Recent Intense Pre-Monsoon Cyclones in the Bay of Bengal. ” – 
+                <span>AGU, 2024</span></li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h3>Skills & Tools</h3>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>MATLAB</li>
+                <li>GrADS</li>
+                <li>QGIS</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>C</li>
+                <li>Linux</li>
+                <li>High-Performance Computing</li>
+            </ul>
+        </section>
+
+<section class="pdf-section" style="padding: 2rem 1rem; background-color: #f5f5f5;">
+  <h2 style="font-size: 1.8rem; margin-bottom: 1.2rem;">Downloadable Resources</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+    
+    <!-- PDF 1: Paper -->
+    <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+      <a href="pdfs/JGR_ML_pankaj.pdf" target="_blank" class="pdf-preview-wrapper">
+        <img src="images/jgr_paper_preview_pankaj.jpg" alt="JGR ML paper preview" />
+      </a>
+      <div style="padding: 1rem;">
+        <h3 style="font-size: 1.1rem; margin: 0;">
+          <a href="pdfs/JGR_ML_pankaj.pdf" target="_blank">
+            Full Paper: ML Weather Prediction Models for Tropical Cyclones
+          </a>
+        </h3>
+      </div>
+    </div>
+
+    <!-- PDF 2: Poster -->
+    <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+      <a href="pdfs/IWM_poster_pankaj.pdf" target="_blank" class="pdf-preview-wrapper">
+        <img src="images/iwm_poster_preview_pankaj.jpg" alt="WMO IWM Poster preview" />
+      </a>
+      <div style="padding: 1rem;">
+        <h3 style="font-size: 1.1rem; margin: 0;">
+          <a href="pdfs/IWM_poster_pankaj.pdf" target="_blank">
+            Conference Poster: WMO-IWM8 2025
+          </a>
+        </h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    </main>
+
+    <footer class="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:pankaj.lal.sahu@cas.iitd.ac.in">pankaj.lal.sahu@cas.iitd.ac.in</a></p>
+        <p>Office: Room 410, Centre for Atmospheric Sciences, Block VI, Indian Institute of Technology Delhi,Hauz Khas, New Delhi-110 016, India.</p>
+    </footer>
+<p style="text-align:center; margin-top: 2em;">
+  <a href="#">⬆ Back to Top</a>
+</p>
+</div>
+
+</body>
+</html>
