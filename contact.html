@@ -38,46 +38,81 @@
     <div class="banner-text static-banner">
       <h1>Contact</h1>
     </div>
+
     <!-- Main Content -->
     <main id="main-content">
-      <section class="wrapper style1">
-        <div class="container contact-grid">
-          <!-- Contact Form -->
-          <div class="contact-form">
-            <h2>Get in Touch</h2>
-            <form method="post" action="#">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea rows="6" placeholder="Your Message" required></textarea>
-              <button type="submit">Send Message</button>
-            </form>
-          </div>
+      <div class="container contact-grid">
+        <!-- Left Contact Section -->
+        <div class="contact-section">
+          <div class="contact-card">
+            <h2 class="section-title">Contact Us</h2>
 
-          <!-- Map and Info -->
-          <div class="contact-info">
-            <h2>Visit Us</h2>
-            <div class="map-container">
-              <iframe
-                src="https://maps.google.com/maps?q=IIT%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                allowfullscreen
-              ></iframe>
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-label">Email</div>
+                <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
+                  >mailto:sandeep.sukumaran@cas.iitd.ac.in</a
+                >
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-label">Phone</div>
+                <a href="tel:+ 91-11-2659-1387">+ 91-11-2659-1387</a>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-label">Follow</div>
+                <div class="social-links">
+                  <a
+                    href="https://twitter.com/ClimateLab_IITD"
+                    target="_blank"
+                    rel="noopener"
+                    >Twitter</a
+                  >
+                  <span>·</span>
+                  <a
+                    href="https://linkedin.com/company/climate-dynamics-lab"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                </div>
+              </div>
             </div>
-            <address>
-              <strong>Climate Dynamics Lab</strong><br />
-              Centre for Atmospheric Sciences, IIT Delhi<br />
-              Hauz Khas, New Delhi – 110016, India<br />
-              <br />
-              <strong>Email:</strong>
-              <a href="mailto:climate.lab@cas.iitd.ac.in"
-                >climate.lab@cas.iitd.ac.in</a
-              ><br />
-              <strong>Phone:</strong> +91-11-2659-XXXX
-            </address>
           </div>
         </div>
-      </section>
-    </main>
 
+        <!-- Right Container -->
+        <div class="contact-section">
+          <div class="contact-card">
+            <h2 class="section-title">Visit Us</h2>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-label">Address</div>
+                <address>
+                  Climate Dynamics Lab<br />
+                  Centre for Atmospheric Sciences, IIT Delhi<br />
+                  Hauz Khas, New Delhi – 110016, India
+                </address>
+              </div>
+              <div class="contact-item map-item">
+                <div class="contact-label">Location</div>
+                <div class="map-container">
+                  <iframe
+                    src="https://maps.google.com/maps?q=IIT%20Delhi&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                    title="Google Map of IIT Delhi"
+                    loading="lazy"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- Footer -->
     <footer id="footer">
       <div class="container">
