@@ -868,6 +868,13 @@ a.team-member-link * {
   text-align: justify;
 }
 
+.pub-list li a {
+  text-decoration: none;
+}
+.pub-list li a:hover {
+  text-decoration: underline;
+}
+
 .pub-list li strong {
   color: #2c0066;
 }
