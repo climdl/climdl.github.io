@@ -302,19 +302,6 @@ body {
 }
 
 /* ONLY target the profile-image */
-.pi-section .profile-image {
-  width: 300px;           /* your new size */
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.pi-section:hover .profile-image {
-  transform: scale(1.05);
-}
-
 
 .wrapper.style1.special {
   background: #fffcfc;
@@ -804,7 +791,30 @@ a.team-member-link * {
   text-align: justify;
 }
 
+.highlight-current {
+  color: #0d2c54;           /* Deep blue */
+  font-weight: 600;         /* Semi-bold */
+  background-color: #eef3fa; /* Light blue highlight */
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
 /* === PI Section: wider, left aligned === */
+.pi-section .profile-image {
+  width: 300px;           /* your new size */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.pi-section:hover .profile-image {
+  transform: scale(1.05);
+}
+
 .pi-section {
   display: flex;
   gap: 2em;
