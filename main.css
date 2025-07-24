@@ -284,11 +284,44 @@ body {
 }
 
 /* === About PI Section === */
+
+.pi-section {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  padding: 1.5em;
+  border-radius: 12px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pi-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ONLY target the profile-image */
+.pi-section .profile-image {
+  width: 300px;           /* your new size */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.pi-section:hover .profile-image {
+  transform: scale(1.05);
+}
+
+
 .wrapper.style1.special {
   background: #fffcfc;
   border-radius: 8px;
   padding: 2em 2em;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #main-content section {
   margin-bottom: 4em;
@@ -355,6 +388,11 @@ body {
 
 .wrapper.style1.special .button:hover {
   background: #c32b5c;
+}
+
+.wrapper.style1.special:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* === Carousel === */
