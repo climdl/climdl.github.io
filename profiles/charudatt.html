@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saran Rajendran - Climate Dynamics Lab</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- General Resets and Body Styles --- */
+        :root {
+            --primary-color: #0d2c54; /* Deep Blue */
+            --secondary-color: #1a508b; /* Lighter Blue for accents */
+            --text-color: #34495e; /* Slate Grey */
+            --light-text-color: #7f8c8d; /* Lighter Grey */
+            --bg-color: #f8f9fa; /* Soft off-white */
+            --container-bg: #ffffff;
+            --border-color: #e9ecef;
+            --shadow: 0 8px 30px rgba(0, 30, 80, 0.08);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 2em auto;
+            padding: 2.5em;
+            background-color: var(--container-bg);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* --- Typography & Links --- */
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+
+        h2 { font-size: 2.5rem; letter-spacing: -1px; }
+        h3 { font-size: 1.75rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.4em; }
+        h4 { margin: 0; font-weight: 500; font-size: 1.1rem; color: var(--light-text-color); }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+            position: relative;
+        }
+        
+        li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block; 
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+
+        /* --- Header Section --- */
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            align-items: center;
+            gap: 2.5em;
+            margin-bottom: 3em;
+            padding: 2em;
+            background: linear-gradient(135deg, #f0f4f8, #e6e9f0); /* Subtle gradient */
+            border-radius: 12px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--container-bg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            flex: 1; /* Allows info to take remaining space */
+        }
+        
+        .social-links {
+            margin-top: 1.2em;
+        }
+        .social-links a {
+            margin-right: 1em;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0.7;
+        }
+        .social-links a:hover img {
+            transform: translateY(-3px);
+            opacity: 1;
+        }
+
+        /* --- Generic Section Styling --- */
+        section {
+            margin-bottom: 3em;
+        }
+
+        .bio p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 1em;
+        }
+        
+        /* --- Research Highlights (Modern Grid Gallery) --- */
+        .highlight-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5em;
+        }
+        .highlight-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease;
+        }
+        .highlight-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        .highlight-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .highlight-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 44, 84, 0.8); /* Semi-transparent dark blue */
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            font-weight: 500;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-out;
+        }
+        .highlight-item:hover .caption {
+            transform: translateY(0);
+        }
+
+        /* --- Skills Section (Tags/Pills) --- */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8em;
+            padding-left: 0;
+        }
+        .skills-list li {
+            padding: 0.5em 1.2em;
+            margin: 0;
+            background-color: #eef2f7;
+            color: var(--secondary-color);
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .skills-list li::before {
+             display: none; /* Remove bullet for skills */
+        }
+
+        /* --- Publications & Conferences --- */
+        .publications li, .conferences li {
+            margin-bottom: 1.5em;
+        }
+        .publications a {
+            display: block; /* Make the title link take full width */
+            font-size: 1.1rem;
+            margin-bottom: 0.2em;
+        }
+        .publications span, .conferences span {
+            font-style: italic;
+            color: var(--light-text-color);
+        }
+
+        /* --- Footer/Contact Section --- */
+        .contact {
+            text-align: center;
+            padding: 2em;
+            background-color: #f0f4f8;
+            border-radius: 12px;
+            margin-top: 2em;
+        }
+        .contact p {
+            margin: 0.5em 0;
+            font-size: 1.05rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="profile-header">
+        <img src="images/charu.jpg" alt="Charudatt Puri" class="profile-image" />
+        <div class="profile-info">
+            <h2>Charudatt Puri</h2>
+            <h4>PhD Scholar, Climate Dynamics Lab</h4>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/charudatt-puri-065836243" target="_blank" title="LinkedIn">
+                    <img src="icons/linkedin.png" alt="LinkedIn" />
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bio">
+            <h3>About Me</h3>
+            <p>
+                I'm Charudatt Puri, a Ph.D. Scholar at the Climate Dynamics Lab within the Centre for Atmospheric Sciences (CAS) at IIT Delhi. My doctoral 
+                research involves exploring the dynamics behind the genesis of synoptic-scale Monsoon Low-Pressure Systems (LPSs)-transient vortices 
+                embedded within the broader monsoon flow. I investigate these fascinating phenomena by integrating observational data, advanced data 
+                analysis techniques, and the construction of idealized modeling experiments using Global Climate Models (GCMs).
+            </p>
+            <p>
+            Prior to my Ph.D., I was a JRF in IDPCS at IIT Bombay, where I worked with regional model to simulate and study extreme rainfall events. Beyond my core research, I'm also deeply interested in understanding the complex entanglement of various climate systems and unraveling their hidden rhythms.
+            </p>
+        </section>
+
+        <section class="research-interests">
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Monsoon Dynamics</li>
+                <li>Geophysical Vortex Dynamics</li>
+                <li>Clouds and Convection</li>
+                <li>Weather Extremes</li>
+            </ul>
+        </section>
+        
+        <!--
+        <section class="highlight">
+            <h3>Research Highlights</h3>
+            <div class="highlight-gallery">
+                <div class="highlight-item">
+                    <img src="images/img1.jpg" alt="Upwelling dynamics over Arabian Sea" />
+                    <div class="caption">Upwelling dynamics over Arabian Sea</div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/img2.jpg" alt="ENSO modulation of Indian monsoon" />
+                    <div class="caption">ENSO modulation of Indian monsoon</div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/img3.jpg" alt="Cross-equatorial heat transport" />
+                    <div class="caption">Cross-equatorial heat transport</div>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/bluemarble.png" alt="Global climate teleconnections" />
+                    <div class="caption">Global climate teleconnections</div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <section class="publications">
+            <h3>Publications</h3>
+            <ul>
+                <li>
+                    Kotiye, G. M., Butee, S. P., & Puri, C. J. (2020)
+                    <a href="https://doi.org/10.14741/ijcet/v.10.3.4" target="_blank">
+                        High Temperature Tensile Properties of Cryogenically treated AISI 4340 Steel.
+                    </a>
+                    <span>International Journal of Current Engineering and Technology</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="education">
+            <h3>Education</h3>
+            <ul>
+                <li>Ph.D. in Atmospheric Sciences (Present) – IIT Delhi, India</li>
+                <li>M.Tech in Earth System Science (2023) – IIST Thiruvananthapuram, Kerala, India</li>
+                <li>B.E. in Mechanical Engineering (2018) – MIT Aurangabad, India</li>
+            </ul>
+        </section>
+
+        <section class="conferences">
+            <h3>Conference Presentations</h3>
+            <ul>
+                <li>“Moist Convection Dynamics of Monsoons” – <span>ICTS, 2024, India</span></li>
+                <li>“Stanford - IIT Bombay Joint Workshop on Climate Change” – <span>2023</span></li>
+                <li>“TROPMET 2022 organised by IISER Bhopan and IMD: Won Best Poster Award, 2022” – <span>TROPMET, 2022, Bhopal, India</span></li>
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h3>Skills & Tools</h3>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>ARW-WRF modelling</li>
+            </ul>
+        </section>
+
+        <!-- 
+        <section class="pdf-section">
+            <h3>Downloadable Resources</h3>
+            <ul>
+                <li><a href="pdfs/saran_paper1.pdf" target="_blank">Full Paper: Ocean Acidification Study (PDF)</a></li>
+                <li><a href="pdfs/saran_presentation.pdf" target="_blank">Conference Presentation: AGU 2023 (PDF)</a></li>
+            </ul>
+        </section>
+        -->
+    </main>
+
+    <footer class="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:asz238486@iitd.ac.in">asz238486@iitd.ac.in</a></p>
+        <p>Office: Room 410, Centre for Atmospheric Sciences, Block VI, Indian Institute of Technology Delhi,Hauz Khas, New Delhi-110 016, India.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
