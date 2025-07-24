@@ -147,44 +147,39 @@ section li {
         
         
         /* --- Research Highlights (Modern Grid Gallery) --- */
-        .highlight-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5em;
-        }
-        .highlight-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
-            transition: transform 0.3s ease;
-        }
-        .highlight-item:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-        .highlight-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .highlight-item .caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(13, 44, 84, 0.8); /* Semi-transparent dark blue */
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            font-weight: 500;
-            transform: translateY(100%);
-            transition: transform 0.4s ease-out;
-        }
-        .highlight-item:hover .caption {
-            transform: translateY(0);
-        }
+.highlight-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5em;
+}
+
+.highlight-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-item img {
+  width: 100%;
+  height: 250px; /* control image height */
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.highlight-item:hover img {
+  transform: scale(1.08);
+}
+
+.highlight-item .caption {
+  padding: 1rem;
+}
+
+
 
         /* --- Skills Section (Tags/Pills) --- */
         .skills-list {
@@ -319,73 +314,79 @@ section li {
   <div class="container" style="max-width: 1000px; margin: auto;">
     <h2 style="font-size: 2rem; margin-bottom: 1rem;">Research Highlights</h2>
     <p style="font-size: 1.1rem; line-height: 1.6;">
-    <!--
-      Our research on <strong>AI-powered monsoon forecasting</strong> at <strong>IIT Delhi</strong> has gained national attention.
-      The model can predict monsoon activity up to <strong>18 days in advance</strong> — a significant leap in weather prediction capability.
-      -->
+      <!-- Optional: Add summary text here -->
     </p>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-
+    <div class="highlight-gallery" style="margin-top: 2rem;">
+      
       <!-- Article 1 -->
-      <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-        <a href="https://timesofindia.indiatimes.com/city/delhi/cloud-computing-iit-delhi-ai-model-forecasts-monsoon-18-days-in-advance/articleshow/122053574.cms" target="_blank">
-          <img src="images/pankaj_toi.png" alt="TOI article" style="width: 100%; height: auto;" />
-        </a>
-        <div style="padding: 1rem;">
-          <h3 style="font-size: 1.1rem; margin: 0;">
-            <a href="https://timesofindia.indiatimes.com/city/delhi/cloud-computing-iit-delhi-ai-model-forecasts-monsoon-18-days-in-advance/articleshow/122053574.cms" target="_blank">
-              IIT Delhi AI model forecasts monsoon 18 days in advance – TOI
-            </a>
-          </h3>
+      <div class="highlight-item">
+        <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+          <a href="https://timesofindia.indiatimes.com/city/delhi/cloud-computing-iit-delhi-ai-model-forecasts-monsoon-18-days-in-advance/articleshow/122053574.cms" target="_blank">
+            <img src="images/pankaj_toi.png" alt="TOI article" />
+          </a>
+          <div style="padding: 1rem;">
+            <h3 style="font-size: 1.1rem; margin: 0;">
+              <a href="https://timesofindia.indiatimes.com/city/delhi/cloud-computing-iit-delhi-ai-model-forecasts-monsoon-18-days-in-advance/articleshow/122053574.cms" target="_blank">
+                IIT Delhi AI model forecasts monsoon 18 days in advance – TOI
+              </a>
+            </h3>
+          </div>
         </div>
       </div>
 
       <!-- Article 2 -->
-      <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-        <a href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html" target="_blank">
-          <img src="images/pankaj_bs.png" alt="Business Standard article" style="width: 100%; height: auto;" />
-        </a>
-        <div style="padding: 1rem;">
-          <h3 style="font-size: 1.1rem; margin: 0;">
-            <a href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html" target="_blank">
-              AI transforming meteorological prediction – Business Standard
-            </a>
-          </h3>
+      <div class="highlight-item">
+        <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+          <a href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html" target="_blank">
+            <img src="images/pankaj_bs.png" alt="Business Standard article" />
+          </a>
+          <div style="padding: 1rem;">
+            <h3 style="font-size: 1.1rem; margin: 0;">
+              <a href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html" target="_blank">
+                AI transforming meteorological prediction – Business Standard
+              </a>
+            </h3>
+          </div>
         </div>
       </div>
 
       <!-- Article 3 -->
-      <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-        <a href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html" target="_blank">
-          <img src="images/pankaj_week.png" alt="The Week article" style="width: 100%; height: auto;" />
-        </a>
-        <div style="padding: 1rem;">
-          <h3 style="font-size: 1.1rem; margin: 0;">
-            <a href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html" target="_blank">
-              IIT AI model improves weather accuracy – The Week (PTI)
-            </a>
-          </h3>
+      <div class="highlight-item">
+        <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+          <a href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html" target="_blank">
+            <img src="images/pankaj_week.png" alt="The Week article" />
+          </a>
+          <div style="padding: 1rem;">
+            <h3 style="font-size: 1.1rem; margin: 0;">
+              <a href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html" target="_blank">
+                IIT AI model improves weather accuracy – The Week (PTI)
+              </a>
+            </h3>
+          </div>
         </div>
       </div>
 
-      <!-- More articles... -->
       <!-- Article 4 -->
-      <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
-        <a href="https://www.abplive.com/education/iit-delhi-ai-model-weather-prediction-tool-monsoon-mood-18-days-in-advance-ann-2969393" target="_blank">
-          <img src="images/pankaj_abp.png" alt="The Week article" style="width: 100%; height: auto;" />
-        </a>
-        <div style="padding: 1rem;">
-          <h3 style="font-size: 1.1rem; margin: 0;">
-            <a href="https://www.abplive.com/education/iit-delhi-ai-model-weather-prediction-tool-monsoon-mood-18-days-in-advance-ann-2969393" target="_blank">
-                       अब 18 दिन पहले ही पता चल जाएगा मॉनसून का मूड, IIT दिल्ली ने बनाया नया AI मॉडल – ABP News
-            </a>
-          </h3>
+      <div class="highlight-item">
+        <div style="background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden;">
+          <a href="https://www.abplive.com/education/iit-delhi-ai-model-weather-prediction-tool-monsoon-mood-18-days-in-advance-ann-2969393" target="_blank">
+            <img src="images/pankaj_abp.png" alt="ABP News article" />
+          </a>
+          <div style="padding: 1rem;">
+            <h3 style="font-size: 1.1rem; margin: 0;">
+              <a href="https://www.abplive.com/education/iit-delhi-ai-model-weather-prediction-tool-monsoon-mood-18-days-in-advance-ann-2969393" target="_blank">
+                अब 18 दिन पहले ही पता चल जाएगा मॉनसून का मूड – ABP News
+              </a>
+            </h3>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
 
