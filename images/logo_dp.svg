@@ -8,6 +8,11 @@
    version="1.1"
    id="svg5"
    xml:space="preserve"
+   inkscape:export-filename="../../../iitd/climdl/new/logo_dp.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="drawing-1.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +26,16 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     showgrid="false" /><defs
+     showgrid="false"
+     inkscape:zoom="0.1705638"
+     inkscape:cx="363.50034"
+     inkscape:cy="2040.2923"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
      id="defs2"><marker
        markerWidth="0.52499998"
        markerHeight="0.99999994"
@@ -45,7 +59,7 @@
      id="layer1"
      transform="translate(396.04321,330.99746)"><g
        id="g2909"
-       transform="translate(40.402775,40.191728)"><g
+       transform="matrix(0.87429019,0,0,0.87429019,33.93551,50.09902)"><g
          id="g1923"
          transform="matrix(1.9532477,0,0,1.9532477,-2369.0676,27.01777)"><ellipse
            style="fill:#ff0000;fill-opacity:1;stroke:#ffffff;stroke-width:22.233;stroke-dasharray:none;paint-order:markers stroke fill"
@@ -137,7 +151,7 @@
              d="m 579.95411,373.45494 v 48.27235 h -14.36677 v -48.27235 z"
              style="font-weight:600;font-size:85.9172px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#001c38;fill-opacity:1;stroke-width:10.3843;paint-order:markers stroke fill"
              id="path1546" /><circle
-             style="fill:#001c38;fill-opacity:1;stroke:none;stroke-width:5.57059;stroke-dasharray:none;paint-order:markers stroke fill"
+             style="fill:#df357d;fill-opacity:1;stroke:#df357d;stroke-width:5.57059;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
              id="circle1548"
              cx="572.77069"
              cy="353.15778"
