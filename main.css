@@ -838,10 +838,17 @@ a.team-member-link * {
 /* === Publications === */
 .pub-section {
   margin-bottom: 4em;
-  padding: 2em;
+  padding: 4em;
   background: #fdfdff;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 99%;
+  max-widt: 2600px;
+  margin: 0 auto; /* Centers the section */
+  overflow: visible;
+  box-shadow: 4px 4px 12px 4px rgba(197, 197, 197, 0.08),
+    /* Bottom-right shadow */ -4px 4px 4px 4px rgba(197, 197, 197, 0.08),
+    /* Bottom-left shadow */ 4px -4px 4px 4px rgba(197, 197, 197, 0.08),
+    /* Top-right shadow */ -4px -4px 4px 4px rgba(197, 197, 197, 0.08); /* Top-left shadow */
 }
 
 .pub-section header h2 {
@@ -851,8 +858,8 @@ a.team-member-link * {
 }
 
 .pub-list {
-  list-style: none;
-  padding-left: 0;
+  padding-left: 2px;
+  list-style-type: decimal; /* Ensure numbers show up */
 }
 
 .pub-list li {
@@ -862,7 +869,7 @@ a.team-member-link * {
 }
 
 .pub-list li strong {
-  color: #002b56;
+  color: #2c0066;
 }
 
 @media (max-width: 768px) {
