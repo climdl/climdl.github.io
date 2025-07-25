@@ -1312,6 +1312,143 @@ a.team-member-link * {
   }
 }
 
+
+/* === Main Research === */
+.main-focus {
+  max-width: 1400px;
+  margin: 3rem auto 2rem;
+  padding: 0 1rem;
+  text-align: justify;
+}
+
+.main-focus h2 {
+  color: #002b56;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.main-focus p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* === Research Area Tiles === */
+.research-areas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.research-tile {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.research-tile h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #002b56;
+}
+
+.research-tile p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.content-tile {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin: 4rem auto;
+  max-width: 1000px;
+}
+
+.content-tile h2,
+.content-tile h3 {
+  color: #002b56;
+  margin-bottom: 1rem;
+}
+
+.content-tile h3 {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.25rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+  padding: 1rem 1rem 1rem 1.25rem;
+  border-left: 4px solid #002b56;
+  background: #f8f9fb;
+  border-radius: 6px;
+}
+
+.project h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #002b56;
+}
+
+.project p {
+  margin: 0;
+  color: #444;
+  line-height: 1.6;
+  font-size: 0.96rem;
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+  .main-focus,
+  .research-areas,
+  .content-tile {
+    padding: 1.5rem;
+  }
+
+  .main-focus h2 {
+    font-size: 1.5rem;
+  }
+
+  .research-tile {
+    padding: 1rem;
+  }
+
+  .content-tile h2 {
+    font-size: 1.5rem;
+  }
+
+  .project h4 {
+    font-size: 1rem;
+  }
+
+  .project p {
+    font-size: 0.9rem;
+  }
+
+  .project {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project h4 {
+    font-size: 1rem;
+  }
+
+  .project p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
 /* === Contact Page Grid === */
 .contact-grid {
   display: flex;
