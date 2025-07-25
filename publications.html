@@ -1,277 +1,1653 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Publications | Climate Dynamics Lab</title>
-    <link rel="stylesheet" href="main.css" />
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-  </head>
-  <body>
-    <!-- Loader -->
-    <div id="loader">
-      <img src="/images/icon.svg" alt="Climate Dynamics Lab Logo" />
-    </div>
+@import url("https://fonts.googleapis.com/css?family=Roboto:700&display=swap");
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a href="index.html">
-        <img class="logo" src="/images/logo_top.svg" alt="Logo" />
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="people.html">People</a></li>
-        <li><a class="active" href="#">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="highlights.html">Highlights</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <!-- Static Hero -->
-    <div class="slideshow static-hero">
-      <img src="/images/img2.jpg" alt="People Hero" class="slide active" />
-    </div>
-    <div class="banner-text static-banner">
-      <h1>Publications</h1>
-    </div>
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
 
-    <!-- Main Content -->
-    <main id="main-content">
-      <section class="wrapper style1">
-        <div class="container">
-          <header class="major">
-            <h2>Publications and Conferences</h2>
-            <br />
-            <p>Papers published in/submitted to international peer reviewed journals and Conferences.</p>
-            <br />
-          </header>
+.wrapper {
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
+}
 
-          <!-- Journal Articles Section -->
-          <section class="pub-section">
-            <header><h2>Journal Articles</h2></header>
-            <o1 class="pub-list">
-              <o1>
-                <li><strong> Chandra, V., Sandeep, S.</strong>, and K. M. R. Hunt (2025) <a href="https://doi.org/10.1002/asl.123456">Weakening of western disturbances in response to polar sea ice melt in climate model simulations</a>, Atmospheric Science Letters (submitted)</li>
-                <li><strong> Saran, R. and Sandeep, S.</strong> (2025) <a href="https://doi.org/10.1088/2515-7620/ad1234">Increasing Uncertainty in Large Flood and Drought Projections over Central India</a>, Environmental Research Communications (under revision)</li>
-                <li><strong> Saran, R. and Sandeep, S.</strong> (2025) <a href="https://doi.org/10.1038/s41598-025-12345-x">Does the Cross-Equatorial Ocean Heat Transport Affect the Interannual Variability of Indian Summer Monsoon?</a>, Scientific Reports (under revision)</li>
-                <li><strong> Sahu, P. L., Sandeep, S.</strong>, and H. Kodamana (2025) <a href="https://doi.org/10.1029/2025JH000594">Evaluating Global Machine Learning Models for Tropical Cyclone Dynamics and Thermodynamics</a>, JGR: Machine Learning and Computation, doi:10.1029/2025JH000594</li>
-                <li><strong> Anirudh, K. M., P. Raj, Sandeep, S.</strong>, H. Kodamana, and C. T. Sabeerali (2025) <a href="https://doi.org/10.1029/2024JH000504">A skillful prediction of monsoon intraseasonal oscillation using deep learning</a>, JGR: Machine Learning and Computation, doi: 10.1029/2024JH000504</li>
-                <li>Sabeerali, C. T., V. Praveen, P. Rohini, O. P. Sreejith, and <strong>Sandeep, S.</strong> (2025) <a href="https://doi.org/10.1007/s00382-025-07621-y">Unraveling the Challenges of Climate Models: Limited Skill in Predicting Seasonal Rainfall in Central India</a>, Climate Dynamics, doi: 10.1007/s00382-025-07621-y</li>
-                <li><strong> Singh, R. and Sandeep, S.</strong> (2024) <a href="https://doi.org/10.1002/qj.4788">Dry air intrusion over India during break phases of summer monsoon in CMIP6 models</a>, Q J R Meteorol Soc., 150(763), 3623-3638, doi: 10.1002/qj.4788</li>
-                <li><strong> Chandra, V. and Sandeep, S.</strong> (2024) <a href="https://doi.org/10.1007/s00382-024-07167-5">Relative roles of the Arctic and Antarctic sea ice melt on Indian summer monsoon</a>, Climate Dynamics, 62, 5373-5387, doi: 10.1007/s00382-024-07167-5 (Highlight in Nature Climate Change)</li>
-                <li><strong> Singh, R. and Sandeep, S.</strong> (2024) <a href="https://doi.org/10.1029/2023JD040180">Precipitation Variability over Northwestern India Driven by the Transport of Moisture Deficit Air</a>, JGR: Atmospheres, 129, e2023JD040180, doi: 10.1029/2023JD040180</li>
-                <li><strong> Srujan, K. S. S. S., and Sandeep, S.</strong> (2024) <a href="https://doi.org/10.1007/s00382-024-07146-w">Clustering of low-pressure systems during the active phase of Indian summer monsoon in climate models</a>, Climate Dynamics, 62, 4981-4995, doi: 10.1007/s00382-024-07146-w</li>
-                <li><strong> Dombo, T. C.</strong>, K. AchutaRao, and <strong>Sandeep, S.</strong> (2023) <a href="https://doi.org/10.1088/1748-9326/ad1083">The Link Between Intertropical Convergence Zone Stagnation and Bias in Local Shortwave Cloud Radiative Forcing Over Tropical Africa in Climate Models</a>, Environmental Research Letters, 19, 014034, doi: 10.1088/1748-9326/ad1083</li>
-                <li>Vishnupriya, S., E. Suhas, and <strong>Sandeep, S.</strong> (2022) <a href="https://doi.org/10.1029/2022GL100976">Extratropical Stratospheric Air Intrusions and the Genesis of Downstream Monsoon Low Pressure Systems</a>, Geophysical Research Letters, 49, e2022GL100976, doi: 10.1029/2022GL100976</li>
-                <li><strong> Chandra, V., Sandeep, S.</strong>, E. Suhas, and Aneesh C. Subramanian (2022) <a href="https://doi.org/10.1029/2021EA002185">Weakening of Indian Summer Monsoon Synoptic Activity in Response to Polar Sea Ice Melt Induced by Albedo Reduction in a Climate Model</a>, Earth and Space Science, 9, e2021EA002185, doi: 10.1029/2021EA002185</li>
-                <li><strong> Srujan, K. S. S. S., Sandeep, S.</strong>, E. Suhas, and H. Kodamana (2022) <a href="https://doi.org/10.1029/2022GL098597">A Dynamical Linkage Between Western North Pacific Tropical Cyclones and Indian Monsoon Low-Pressure Systems</a>, Geophysical Research Letters, 49, e2022GL098597, doi: 10.1029/2022GL098597</li>
-                <li><strong> Singh, R. and Sandeep, S.</strong> (2021) <a href="https://doi.org/10.1007/s00382-021-06060-9">Dynamics of dry air intrusion over India during summer monsoon breaks</a>, Climate Dynamics, 59, 1649-1664, doi: 10.1007/s00382-021-06060-9</li>
-                <li><strong> Nair, Aravind, K. S. S. S. Srujan </strong>, S. Kulkarni, K. Alwadhi, N. Jain, H. Kodamana, <strong>Sandeep, S.</strong>, and V. O. John (2021) <a href="https://doi.org/10.1109/LGRS.2021.3131638">A Deep Learning Framework for the Detection of Tropical Cyclones from Satellite Images</a>, IEEE Geoscience and Remote Sensing Letters, doi: 10.1109/LGRS.2021.3131638</li>
-                <li><strong> Srujan, K. S. S. S., Sandeep, S.</strong>, and E. Suhas (2021) <a href="https://doi.org/10.1029/2021EA001741">Downstream and In Situ Genesis of Monsoon Low-Pressure Systems in Climate Models</a>, Earth and Space Science, 8, e2021EA001741, doi: 10.1029/2021EA001741</li>
-                <li>Sinha, A., M. Gupta, <strong> K. S. S. S. Srujan </strong>, H. Kodamana, and <strong>Sandeep, S.</strong> (2021) <a href="https://doi.org/10.1109/LGRS.2021.3100899">Prediction of synoptic-scale sea level pressure over the Indian monsoon region using deep learning</a>, IEEE Geoscience and Remote Sensing Letters, doi:10.1109/LGRS.2021.3100899</li>
-                <li>Gupta, M., H. Kodamana, and <strong>Sandeep, S.</strong> (2020) <a href="https://doi.org/10.1109/LGRS.2020.3032353">Prediction of ENSO Beyond Spring Predictability Barrier Using Deep Convolutional LSTM Networks</a>, IEEE Geoscience and Remote Sensing Letters, doi: 10.1109/LGRS.2020.3032353</li>
-                <li>Meera, M., E. Suhas, <strong>Sandeep, S.</strong> (2019) <a href="https://doi.org/10.1029/2019GL084054">Downstream and In situ: Two Perspectives on the Initiation of Monsoon Low Pressure Systems over the Bay of Bengal</a>, Geophysical Research Letters, 46, 12303 - 12310</li>
-                <li><strong>Sandeep, S.</strong>, R. S. Ajayamohan, W. R. Boos, T. P. Sabin, V. Praveen (2018) <a href="https://doi.org/10.1073/pnas.1717332115">Decline and poleward shift in Indian summer monsoon synoptic activity in a warming climate</a>, Proceedings of the National Academy of Sciences, 115 (11), 2681-2686</li>
-                <li><strong>Sandeep, S.</strong> and R. S. Ajayamohan (2018) <a href="https://doi.org/10.1002/2017JD027475">Modulation of Winter Precipitation Dynamics Over the Arabian Gulf by ENSO</a>, JGR: Atmospheres, 123, 198-210</li>
-                <li>Kutty, G., <strong>Sandeep, S.</strong>, Vinodkumar, S. Nhaloor (2018) <a href="https://doi.org/10.1007/s00704-017-2317-8">Sensitivity of convective precipitation to soil moisture and vegetation during break spell of Indian summer monsoon</a>, Theoretical and Applied Climatology, 133(3-4), 957-972</li>
-                <li>Praveen, V., R. S. Ajayamohan, V. Valsala, <strong>Sandeep, S.</strong> (2016) <a href="https://doi.org/10.1002/2016GL069075">Intensification of upwelling along Oman coast in a warming scenario</a>, Geophysical Research Letters, 43, 7581-7589</li>
-                <li>Kumar, K. N., T.B.M.J. Ouarda, <strong>Sandeep, S.</strong>, R. S. Ajayamohan (2016) <a href="https://doi.org/10.1007/s00382-015-2896-3">Wintertime precipitation variability over the Arabian Peninsula and its relationship with ENSO in the CAM4 simulations</a>, Climate Dynamics, 47(7-8), 2443-2454</li>
-                <li>Praveen, V., <strong>Sandeep, S.</strong>, R.S. Ajayamohan (2015) <a href="https://doi.org/10.1175/JCLI-D-14-00760.1">On the Relationship between Mean Monsoon Precipitation and Low Pressure Systems in Climate Model Simulations</a>, Journal of Climate, 28, 5305-532</li>
-                <li><strong>Sandeep, S.</strong> and R. S. Ajayamohan (2015) <a href="https://doi.org/10.1007/s00382-014-2297-z">Poleward shift in Indian summer monsoon low level jetstream under global warming</a>, Climate Dynamics, 45(1-2), 337-351</li>
-                <li><strong>Sandeep, S.</strong> and R. S. Ajayamohan (2014) <a href="https://doi.org/10.1038/srep06403">Origin of cold bias over the Arabian Sea in Climate Models</a>, Scientific Reports, 4, 6403</li>
-                <li><strong>Sandeep, S.</strong>, F. Stordal, P. D. Sardeshmukh, G. P. Compo (2014) <a href="https://doi.org/10.1007/s00382-013-2000-9">Pacific Walker Circulation variability in coupled and uncoupled climate models</a>, Climate Dynamics, 43(1-2), 103-117</li>
-                <li>Diallo, I., F. Giorgi, <strong>Sandeep, S.</strong>, F. Stordal, G. Giuliani (2014) <a href="https://doi.org/10.1007/s00704-013-1032-6">Evaluation of RegCM4 driven by CAM4 over Southern Africa: mean climatology, interannual variability and daily extremes of wet season temperature and precipitation</a>, Theoretical and Applied Climatology, 121(3-4), 749-766</li>
-                <li><strong>Sandeep, S.</strong>, and F. Stordal (2013) <a href="https://doi.org/10.1080/2150704X.2013.789146">Use of daily outgoing longwave radiation (OLR) data in detecting precipitation extremes in the tropics</a>, Remote Sensing Letters, 4(6), 570-578</li>
-                <li>Singh, D., <strong>Sandeep, S.</strong>, A. Chandrasekar (2008) <a href="https://www.atmosfera.unam.mx/index.php/ATM/article/view/156">Combined IR-microwave satellite retrieval of temperature and moisture profiles using the ICI inversion system and its application in the MM5 model</a>, Atmosfera, 21(2), 191-212</li>
-                <li><strong>Sandeep, S.</strong>, A. Chandrasekar, S. K. Dash (2007) <a href="https://doi.org/10.1007/s00024-007-0226-2">On the prediction of tropical cyclones over the indian region Using a synthetic vortex scheme in a mesoscale model</a>, Pure and Applied Geophysics, 164(8-9), 1443-1463</li>
-                <li><strong>Sandeep, S.</strong>, A. Chandrasekar, S. K. Dash (2007) <a href="https://doi.org/10.1007/s11069-006-9082-9">Impact of modification of initial cyclonic structure on the prediction of a cyclone over the Arabian Sea</a>, Natural Hazards, 41(3), 487-499</li>
-                <li><strong>Sandeep, S.</strong>, A. Chandrasekar, D. Singh (2006) <a href="https://doi.org/10.1080/01431160600941758">The impact of assimilation of AMSU data for the prediction of a tropical cyclone over India using a mesoscale model</a>, International Journal of Remote Sensing, 27(20), 4621-4653</li>
-            </ol>
-          </ol>
-          </section>
+/* Iconify icons sizing & color */
+.iconify {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  fill: currentColor !important;
+}
 
-          <!-- Conference Proceedings Section -->
-          <section class="pub-section">
-            <header><h2>Conference Proceedings</h2></header>
-            <ol class="pub-list">
-              <li>
-                <!-- <strong>Sandeep, S.,</strong> and Team (2024). AI in Monsoon
-                Modelling. In -->
-                <!-- <em
-                  >Proceedings of the International Climate Science
-                  Conference</em -->
-              </li>
-              <!-- <li>
-                <strong>Sandeep, S.,</strong> et al. (2023). Tropical Wave
-                Dynamics Workshop Paper. In <em>AGU Fall Meeting Abstracts</em>.
-              </li> -->
-              <!-- Add more conference proceedings if needed -->
-            </ol>
-          </section>
-        </div>
-      </section>
-    </main>
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-top row">
-          <!-- Logo Left -->
-          <div class="col-4 col-12-mobile footer-left">
-            <img
-              src="/images/logo_footer.svg"
-              alt="Climate Dynamics Lab Logo"
-              class="footer-logo"
-            />
-          </div>
+/* Footer social icons */
+.footer-right .icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-          <!-- Contact Middle -->
-          <div class="col-4 col-12-mobile footer-center">
-            <h3>Climate Dynamics Lab</h3>
-            <br />
-            <p>
-              Centre for Atmospheric Sciences, IIT Delhi<br />
-              Hauz Khas, New Delhi - 110016, India<br />
-              <br />
-            </p>
-          </div>
-          <div class="col-4 col-12-mobile footer-right">
-            <ul class="icons">
-              <li>
-                <a
-                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  title="Email"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="mdi:email"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
+.footer-right .icons li a {
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
 
-              <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/github/ffffff"
-                    alt="GitHub"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/climdl"
-                  target="_blank"
-                  title="LinkedIn"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://bsky.app/profile/climdl.bsky.social"
-                  target="_blank"
-                  title="Bluesky"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/bluesky/ffffff"
-                    alt="Bluesky"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ClimDL_IITD"
-                  target="_blank"
-                  title="X (formerly Twitter)"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/x/ffffff"
-                    alt="X"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+.footer-right .icons li a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
 
-        <hr />
+/* Contact Us section icons */
+.contact-list a .iconify,
+.social-links a img,
+.social-links a .iconify {
+  vertical-align: middle;
+}
 
-        <!-- Copyright -->
-        <div class="copyright">
-          <ul class="menu">
-            <li>
-              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+/* Adjust icon size in Contact Us */
+.contact-list a .iconify {
+  height: 20px !important;
+  width: 20px !important;
+  margin-right: 6px;
+  color: #002b56;
+}
 
+.social-links a img,
+.social-links a .iconify {
+  height: 20px !important;
+  width: 20px !important;
+}
 
-    <!-- Scripts -->
-    <script>
-      // Hamburger toggle
-      document.querySelector(".menu-toggle").onclick = () =>
-        document.querySelector(".navbar ul").classList.toggle("show");
+/* === Navbar === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  padding: 0 30px;
+}
 
-      // === Slideshow ===
-      const slides = document.querySelectorAll(".slideshow .slide");
-      let currentSlide = 0;
+.navbar .logo {
+  width: 165px;
+  height: auto;
+}
 
-      setInterval(() => {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add("active");
-      }, 4000);
+/* === Make mobile nav scrollable if too tall === */
+.navbar ul {
+  max-height: 100vh; /* never overflow the viewport */
+  overflow-y: auto;
+}
 
-      // === Carousel ===
-      const reel = document.querySelector(".carousel .reel");
-      const forward = document.querySelector(".carousel .forward");
-      const backward = document.querySelector(".carousel .backward");
+/* Optional: improve scroll look on mobile */
+.navbar ul::-webkit-scrollbar {
+  width: 6px;
+}
 
-      if (reel && forward && backward) {
-        let scrollX = 0;
-        const cardWidth = 360 + 60;
+.navbar ul::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
 
-        forward.addEventListener("click", () => {
-          scrollX -= cardWidth;
-          const maxScroll = -(
-            reel.scrollWidth - reel.parentElement.clientWidth
-          );
-          if (scrollX < maxScroll) scrollX = maxScroll;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
 
-        backward.addEventListener("click", () => {
-          scrollX += cardWidth;
-          if (scrollX > 0) scrollX = 0;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-      }
+.navbar ul li {
+  position: relative;
+  margin: 0 12px;
+  line-height: 80px;
+}
 
-      // === Loader ===
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-    </script>
-  </body>
-</html>
+.navbar ul li a {
+  font-size: 18px;
+  color: rgb(0, 43, 86);
+  text-decoration: none;
+  padding: 6px 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 18px;
+  width: 0%;
+  height: 2px;
+  background: #ea3a73;
+  transition: width 0.4s ease;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.navbar ul li a.active::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: #ea3a73;
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #002b56;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* === Slideshow === */
+.slideshow {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow .slide.active {
+  opacity: 1;
+}
+
+/* === Banner Text === */
+.banner-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 590px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 43, 86, 0.3),
+    rgba(234, 58, 115, 0.2)
+  );
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  color: white;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  z-index: 2; /* ensures it overlays slideshow */
+}
+.banner-text p {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.banner-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.banner-text h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+#intro {
+  background: #fdfdff;
+  max-width: 1800px;
+  margin: 2em auto 0 auto; /* small top margin only */
+  text-align: center;
+  padding: 2em 2em;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+#intro header {
+  margin: 0 auto;
+  padding: 30px 40px 40px 40px;
+}
+
+#intro h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem; /* slightly smaller, fits better */
+  font-weight: 700;
+  color: #002b56;
+  margin-bottom: 1em; /* tighter space below title */
+  letter-spacing: 0.4px;
+}
+
+#intro header > p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 2; /* slightly tighter than 1.7 */
+  color: #333;
+  text-align: justify;
+  margin-bottom: 1em; /* moderate space below para */
+}
+
+#intro header > p + p {
+  margin-top: 1.2em; /* space if multiple paragraphs */
+}
+
+/* === Responsive tweaks === */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar ul {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    background: #ffffffd0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px;
+    transition: left 0.3s ease;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar ul li a {
+    display: block;
+    width: auto;
+  }
+
+  .navbar ul.show {
+    left: 0;
+  }
+
+  .banner-text {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(234, 58, 115, 0.3),
+      rgba(0, 43, 86, 0.2)
+    );
+    padding: 20px 20px 20px 20px;
+    text-align: left;
+    color: white;
+  }
+  .banner-text p {
+    font-size: 10px;
+  }
+  .banner-text h1 {
+    font-size: 18px;
+  }
+
+  .banner-text h2 {
+    font-size: 12px;
+  }
+}
+
+.phd-announcement {
+  background: linear-gradient(to right, #e8f6f8, #ebf4fa);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 960px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.phd-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.phd-icon {
+  font-size: 4rem;
+  color: #0288d1;
+  flex-shrink: 0;
+}
+
+.phd-text {
+  flex: 1;
+  text-align: left;
+}
+
+.phd-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #003c6c;
+}
+
+.phd-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.phd-text a {
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.phd-text a:hover {
+  color: #004999;
+  border-color: transparent;
+  text-decoration: underline;
+}
+
+/* Simple animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === General Main Content === */
+#main-content {
+  padding: 4em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#main-content section {
+  margin-bottom: 4em;
+}
+
+/* === About PI Section === */
+
+.pi-section {
+  padding: 4em 1em;
+  gap: 2em;
+  background-color: #d9d9e4;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 2.5em;
+  align-items: center;
+}
+.pi-section:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.container-pi {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 2em;
+  font-weight: 700;
+  color: #333;
+}
+
+.pi-image {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.pi-image {
+  flex: 1 1 280px;
+  max-width: 280px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.pi-content {
+  flex: 2 1 500px;
+}
+
+.pi-name {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+  color: #0d1b2a;
+  font-weight: 700;
+}
+
+.pi-title {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+.pi-bio {
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #333;
+}
+
+.pi-subheading {
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  font-size: 1.1em;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.pi-list {
+  list-style-type: disc;
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+  color: #3a3a3a;
+  font-size: 1em;
+}
+
+.pi-button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.7em 1.4em;
+  background-color: #0051a3;
+  color: #f9f9fc;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0 4px 10px rgba(0, 81, 163, 0.2);
+  transition: all 0.3s ease;
+}
+
+.pi-button:hover {
+  background-color: #003f82;
+  box-shadow: 0 6px 14px rgba(0, 81, 163, 0.3);
+}
+
+/* === Carousel === */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 1em 0;
+  max-width: 1200px; /* or try 1000px, 960px etc. */
+  margin: 0 auto; /* centers the carousel */
+}
+
+.carousel .reel {
+  display: flex;
+  gap: 1.5em;
+  padding: 1rem 0;
+}
+
+.carousel article {
+  background: #e6f0ff; /* light blue box */
+  padding: 1em;
+  border-radius: 10px;
+  flex: 0 0 300px; /* fixed card width */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px; /* fixed card height */
+  box-sizing: border-box;
+}
+
+.carousel article:hover {
+  transform: translateY(-5px);
+}
+
+.carousel .image.featured img {
+  width: 100%;
+  display: block;
+}
+
+.carousel header {
+  padding: 1em;
+  text-align: center;
+}
+
+.carousel p {
+  padding: 0 1em 1em;
+  text-align: justify; /* force justify */
+}
+
+.carousel .forward,
+.carousel .backward {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; /* smaller size */
+  height: 40px;
+  background: rgba(234, 58, 115, 0.8);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2rem; /* smaller, cuter icon */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* soft shadow */
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.carousel .forward:hover,
+.carousel .backward:hover {
+  background: rgba(195, 43, 92, 0.9);
+  transform: translateY(-50%) scale(1.1); /* subtle grow on hover */
+}
+
+.carousel .forward {
+  right: 10px;
+}
+
+.carousel .backward {
+  left: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel .forward,
+  .carousel .backward {
+    display: none;
+  }
+
+  .carousel article {
+    flex: 0 0 90%; /* slightly more space for mobile */
+  }
+
+  .carousel {
+    padding: 0.5em 0;
+  }
+}
+
+/* === Mission Section === */
+.wrapper.style2 {
+  background: #002b56;
+  color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.wrapper.style2 h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3em;
+}
+
+.wrapper.style2 p {
+  max-width: 700px;
+  margin: 0 auto 0.5em auto;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.wrapper.style2 .image.featured img {
+  border-radius: 8px;
+  max-width: 800px;
+  margin-bottom: 1em;
+}
+
+.wrapper.style2 footer .button {
+  background: #ea3a73;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.wrapper.style2 footer .button:hover {
+  background: #c32b5c;
+}
+
+@media (max-width: 768px) {
+  .wrapper.style2 {
+    padding: 1.5em 2em 1.5em 2em; /* tighter padding for mobile */
+    border-radius: 0; /* optional: full-width on mobile looks cleaner sometimes */
+  }
+
+  .wrapper.style2 .image.featured img {
+    margin-bottom: 1em; /* smaller gap under image */
+  }
+
+  .wrapper.style2 h2 {
+    margin-top: 0;
+    margin-bottom: 0.5em; /* prevent big space */
+  }
+
+  .wrapper.style2 p {
+    margin-bottom: 1em;
+  }
+}
+
+/* === Footer === */
+#footer {
+  background: rgb(0, 43, 86);
+  color: #fff;
+  padding: 4em 2em;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 1 1 30%;
+}
+
+.footer-left .footer-logo {
+  width: 150px;
+  height: auto;
+}
+
+.footer-center {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.footer-center h3 {
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
+.footer-center p {
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-center a {
+  color: #f78fb0;
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  flex: 1 1 30%;
+  text-align: right;
+}
+
+.footer-right .icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.icons li img,
+.icons li .iconify {
+  transition: transform 0.2s ease, opacity 0.2s;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+}
+.iconify[data-icon="logos:linkedin-icon"] svg {
+  fill: white !important;
+  width: 24px;
+  height: 24px;
+}
+
+.icons li img:hover,
+.icons li .iconify:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.footer-right .icons li a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+#footer hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 2em 0;
+}
+
+#footer .copyright {
+  text-align: center;
+  font-size: 0.9em;
+  color: rgba(200, 200, 200, 0.8);
+}
+
+#footer .copyright a {
+  color: #ea3a73;
+  text-decoration: none;
+}
+
+#footer .copyright a:hover {
+  text-decoration: underline;
+}
+
+#footer .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .menu li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1 1 100%;
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  .footer-left .footer-logo {
+    width: 160px; /* smaller logo for mobile */
+    height: auto;
+  }
+
+  .footer-center h3 {
+    font-size: 1rem; /* reduce heading font */
+  }
+
+  .footer-center p {
+    font-size: 0.9rem; /* reduce paragraph font */
+  }
+
+  .footer-right .icons {
+    justify-content: center;
+  }
+
+  .footer-right .icons li a {
+    font-size: 1rem; /* slightly smaller icons if needed */
+  }
+
+  #footer .copyright {
+    font-size: 0.8em; /* smaller copyright text */
+  }
+}
+
+/* === Research Themes === */
+#research-themes {
+  text-align: center;
+}
+
+#research-themes header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+#research-themes header p {
+  max-width: 700px;
+  margin: 0 auto 2em;
+}
+
+#research-themes .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+#research-themes article {
+  flex: 0 0 300px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+}
+
+#research-themes .image.featured img {
+  width: 100%;
+  display: block;
+}
+
+#research-themes header h3 {
+  font-size: 1.2rem;
+  margin: 0.5em 0;
+}
+
+#research-themes p {
+  padding: 0 1em 1.5em;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* === General container for each team group === */
+.team-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 2.5em 2em;
+  margin-bottom: 3em;
+}
+
+.team-section header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+  color: rgba(195, 43, 92, 0.95);
+}
+
+/* === Shared grid for students/alumni === */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+/* === Team member card === */
+
+a.team-member-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Remove underline from everything inside, but DO NOT override color */
+a.team-member-link * {
+  text-decoration: none;
+}
+
+.team-member {
+  background: #fdfdff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  flex: 0 1 250px;
+  max-width: 280px;
+  min-height: 480px;
+  padding: 1.2em;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.team-member .profile-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0px solid #002b56;
+  margin-bottom: 1em;
+}
+
+.team-member h3 {
+  margin: 0.5em 0 0.2em;
+  font-size: 1.3rem;
+  color: #002b56;
+}
+
+.team-member h4 {
+  margin: 0.2em 0 0.5em;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.team-member .bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: justify;
+}
+
+.highlight-current {
+  color: #0d2c54; /* Deep blue */
+  font-weight: 600; /* Semi-bold */
+  background-color: #eef3fa; /* Light blue highlight */
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* === PI Section: wider, left aligned === */
+.pi-section .profile-image {
+  width: 300px; /* your new size */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.pi-section:hover .profile-image {
+  transform: scale(1.05);
+}
+
+.pi-section {
+  display: flex;
+  gap: 2em;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5em 2em;
+  flex-wrap: wrap;
+}
+
+.pi-section .profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 0px solid #002b56;
+  object-fit: cover;
+}
+
+.pi-section .pi-details {
+  flex: 1;
+  min-width: 250px;
+}
+
+.pi-section .pi-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.2em;
+  color: #002b56;
+}
+
+.pi-section .pi-details h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8em;
+  color: #555;
+}
+
+.pi-section .pi-details .bio {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .pi-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pi-section .profile-image {
+    display: block;
+    margin: 0 auto 1em auto;
+    width: 160px;
+    height: 160px;
+  }
+
+  .team-member {
+    flex: 1 1 80%;
+    max-width: 100%;
+  }
+
+  .team-member .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* === Publications === */
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 1rem 0;
+  padding-right: 1rem;
+}
+
+.search-container input[type="text"] {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.2);
+}
+
+.search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.search-container button:hover {
+  color: #0077cc;
+}
+
+.pub-section {
+  margin-bottom: 4em;
+  padding: 4em;
+  background: #fdfdff;
+  border-radius: 8px;
+  width: 99%;
+  max-widt: 2600px;
+  margin: 0 auto; /* Centers the section */
+  overflow: visible;
+  box-shadow: 4px 4px 12px 4px rgba(197, 197, 197, 0.08),
+    /* Bottom-right shadow */ -4px 4px 4px 4px rgba(197, 197, 197, 0.08),
+    /* Bottom-left shadow */ 4px -4px 4px 4px rgba(197, 197, 197, 0.08),
+    /* Top-right shadow */ -4px -4px 4px 4px rgba(197, 197, 197, 0.08); /* Top-left shadow */
+}
+
+.pub-section header h2 {
+  font-size: 1.8rem;
+  color: #002b56;
+  margin-bottom: 1em;
+}
+
+.pub-list {
+  padding-left: 2px;
+  list-style-type: decimal; /* Ensure numbers show up */
+}
+
+.pub-list li {
+  margin-bottom: 1.2em;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.pub-list li a {
+  text-decoration: none;
+}
+.pub-list li a:hover {
+  text-decoration: underline;
+}
+
+.pub-list li strong {
+  color: #2c0066;
+}
+
+@media (max-width: 768px) {
+  .pub-section {
+    padding: 1.5em;
+  }
+  .pub-section header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* === Inner Page Hero === */
+.static-hero {
+  height: 50vh; /* or any smaller height you prefer */
+}
+
+.static-hero .slide {
+  object-fit: cover;
+}
+
+/* Override banner-text for inner pages */
+.static-hero + .banner-text {
+  height: 50vh;
+  padding: 80px 10px 10px 220px;
+}
+
+.static-hero + .banner-text h1 {
+  font-size: 36px;
+}
+
+@media (max-width: 768px) {
+  .static-hero {
+    height: 40vh;
+  }
+  .static-hero + .banner-text {
+    height: 40vh;
+    padding: 100px 0 0 100px;
+  }
+  .static-hero + .banner-text h1 {
+    font-size: 20px;
+  }
+}
+
+/* === Gallery Grid === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5em;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item .caption {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 0.5em;
+  color: #333;
+}
+
+/* === Lightbox === */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+#lightbox-caption {
+  text-align: center;
+  color: #ccc;
+  margin: 1em 0;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+/* === Highlights Grid with Wider Cards === */
+.highlights-container {
+  max-width: 1400px; /* Wider than default 1200px */
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+/* Grid layout for two cards per row on large screens */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2.5em; /* More space between cards */
+  margin-top: 2em;
+}
+
+/* Card styles */
+.highlight-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-image {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Taller for wider cards */
+  overflow: hidden;
+}
+
+.highlight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.highlight-date {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #ea3a73;
+  color: #fff;
+  padding: 0.4em 1em;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.highlight-content {
+  padding: 1.5em 2em;
+}
+
+.highlight-content h3 {
+  margin: 0 0 0.6em 0;
+  font-size: 1.4rem;
+  color: #002b56;
+}
+
+.highlight-content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+@media (max-width: 900px) {
+  .highlights-grid {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+
+  .highlight-image {
+    height: 200px;
+  }
+}
+
+/* === Main Research === */
+.main-focus {
+  max-width: 1400px;
+  margin: 3rem auto 2rem;
+  padding: 0 1rem;
+  text-align: justify;
+}
+
+.main-focus h2 {
+  color: #002b56;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.main-focus p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* === Research Area Tiles === */
+.research-areas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.research-tile {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.research-tile h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #002b56;
+}
+
+.research-tile p {
+  margin: 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.content-tile {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  margin: 4rem auto;
+  max-width: 1000px;
+}
+
+.content-tile h2,
+.content-tile h3 {
+  color: #002b56;
+  margin-bottom: 1rem;
+}
+
+.content-tile h3 {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.25rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+  padding: 1rem 1rem 1rem 1.25rem;
+  border-left: 4px solid #002b56;
+  background: #f8f9fb;
+  border-radius: 6px;
+}
+
+.project h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #002b56;
+}
+
+.project p {
+  margin: 0;
+  color: #444;
+  line-height: 1.6;
+  font-size: 0.96rem;
+}
+
+/* === Mobile === */
+@media (max-width: 768px) {
+  .main-focus,
+  .research-areas,
+  .content-tile {
+    padding: 1.5rem;
+  }
+
+  .main-focus h2 {
+    font-size: 1.5rem;
+  }
+
+  .research-tile {
+    padding: 1rem;
+  }
+
+  .content-tile h2 {
+    font-size: 1.5rem;
+  }
+
+  .project h4 {
+    font-size: 1rem;
+  }
+
+  .project p {
+    font-size: 0.9rem;
+  }
+
+  .project {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project h4 {
+    font-size: 1rem;
+  }
+
+  .project p {
+    font-size: 0.9rem;
+  }
+}
+
+/* === Contact Page Grid === */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem 0;
+  align-items: center;
+}
+
+/* Contact Section Wrapper (ensures equal width for both) */
+.contact-section {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Card Styling */
+.contact-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+  margin-top: 0;
+  color: #002b56;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Items */
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #002b56;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-links img,
+.social-links .iconify {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+}
+
+.social-links a:hover img,
+.social-links a:hover .iconify {
+  transform: scale(1.2);
+}
+
+/* Map Styling */
+.map-container {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 1rem;
+  width: 130%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .contact-item {
+    font-size: 0.95rem;
+  }
+}
+
+/* === Loader Styles === */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loader img {
+  width: 150px;
+  height: auto;
+  animation: zoom 5s ease-in-out infinite alternate;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+/* Hide loader when body has loaded class */
+body.loaded #loader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  .wrapper.style1.special .row {
+    flex-direction: column;
+  }
+
+  .wrapper.style1.special .col-4,
+  .wrapper.style1.special .col-8 {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .carousel article {
+    flex: 0 0 80%;
+  }
+
+  #research-themes .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #research-themes article {
+    width: 80%;
+  }
+}
