@@ -5,6 +5,8 @@
     <title>Contact | Climate Dynamics Lab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="main.css" />
+    <!-- Iconify for SVG icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   </head>
   <body>
     <!-- Loader -->
@@ -14,7 +16,9 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-      <img class="logo" src="/images/logo_top.svg" alt="Logo" />
+      <a href="index.html">
+        <img class="logo" src="/images/logo_top.svg" alt="Logo" />
+      </a>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
@@ -45,51 +49,89 @@
         <!-- Left Contact Section -->
         <div class="contact-section">
           <div class="contact-card">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title">Get in Touch!</h2>
 
             <div class="contact-list">
               <div class="contact-item">
-                <div class="contact-label">Email</div>
-                <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  >mailto:sandeep.sukumaran@cas.iitd.ac.in</a
-                >
+                <span
+                  class="iconify"
+                  data-icon="mdi:email"
+                  style="color: #002b56"
+                ></span>
+                <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in"> E-Mail </a>
               </div>
 
               <div class="contact-item">
-                <div class="contact-label">Phone</div>
-                <a href="tel:+ 91-11-2659-1387">+ 91-11-2659-1387</a>
+                <span
+                  class="iconify"
+                  data-icon="mdi:phone"
+                  style="color: #002b56"
+                ></span>
+                <a href="tel:+911126591387">+91-11-2659-1387</a>
               </div>
 
               <div class="contact-item">
-                <div class="contact-label">Follow</div>
+                <span
+                  class="iconify"
+                  data-icon="mdi:account-multiple"
+                  style="color: #002b56"
+                ></span>
                 <div class="social-links">
                   <a
-                    href="https://twitter.com/ClimateLab_IITD"
+                    href="https://github.com/climdl"
                     target="_blank"
-                    rel="noopener"
-                    >Twitter</a
+                    title="GitHub"
                   >
-                  <span>·</span>
+                    <img
+                      src="https://cdn.simpleicons.org/github/002b56"
+                      alt="GitHub"
+                    />
+                  </a>
                   <a
                     href="https://linkedin.com/company/climate-dynamics-lab"
                     target="_blank"
-                    rel="noopener"
-                    >LinkedIn</a
+                    title="LinkedIn"
                   >
+                    <span
+                      class="iconify"
+                      data-icon="simple-icons:linkedin"
+                    ></span>
+                  </a>
+                  <a
+                    href="https://bsky.app/profile/climdl.bsky.social"
+                    target="_blank"
+                    title="Bluesky"
+                  >
+                    <img
+                      src="https://cdn.simpleicons.org/bluesky/002b56"
+                      alt="Bluesky"
+                    />
+                  </a>
+                  <a
+                    href="https://x.com/ClimDL_IITD"
+                    target="_blank"
+                    title="X (formerly Twitter)"
+                  >
+                    <img src="https://cdn.simpleicons.org/x/002b56" alt="X" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Container -->
+        <!-- Right Contact Section -->
         <div class="contact-section">
           <div class="contact-card">
-            <h2 class="section-title">Visit Us</h2>
+            <h2 class="section-title">Come Say Hello!</h2>
 
             <div class="contact-list">
               <div class="contact-item">
-                <div class="contact-label">Address</div>
+                <span
+                  class="iconify"
+                  data-icon="mdi:map-marker"
+                  style="color: #002b56"
+                ></span>
                 <address>
                   Climate Dynamics Lab<br />
                   Centre for Atmospheric Sciences, IIT Delhi<br />
@@ -97,15 +139,13 @@
                 </address>
               </div>
               <div class="contact-item map-item">
-                <div class="contact-label">Location</div>
                 <div class="map-container">
                   <iframe
                     src="https://maps.google.com/maps?q=IIT%20Delhi&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
                     title="Google Map of IIT Delhi"
                     loading="lazy"
                     allowfullscreen
-                  >
-                  </iframe>
+                  ></iframe>
                 </div>
               </div>
             </div>
@@ -113,6 +153,7 @@
         </div>
       </div>
     </main>
+
     <!-- Footer -->
     <footer id="footer">
       <div class="container">
@@ -134,22 +175,78 @@
               Centre for Atmospheric Sciences, IIT Delhi<br />
               Hauz Khas, New Delhi - 110016, India<br />
               <br />
-              <strong>Email:</strong>
-              <br />
-              <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">
-                sandeep.sukumaran@cas.iitd.ac.in
-              </a>
+              <strong>Email:</strong><br />
             </p>
           </div>
-
-          <!-- Social Right -->
           <div class="col-4 col-12-mobile footer-right">
             <ul class="icons">
-              <li><a href="#" class="icon brands fa-twitter"></a></li>
-              <li><a href="#" class="icon brands fa-linkedin-in"></a></li>
-              <li><a href="#" class="icon brands fa-github"></a></li>
-              <li><a href="#" class="icon brands fa-researchgate"></a></li>
-              <li><a href="#" class="icon brands fa-google"></a></li>
+              <li>
+                <a
+                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
+                  title="Email"
+                  style="color: white"
+                >
+                  <span
+                    class="iconify"
+                    data-icon="mdi:email"
+                    data-inline="false"
+                  ></span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://github.com/climdl"
+                  target="_blank"
+                  title="GitHub"
+                >
+                  <img
+                    src="https://cdn.simpleicons.org/github/ffffff"
+                    alt="GitHub"
+                    style="height: 24px; width: 24px"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/climdl"
+                  target="_blank"
+                  title="LinkedIn"
+                  style="color: white"
+                >
+                  <span
+                    class="iconify"
+                    data-icon="simple-icons:linkedin"
+                    data-inline="false"
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://bsky.app/profile/climdl.bsky.social"
+                  target="_blank"
+                  title="Bluesky"
+                >
+                  <img
+                    src="https://cdn.simpleicons.org/bluesky/ffffff"
+                    alt="Bluesky"
+                    style="height: 24px; width: 24px"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/ClimDL_IITD"
+                  target="_blank"
+                  title="X (formerly Twitter)"
+                >
+                  <img
+                    src="https://cdn.simpleicons.org/x/ffffff"
+                    alt="X"
+                    style="height: 24px; width: 24px"
+                  />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
