@@ -582,6 +582,8 @@ body {
   position: relative;
   overflow: hidden;
   padding: 1em 0;
+  max-width: 1200px;  /* or try 1000px, 960px etc. */
+  margin: 0 auto;     /* centers the carousel */
 }
 
 .carousel .reel {
@@ -662,30 +664,32 @@ body {
 .wrapper.style2 {
   background: #002b56;
   color: #fff;
-  padding: 6em 6em 4em 6em; /* slightly reduced side padding for better fit on wider screens */
+  padding: 1em;
   border-radius: 8px;
   text-align: center;
-  width: 100%;
-  box-sizing: border-box; /* ensure padding doesn’t overflow container width */
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .wrapper.style2 h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5em;
+  font-size: 1.8rem;
+  margin-bottom: 0.3em;
 }
 
 .wrapper.style2 p {
-  max-width: 800px;
-  margin: 0 auto 1em auto;
-  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 0.5em auto;
+  line-height: 1.5;
   text-align: justify;
 }
 
 .wrapper.style2 .image.featured img {
   border-radius: 8px;
-  max-width: 100%;
-  margin-bottom: 2em;
+  max-width: 800px;
+  margin-bottom: 1em;
 }
+
 
 .wrapper.style2 footer .button {
   background: #ea3a73;
