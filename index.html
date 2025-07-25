@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>ClimDL | CAS | IIT Delhi</title>
+    <title>Custom Website</title>
     <link rel="stylesheet" href="main.css" />
   </head>
 
@@ -18,13 +18,13 @@
   <body>
     <!-- Loader -->
     <div id="loader">
-      <img src="/images/icon.svg" alt="Climate Dynamics Lab Logo" />
+      <img src="/images/icon.png" alt="Climate Dynamics Lab Logo" />
     </div>
 
     <!-- Your wrapper starts here -->
     <div class="wrapper">
       <nav class="navbar">
-        <img class="logo" src="/images/logo_top.svg" alt="Logo" />
+        <img class="logo" src="/images/logo.png" alt="Logo" />
         <ul>
           <li><a class="active" href="index.html">Home</a></li>
           <li><a href="research.html">Research</a></li>
@@ -41,14 +41,14 @@
         </div>
       </nav>
 
-      <!--  Slideshow background -->
+      <!-- ✅ Slideshow background -->
       <div class="slideshow">
         <img src="/images/bluemarble.png" class="slide active" />
         <img src="/images/earthview.png" class="slide" />
         <img src="/images/darby.jpg" class="slide" />
       </div>
 
-      <!--  Banner on the left, overlaying slideshow -->
+      <!-- ✅ Banner on the left, overlaying slideshow -->
       <div class="banner-text">
         <p>Welcome!</p>
         <h1>Climate Dynamics Lab</h1>
@@ -80,44 +80,58 @@
       </header>
     </section>
 
-    <!-- Main Content -->
-    <main id="main-content">
-      <!-- About PI -->
-      <section class="wrapper style1 special">
-        <div class="container">
-          <header>
-            <h2>Meet Our PI</h2>
-          </header>
-          <div class="row">
-            <div class="col-4 col-12-mobile">
-              <a href="people.html#pi" class="image featured">
-                <img
-                  src="images/prof_sandeep.png"
-                  alt="Prof. Sandeep Sukumaran"
-                />
-              </a>
-            </div>
-            <div class="col-8 col-12-mobile">
-              <h3>Prof. Sandeep Sukumaran</h3>
-              <h4>Associate Professor, CAS, IIT Delhi</h4>
-              <p>
-                Prof. Sandeep is an atmospheric scientist specializing in
-                tropical climate dynamics. He earned his PhD from IIT Kharagpur
-                and held postdoctoral positions at IISc Bangalore, University of
-                Oslo, and NYU Abu Dhabi.
-              </p>
-              <h4>Research Areas:</h4>
-              <ul>
-                <li>Indian summer monsoon dynamics</li>
-                <li>Climate change and monsoon variability</li>
-                <li>AI/ML applications in weather and climate</li>
-              </ul>
-              <br />
-              <a href="people.html#pi" class="button">Full Profile</a>
-            </div>
-          </div>
-        </div>
-      </section>
+<!-- PhD Vacancy Announcement -->
+<section class="phd-announcement">
+  <div class="phd-content">
+    <div class="phd-icon">🎓</div>
+    <div class="phd-text">
+      <h2>PhD Opportunity at Climate Dynamics Lab</h2>
+      <p>
+        We are inviting applications from <strong>motivated PhD aspirants</strong> with a valid
+        <strong>CSIR/UGC Fellowship</strong> to join our research group.
+        
+        If you're passionate about atmospheric science and want to work on real-world challenges,
+        <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">get in touch</a> or explore our work.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<main id="main-content">
+  <!-- About PI -->
+  <section class="pi-section">
+    <div class="pi-card">
+      <div class="pi-image">
+        <a href="people.html#pi">
+          <img
+            src="images/prof_sandeep.png"
+            alt="Prof. Sandeep Sukumaran"
+            class="profile-image"
+          />
+        </a>
+      </div>
+      <div class="pi-content">
+        <h3 class="pi-name">Prof. Sandeep Sukumaran</h3>
+        <h4 class="pi-title">Associate Professor, CAS, IIT Delhi</h4>
+        <p class="pi-bio">
+          Prof. Sandeep is an atmospheric scientist specializing in climate dynamics. 
+          He earned his PhD from IIT Kharagpur and held postdoctoral positions at IISc Bangalore, 
+          University of Oslo, and NYU Abu Dhabi.
+        </p>
+        <h4 class="pi-subheading">Research Areas:</h4>
+        <ul class="pi-list">
+          <li>Climate dynamics</li>
+          <li>Climate change and monsoon variability</li>
+          <li>AI/ML applications in weather and climate</li>
+        </ul>
+        <a href="people.html#pi" class="pi-button">Full Profile</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
 
       <!-- Carousel -->
       <section class="carousel" aria-label="Research Highlights">
@@ -223,7 +237,7 @@
       <section class="wrapper style2">
         <article class="container special">
           <a href="research.html" class="image featured">
-            <img src="images/team.jpeg" alt="Lab Team" />
+            <img src="images/group_pic1.jpg" alt="Lab Team" />
           </a>
           <header>
             <h2>Our Mission</h2>
@@ -324,7 +338,7 @@
           <!-- Logo Left -->
           <div class="col-4 col-12-mobile footer-left">
             <img
-              src="/images/logo_footer.svg"
+              src="/images/logo2.png"
               alt="Climate Dynamics Lab Logo"
               class="footer-logo"
             />
