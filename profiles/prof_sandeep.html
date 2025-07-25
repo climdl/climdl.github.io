@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Sandeep – Climate Dynamics Lab</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Basic Theme Variables */
+    :root {
+      --primary-color: #0d2c54;
+      --secondary-color: #1a508b;
+      --text-color: #34495e;
+      --light-text-color: #7f8c8d;
+      --bg-color: #f8f9fa;
+      --container-bg: #ffffff;
+      --shadow: 0 8px 30px rgba(0, 30, 80, 0.08);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      margin: 0;
+      padding: 20px;
+      color: var(--text-color);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      background: var(--container-bg);
+      padding: 2.5em;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #eaeaea;
+      padding-bottom: 0.4em;
+    }
+
+    h4 {
+      font-weight: 500;
+      color: var(--light-text-color);
+    }
+
+    a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: '• ';
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2em;
+      margin-bottom: 2.5em;
+      background: linear-gradient(135deg, #f0f4f8, #e6e9f0);
+      padding: 2em;
+      border-radius: 12px;
+    }
+
+    .profile-image {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--container-bg);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .social-links a {
+      margin-right: 1em;
+      display: inline-block;
+    }
+
+    .social-links img {
+      width: 32px;
+      height: 32px;
+      opacity: 0.7;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .social-links a:hover img {
+      transform: translateY(-3px);
+      opacity: 1;
+    }
+
+    section {
+      margin-bottom: 3em;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8em;
+    }
+
+    .skills-list li {
+      background: #eef2f7;
+      color: var(--secondary-color);
+      padding: 0.5em 1.2em;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .contact {
+      background: #f0f4f8;
+      padding: 2em;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="profile-header">
+      <img src="images/prof_sandeep.png" alt="Dr. Sandeep" class="profile-image" />
+      <div class="profile-info">
+        <h2>Dr. Sandeep Sukumaran</h2>
+        <h4>Associate Professor, Centre for Atmospheric Sciences, IIT Delhi</h4>
+        <h4>Associate Faculty, Yardi School of Artificial Intelligence</h4>
+        <div class="social-links">
+          <a href="https://web.iitd.ac.in/~san81/" title="WebPage"><img src="icons/webpage.png" alt="WebPage"></a>
+          <a href="https://in.linkedin.com/in/sandeep-sukumaran-7433ab158" title="LinkedIn"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+          <a href="https://scholar.google.co.in/citations?user=KSHzRiQAAAAJ&hl=en" title="Google Scholar"><img src="icons/gs.png" alt="Google Scholar"></a>
+          <a href="https://orcid.org/0000-0002-8213-8331" title="ORCID"><img src="icons/orcid.png" alt="ORCID"></a>
+          <a href="https://www.researchgate.net/profile/Sandeep-Sukumaran" title="Research Gate"><img src="icons/ResearchGate_icon.png" alt="Research Gate"></a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="bio">
+        <h3>About Me</h3>
+        <p>
+          I am an Associate Professor at the Centre for Atmospheric Sciences, IIT Delhi, a position I have held since December 2022. 
+          I joined the Centre as an Assistant Professor in November 2017. I received my M.Sc. in Meteorology from Cochin University of 
+          Science and Technology in 2004 and completed my Ph.D. in 2009 from the Department of Physics and Meteorology at IIT Kharagpur.
+        </p>
+        <p>
+          Between 2009 and 2017, I held postdoctoral research positions at the Indian Institute of Science (IISc), Bangalore; the 
+          University of Oslo, Norway; and New York University Abu Dhabi, UAE.
+        </p>
+      </section>
+
+      <section class="research">
+        <h3>Research Summary</h3>
+        <p>
+          My research focuses on the dynamics of the Indian Summer Monsoon and its response to climate change. I use climate models, 
+          observational data, and datasets from the Coupled Model Inter-comparison Project (CMIP5/6) to analyze monsoon precipitation 
+          and circulation changes. I am also passionate about integrating AI/ML techniques with atmospheric science to enhance 
+          understanding and prediction of weather and climate phenomena.
+        </p>
+      </section>
+
+      <section class="interests">
+        <h3>Areas of Interest</h3>
+        <ul>
+          <li>Indian Summer Monsoon Dynamics</li>
+          <li>Future Climate Projections</li>
+          <li>Climate Modeling (CMIP5/6)</li>
+          <li>AI/ML Applications in Atmospheric Science</li>
+        </ul>
+      </section>
+
+ 
+    </main>
+
+    <footer class="contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">sandeep.sukumaran@cas.iitd.ac.in</a></p>
+      <p>Office: Room 312, Centre for Atmospheric Sciences, Block VI,<br>IIT Delhi, Hauz Khas, New Delhi - 110016, India.</p>
+    </footer>
+    <p style="text-align:center; margin-top: 2em;">
+      <a href="#">⬆ Back to Top</a>
+    </p>
+  </div>
+
+</body>
+</html>
+
