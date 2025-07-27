@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anirudh K M – Climate Dynamics Lab</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary-color: #0d2c54;
+        --secondary-color: #1a508b;
+        --text-color: #34495e;
+        --light-text-color: #7f8c8d;
+        --bg-color: #f8f9fa;
+        --container-bg: #ffffff;
+        --border-color: #e9ecef;
+        --shadow: 0 8px 30px rgba(0, 30, 80, 0.08);
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 20px;
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 2em auto;
+        padding: 2.5em;
+        background-color: var(--container-bg);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+      }
+
+      h1,
+      h2,
+      h4 {
+        font-family: "Poppins", sans-serif;
+        color: var(--primary-color);
+        margin-top: 0;
+      }
+
+      h2 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        margin: 2rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--border-color);
+      }
+
+      h4 {
+        font-size: 1.1rem;
+        color: var(--light-text-color);
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 1em;
+        padding-left: 1.5em;
+        position: relative;
+      }
+
+      li::before {
+        content: "•";
+        color: var(--secondary-color);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      section {
+        margin-bottom: 2.5rem;
+      }
+
+      section p,
+      section li {
+        font-size: 1.1rem;
+      }
+
+      .bio p {
+        text-align: justify;
+      }
+
+      .profile-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2em;
+        margin-bottom: 3em;
+        padding: 2em;
+        background: linear-gradient(135deg, #f0f4f8, #e6e9f0);
+        border-radius: 12px;
+      }
+
+      .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--container-bg);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-info {
+        flex: 1;
+      }
+
+      .social-links a {
+        margin-right: 1em;
+        font-size: 1.4rem;
+        color: var(--secondary-color);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0.8;
+      }
+
+      .social-links a:hover {
+        transform: translateY(-3px);
+        opacity: 1;
+      }
+
+      .highlight-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1.5em;
+        margin-top: 1rem;
+      }
+
+      .highlight-item {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+        transition: transform 0.3s ease;
+      }
+
+      .highlight-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .highlight-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .highlight-item .caption {
+        padding: 1rem;
+      }
+
+      .highlight-item h3 {
+        font-size: 1.1rem;
+        margin: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8em;
+      }
+
+      .skills-list li {
+        background-color: #eef2f7;
+        color: var(--secondary-color);
+        border-radius: 20px;
+        padding: 0.5em 1.2em;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .skills-list li::before {
+        display: none;
+      }
+
+      .contact {
+        text-align: center;
+        padding: 2em;
+        background-color: #f0f4f8;
+        border-radius: 12px;
+        margin-top: 2em;
+      }
+
+      .contact p {
+        margin: 0.5em 0;
+        font-size: 1.05rem;
+      }
+
+      .publication {
+        margin-bottom: 1.5em;
+      }
+
+      .publication a {
+        font-size: 1.1rem;
+        display: block;
+      }
+
+      .authors,
+      .journal {
+        color: var(--light-text-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="profile-header">
+        <img
+          src="images/anirudh.jpg"
+          alt="Portrait of Anirudh K M"
+          class="profile-image"
+        />
+        <div class="profile-info">
+          <h1>Anirudh K M</h1>
+          <h4>PhD Scholar, Climate Dynamics Lab</h4>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/anirudhkm10/"
+              title="LinkedIn"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://scholar.google.com/citations?user=H4mJfyMAAAAJ&hl=en&authuser=1"
+              title="Google Scholar"
+              target="_blank"
+              ><i class="fab fa-google"></i
+            ></a>
+            <a
+              href="https://orcid.org/0009-0001-5250-0029"
+              title="ORCID"
+              target="_blank"
+              ><i class="fab fa-orcid"></i
+            ></a>
+            <a
+              href="https://www.researchgate.net/profile/Anirudh-K-M-2?ev=hdr_xprf"
+              title="ResearchGate"
+              target="_blank"
+              ><i class="fab fa-researchgate"></i
+            ></a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="bio">
+          <h2>About Me</h2>
+          <p>
+            Growing up, I experienced the monsoon not as data, but as a rhythm
+            you could feel—in the air, the soil, and the silence before rain.
+            Today, as a PhD researcher at the Centre for Atmospheric Sciences,
+            IIT Delhi, I study that same monsoon through the lens of machine
+            learning and atmospheric physics.
+          </p>
+          <p>
+            My research focuses on physics-guided neural networks to forecast
+            the Indian Summer Monsoon’s active and break phases. I explore deep
+            learning architectures like transformers and Fourier Neural
+            Operators to model the monsoon’s complex, multi-scale dynamics.
+          </p>
+          <p>
+            A central goal of my work is to better understand interactions
+            between monsoon intraseasonal oscillations and climate drivers like
+            ENSO. By embedding physical constraints into models, I aim to
+            improve accuracy, interpretability, and efficiency—delivering
+            forecasts valuable for agriculture and water planning.
+          </p>
+          <p>
+            Beyond research, I’m drawn to arts, politics, and cinema. I collect
+            books that bridge science, society, and culture. I believe science
+            should be open, collaborative, and serve the common good.
+          </p>
+        </section>
+
+        <section class="research-interests">
+          <h2>Research Interests</h2>
+          <ul>
+            <li>Physics-guided deep learning</li>
+            <li>Indian Summer Monsoon dynamics</li>
+            <li>Uncertainty quantification in ML forecasts</li>
+            <li>Monsoon–ENSO interactions</li>
+            <li>Climate forecasting</li>
+          </ul>
+        </section>
+
+        <section id="research-highlights">
+          <h2>Research Highlights</h2>
+          <div class="highlight-gallery">
+            <article class="highlight-item">
+              <a
+                href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html"
+                target="_blank"
+              >
+                <img
+                  src="images/pankaj_bs.png"
+                  alt="Business Standard article on AI in meteorology"
+                />
+              </a>
+              <div class="caption">
+                <h3>
+                  <a
+                    href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html"
+                    target="_blank"
+                  >
+                    AI transforming meteorological prediction – Business
+                    Standard
+                  </a>
+                </h3>
+              </div>
+            </article>
+
+            <article class="highlight-item">
+              <a
+                href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html"
+                target="_blank"
+              >
+                <img
+                  src="images/pankaj_week.png"
+                  alt="The Week article on IIT Delhi's AI model"
+                />
+              </a>
+              <div class="caption">
+                <h3>
+                  <a
+                    href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html"
+                    target="_blank"
+                  >
+                    IIT AI model improves weather accuracy – The Week (PTI)
+                  </a>
+                </h3>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="publications">
+          <h2>Publications</h2>
+          <div class="publication">
+            <a href="https://doi.org/10.1029/2024JH000504" target="_blank">
+              A skillful prediction of monsoon intraseasonal oscillation using
+              deep learning
+            </a>
+            <div class="authors">
+              Anirudh, K. M., P. Raj, Sandeep, S., H. Kodamana, and C. T.
+              Sabeerali (2025)
+            </div>
+            <div class="journal">JGR: Machine Learning and Computation</div>
+          </div>
+        </section>
+
+        <section class="conferences">
+          <h2>Conference Presentations</h2>
+          <ul>
+            <li>
+              “Anirudh K M, Prasang Raj, Sukumaran Sandeep, Hariprasad Kodamana
+              (2025). Enhancing the prediction of monsoon intraseasonal
+              oscillations: a deep learning approach.” –
+              <span>IWM-8, 2025, IITM Pune, India</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="education">
+          <h2>Education</h2>
+          <ul>
+            <li>Ph.D. in Atmospheric Sciences (Present) – IIT Delhi, India</li>
+            <li>
+              M.Tech in Atmospheric Sciences (2023) – Cochin University of
+              Science and Technology, Kerala
+            </li>
+            <li>
+              B.Tech in Civil Engineering (2020) – School of Engineering, CUSAT,
+              Kerala
+            </li>
+          </ul>
+        </section>
+
+        <section class="skills">
+          <h2>Skills & Tools</h2>
+          <ul class="skills-list">
+            <li>Python</li>
+            <li>PyTorch</li>
+            <li>Climate Data Analysis</li>
+            <li>High-Performance Computing</li>
+            <li>Linux</li>
+          </ul>
+        </section>
+
+        <section class="contact">
+          <h2>Contact</h2>
+          <p>
+            Email:
+            <a href="mailto:mail@cas.iitd.ac.in">mailme@cas.iitd.ac.in</a>
+          </p>
+          <p>
+            Office: Room 410, Centre for Atmospheric Sciences, Block VI,<br />
+            Indian Institute of Technology Delhi, Hauz Khas, New Delhi – 110016,
+            India.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
