@@ -174,18 +174,62 @@ body {
   overflow: hidden;
 }
 
-.slideshow .slide {
+/* Slide container */
+.slide {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  inset: 0; /* Replaces width: 100%; height: 100% */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
-.slideshow .slide.active {
+.slide.active {
   opacity: 1;
 }
+
+/* Slide image */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Removes potential gaps below images */
+}
+
+/* Slide caption */
+.slide figcaption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 70%; /* Consistent with banner-text width */
+  padding: 10px 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(129, 156, 187, 0.3),
+    rgba(99, 18, 44, 0.2)
+  ); /* Matches banner gradient */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* Vendor prefix for compatibility */
+  color: #fff;
+  font: 500 1rem "Roboto", sans-serif; /* Shorthand for font properties */
+  text-align: right;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 2; /* Above images, below potential overlays */
+}
+
+.slide.active figcaption {
+  opacity: 1;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .slide figcaption {
+    max-width: 50%; /* Matches mobile banner-text width */
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+}
+
 
 /* === Banner Text === */
 .banner-text {
@@ -1069,7 +1113,6 @@ a.team-member-link * {
   }
 }
 
-/* === Publications === */
 /* === Publications === */
 .search-container {
   display: flex;
