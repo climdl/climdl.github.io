@@ -210,7 +210,7 @@ body {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px); /* Vendor prefix for compatibility */
   color: #fff;
-  font: 500 1rem "Roboto", sans-serif; /* Shorthand for font properties */
+  font: 500 1.5rem "Roboto", sans-serif; /* Shorthand for font properties */
   text-align: right;
   opacity: 0;
   transition: opacity 1s ease-in-out;
