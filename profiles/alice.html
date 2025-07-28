@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pankaj Lal Sahu - Climate Dynamics Lab</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- General Resets and Body Styles --- */
+        :root {
+            --primary-color: #0d2c54; /* Deep Blue */
+            --secondary-color: #1a508b; /* Lighter Blue for accents */
+            --text-color: #34495e; /* Slate Grey */
+            --light-text-color: #7f8c8d; /* Lighter Grey */
+            --bg-color: #f8f9fa; /* Soft off-white */
+            --container-bg: #ffffff;
+            --border-color: #e9ecef;
+            --shadow: 0 8px 30px rgba(0, 30, 80, 0.08);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 2em auto;
+            padding: 2.5em;
+            background-color: var(--container-bg);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+        
+        /* --- Typography & Links --- */
+        h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+
+        h2 { font-size: 2.5rem; letter-spacing: -1px; }
+        h3 { font-size: 1.75rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.4em; }
+        h4 { margin: 0; font-weight: 500; font-size: 1.1rem; color: var(--light-text-color); }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+            position: relative;
+        }
+        
+        li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block; 
+            position: absolute;
+            left: 0;
+            top: -1px;
+        }
+
+        /* --- Header Section --- */
+        .profile-header {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            align-items: center;
+            gap: 2.5em;
+            margin-bottom: 3em;
+            padding: 2em;
+            background: linear-gradient(135deg, #f0f4f8, #e6e9f0); /* Subtle gradient */
+            border-radius: 12px;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--container-bg);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            flex: 1; /* Allows info to take remaining space */
+        }
+        
+        .social-links {
+            margin-top: 1.2em;
+        }
+        .social-links a {
+            margin-right: 1em;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0.7;
+        }
+        .social-links a:hover img {
+            transform: translateY(-3px);
+            opacity: 1;
+        }
+
+        /* --- Generic Section Styling --- */
+        section {
+            margin-bottom: 3em;
+        }
+
+        .bio p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 1em;
+        }
+        
+        section p,
+section li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+        
+        
+        /* --- Research Highlights (Modern Grid Gallery) --- */
+.highlight-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5em;
+}
+
+.highlight-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-item img {
+  width: 100%;
+  height: 250px; /* control image height */
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.highlight-item:hover img {
+  transform: scale(1.08);
+}
+
+.highlight-item .caption {
+  padding: 1rem;
+}
+
+
+
+        /* --- Skills Section (Tags/Pills) --- */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8em;
+            padding-left: 0;
+        }
+        .skills-list li {
+            padding: 0.5em 1.2em;
+            margin: 0;
+            background-color: #eef2f7;
+            color: var(--secondary-color);
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .skills-list li::before {
+             display: none; /* Remove bullet for skills */
+        }
+
+        /* --- Publications & Conferences --- */
+        .publications li, .conferences li {
+            margin-bottom: 1.5em;
+        }
+        .publications a {
+            display: block; /* Make the title link take full width */
+            font-size: 1.1rem;
+            margin-bottom: 0.2em;
+        }
+        .publications span, .conferences span {
+            font-style: italic;
+            color: var(--light-text-color);
+        }
+        
+.pdf-preview-wrapper {
+    display: block;
+    overflow: hidden;
+    height: 320px; /* 80% of 400px image height */
+    position: relative;
+}
+
+.pdf-preview-wrapper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top; /* <-- ensures the top of image is visible */
+    transform: translateY(0); /* No vertical shift needed anymore */
+    transition: transform 0.5s ease;
+}
+
+.pdf-preview-wrapper:hover img {
+    transform: translateY(-20%); /* Reveals rest on hover */
+}
+
+        /* --- Footer/Contact Section --- */
+        .contact {
+            text-align: center;
+            padding: 2em;
+            background-color: #f0f4f8;
+            border-radius: 12px;
+            margin-top: 2em;
+        }
+        .contact p {
+            margin: 0.5em 0;
+            font-size: 1.05rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="profile-header">
+        <img src="images/Alice.jpg" alt="Alice" class="profile-image" />
+        <div class="profile-info">
+            <h2>Alice Jeeva PJ</h2>
+            <h4>PhD Scholar, Climate Dynamics Lab</h4>
+            <div class="social-links">
+                <a href="www.linkedin.com/in/alice-jeeva/" target="_blank" title="LinkedIn">
+                    <img src="icons/linkedin.png" alt="LinkedIn" />
+                </a>
+               
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bio">
+            <h3>About Me</h3>
+            <p>
+                The Indian Summer Monsoon is a lifeline for over a billion people — yet its variability remains one of the most complex challenges in climate science. 
+            </p>
+            <p>
+                I am a research scholar under the joint supervision of Prof. Sandeep Sukumaran and Prof. Sarvesh Kumar Dubey at the Centre for Atmospheric Sciences, IIT Delhi. My current research focuses on Indian Summer Monsoon variability and scale interaction in climate models. Specifically, I work on understanding the fundamental processes driving variability on subseasonal timescales and investigating how energy is transferred across scales in the climate system. I also explore scale interactions to improve the representation of monsoonal processes in climate models, with the broader goal of enhancing monsoon predictability.
+            </p>
+           
+        </section>
+
+        <section class="research-interests">
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Monsoon dynamics</li>
+                <li>Sub-seasonal variability of monsoon</li>
+                <li>Scale interaction</li>
+            </ul>
+        </section>
+ 
+ <!--
+        <section class="publications">
+            <h3>Publications</h3>
+            <ul>
+                <li>
+                    Sahu, P. L., S. Sandeep, and H. Kodamana (2025)
+                    <a href="https://doi.org/10.1029/2025JH000594" target="_blank">
+                        Evaluating Global Machine Learning Models for Tropical Cyclone Dynamics and Thermodynamics
+                    </a>
+                    <span>JGR: Machine Learning and Computation</span>
+                </li>
+                <li>
+                    Sahu, P. L., S. Pattnaik, and P. Rath (2024)
+                    <a href="https://link.springer.com/article/10.1007/s12524-024-01930-1" target="_blank">
+                        Factors driving intensification of pre-monsoon tropical cyclones over the Bay of Bengal: a comparative study of cyclones fani and 
+                        yaas
+                    </a>
+                    <span>Journal of the Indian Society of Remote Sensing</span>
+                </li>
+                <li>
+                    Sahu, P. L., S. Pattnaik (2024)
+                    <a href="https://link.springer.com/article/10.1007/s00703-024-01036-w" target="_blank">
+                        Investigation about the cause of the intense pre-monsoon cyclonic system over the Bay of Bengal
+                    </a>
+                    <span>Meteorology and Atmospheric Physics</span>
+                </li>
+            </ul>
+        </section>
+        -->
+        
+        <section class="education">
+            <h3>Education</h3>
+            <ul>
+                <li>Ph.D. in Atmospheric Sciences (Present) – IIT Delhi, India</li>
+                <li>M.Tech in Atmospheric Sciences (2022) - Cochin University of Science and Technology, Kerala</li>
+                <li>M.Sc in Space Science and Technology (2020) - St. Albert’s College (Autonomous), Kerala</li>
+                <li>B.Sc in Physics (2018) - Mahatma Gandhi University, Kerala</li>
+            </ul>
+        </section>
+
+        <section class="conferences">
+            <h3>Conference Presentations</h3>
+            <ul>
+                <li>“PJ Alice Jeeva, Sukumaran Sandeep, and Sarvesh Dubey (2025). Dominant Modes of Indian Summer Monsoon Variability over Homogeneous Rainfall Regions” – <span> WMO-IWM8, 2025, IITM Pune, India</span></li>
+                
+            </ul>
+        </section>
+
+        <section class="skills">
+            <h3>Skills & Tools</h3>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>MATLAB</li>
+                <li>GrADS</li>
+                <li>NCL</li>
+            </ul>
+        </section>
+
+
+    </main>
+
+    <footer class="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:asz228434[at]cas.iitd.ac.in">asz228434@cas.iitd.ac.in</a></p>
+        <p>Office: Room 410, Centre for Atmospheric Sciences, Block VI, Indian Institute of Technology Delhi,Hauz Khas, New Delhi-110 016, India.</p>
+    </footer>
+<p style="text-align:center; margin-top: 2em;">
+  <a href="#">⬆ Back to Top</a>
+</p>
+</div>
+
+</body>
+</html>
