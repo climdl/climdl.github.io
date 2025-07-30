@@ -1209,7 +1209,7 @@ a.team-member-link * {
 }
 
 .static-hero .slide {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Override banner-text for inner pages */
