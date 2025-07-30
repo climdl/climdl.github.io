@@ -224,11 +224,42 @@
             margin: 0.5em 0;
             font-size: 1.05rem;
         }
-
+        .back-button {
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          z-index: 999;
+          padding: 0.5em 1em;
+          font-size: 1rem;
+          font-weight: 500;
+          color: var(--secondary-color);
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
+          backdrop-filter: blur(8px); /* frosted glass effect */
+          -webkit-backdrop-filter: blur(8px); /* Safari support */
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+          text-decoration: underline;
+          background: rgba(255, 255, 255, 0.2);
+          color: var(--primary-color);
+        }
+      @media (max-width: 768px) {
+        .back-button {
+          position: static;
+          display: block;
+          margin: 1em 0;
+        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+ 
+  <body>
+    <a href="/people.html" class="back-button">← Back</a>
+    </a>
 <div class="container">
     <header class="profile-header">
         <img src="images/saran.jpeg" alt="Saran Rajendran" class="profile-image" />
