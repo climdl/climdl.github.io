@@ -257,9 +257,16 @@
         background: rgba(255, 255, 255, 0.25); /* keep background */
         color: var(--primary-color);
       }
-
+      @media (max-width: 600px) {
+      .back-button {
+        font-size: 1.1rem;
+        top: 15px;
+        left: 15px;
+      }
+    }
     </style>
   </head>
+ 
   <body>
     <a href="/index.html" class="back-button" title="Back to Home">
   ← Home
