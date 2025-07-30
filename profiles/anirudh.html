@@ -234,9 +234,29 @@
       .journal {
         color: var(--light-text-color);
       }
+      .back-button {
+      display: inline-block;
+      margin: 1em auto 0 0;
+      padding: 0.5em 1em;
+      background-color: var(--secondary-color);
+      color: #fff;
+      font-weight: 500;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+    }
+    
+    .back-button:hover {
+      background-color: var(--primary-color);
+    }
+
     </style>
   </head>
   <body>
+    <a href="index.html" class="back-button">
+  ← Back to Home
+    </a>
     <div class="container">
       <header class="profile-header">
         <img
