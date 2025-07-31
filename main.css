@@ -1338,22 +1338,21 @@ a.team-member-link * {
   color: #bbb;
 }
 
-/* === Highlights Grid with Wider Cards === */
+/* Highlights Grid */
 .highlights-container {
-  max-width: 1400px; /* Wider than default 1200px */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2em;
 }
 
-/* Grid layout for two cards per row on large screens */
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 2.5em; /* More space between cards */
+  grid-template-columns: 1fr;
+  gap: 2.5em;
   margin-top: 2em;
 }
 
-/* Card styles */
+/* Card Styles */
 .highlight-card {
   background: #fff;
   border-radius: 12px;
@@ -1364,7 +1363,8 @@ a.team-member-link * {
   flex-direction: column;
 }
 
-.highlight-card:hover {
+.highlight-card:hover,
+.highlight-card:focus-within {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
@@ -1372,8 +1372,10 @@ a.team-member-link * {
 .highlight-image {
   position: relative;
   width: 100%;
-  height: 300px; /* Taller for wider cards */
+  height: 300px;
   overflow: hidden;
+  background: #f0f0f0;
+  transition: height 0.3s ease;
 }
 
 .highlight-image img {
@@ -1386,7 +1388,7 @@ a.team-member-link * {
 .highlight-date {
   position: absolute;
   top: 16px;
-  left: 16px;
+  right: 16px;
   background: #ea3a73;
   color: #fff;
   padding: 0.4em 1em;
@@ -1412,17 +1414,69 @@ a.team-member-link * {
   color: #444;
 }
 
-@media (max-width: 900px) {
-  .highlights-grid {
-    grid-template-columns: 1fr; /* Stack cards on smaller screens */
-  }
+/* Expandable Card */
+.highlight-content.expandable {
+  cursor: pointer;
+}
 
+.highlight-content .full-content {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 1em;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.highlight-content.expanded .full-content {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.highlight-content .toggle-icon::after {
+  content: " ▼";
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  color: #002b56;
+  transition: transform 0.2s ease;
+}
+
+.highlight-content.expanded .toggle-icon::after {
+  content: " ▲";
+  transform: rotate(180deg);
+}
+
+/* YouTube Embed */
+.youtube-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 1em;
+}
+
+.youtube-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
   .highlight-image {
-    height: 200px;
+    height: 250px;
   }
 }
 
-
+@media (hover: none) {
+  .highlight-card:hover {
+    transform: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+}
 /* === Main Research === */
 .main-focus {
   max-width: 1400px;
