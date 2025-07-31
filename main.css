@@ -1360,6 +1360,7 @@ a.team-member-link * {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
+  text-align: justify;
   flex-direction: column;
 }
 
@@ -1401,6 +1402,7 @@ a.team-member-link * {
   padding: 1.5em 2em;
 }
 
+
 .highlight-content h3 {
   margin: 0 0 0.6em 0;
   font-size: 1.4rem;
@@ -1413,6 +1415,69 @@ a.team-member-link * {
   line-height: 1.6;
   color: #444;
 }
+
+
+
+.highlight-links {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+
+.highlight-links li {
+  margin-bottom: 0.75em;
+}
+
+.highlight-links a {
+  display: inline-block;
+  color: #002b56;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.highlight-links a:hover {
+  color: #ea3a73;
+  border-bottom: 1px solid #002b56;
+}
+
+.highlight-articles {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+}
+
+.highlight-articles li {
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1em;
+}
+
+.highlight-articles li:last-child {
+  border-bottom: none;
+}
+
+.highlight-articles a {
+  font-weight: 600;
+  color: #002b56;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.2em;
+  transition: color 0.2s ease;
+}
+
+.highlight-articles a:hover {
+  color: #ea3a73;
+}
+
+.highlight-articles p {
+  margin-top: 0.5em;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
 
 /* Expandable Card */
 .highlight-content.expandable {
@@ -1428,7 +1493,7 @@ a.team-member-link * {
 }
 
 .highlight-content.expanded .full-content {
-  max-height: 500px;
+  max-height: fit-content;
   opacity: 1;
 }
 
@@ -1436,7 +1501,8 @@ a.team-member-link * {
   content: " ▼";
   font-size: 0.8em;
   margin-left: 0.5em;
-  color: #002b56;
+  margin-bottom: 0.5em;
+  color: #ea3a73;
   transition: transform 0.2s ease;
 }
 
@@ -1477,6 +1543,8 @@ a.team-member-link * {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   }
 }
+
+
 /* === Main Research === */
 .main-focus {
   max-width: 1400px;
