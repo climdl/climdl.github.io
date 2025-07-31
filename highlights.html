@@ -53,7 +53,48 @@
           <div class="highlights-grid">
             <div class="highlight-card">
               <div class="highlight-image">
-                <img src="images/highlight1.jpg" alt="Highlight 1" />
+                <img
+                  src="images/lecture_thumbnail.jpg"
+                  alt="Monsoon Lecture Thumbnail"
+                  loading="lazy"
+                />
+                <div class="highlight-date">November 2024</div>
+              </div>
+              <div class="highlight-content expandable">
+                <h3
+                  class="toggle-icon"
+                  tabindex="0"
+                  role="button"
+                  aria-expanded="false"
+                >
+                  Global ML Weather Models for Monsoon Forecasting
+                </h3>
+                <p>
+                  Sandeep Sukumaran discusses opportunities and challenges in
+                  using global ML weather models for monsoon prediction at
+                  SCDLDS, Ashoka University.
+                </p>
+                <div class="full-content">
+                  <div class="youtube-embed">
+                    <iframe
+                      src="https://www.youtube.com/embed/djXO-zJKeVg"
+                      title="Global ML Weather Prediction Models for Monsoon Forecasting"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-image">
+                <img
+                  src="images/highlight1.jpg"
+                  alt="Lab Grant Announcement"
+                  loading="lazy"
+                />
                 <div class="highlight-date">July 2025</div>
               </div>
               <div class="highlight-content">
@@ -66,7 +107,11 @@
 
             <div class="highlight-card">
               <div class="highlight-image">
-                <img src="images/highlight2.jpg" alt="Highlight 2" />
+                <img
+                  src="images/highlight2.jpg"
+                  alt="International Collaboration"
+                  loading="lazy"
+                />
                 <div class="highlight-date">June 2025</div>
               </div>
               <div class="highlight-content">
@@ -74,10 +119,15 @@
                 <p>Partnering with global universities for monsoon research.</p>
               </div>
             </div>
+
             <div class="highlight-card">
               <div class="highlight-image">
-                <img src="images/highlight04.jpg" alt="Invited Talk" />
-                <span class="highlight-date">Jan 2025</span>
+                <img
+                  src="images/highlight04.jpg"
+                  alt="Invited Talk at International Climate Symposium"
+                  loading="lazy"
+                />
+                <div class="highlight-date">Jan 2025</div>
               </div>
               <div class="highlight-content">
                 <h3>Invited Talk</h3>
@@ -91,7 +141,7 @@
         </div>
       </section>
     </main>
-    
+
     <!-- Footer -->
     <footer id="footer">
       <div class="container">
@@ -113,77 +163,22 @@
               Centre for Atmospheric Sciences, IIT Delhi<br />
               Hauz Khas, New Delhi - 110016, India<br />
               <br />
+              <strong>Email:</strong>
+              <br />
+              <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">
+                sandeep.sukumaran@cas.iitd.ac.in
+              </a>
             </p>
           </div>
+
+          <!-- Social Right -->
           <div class="col-4 col-12-mobile footer-right">
             <ul class="icons">
-              <li>
-                <a
-                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  title="Email"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="mdi:email"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/github/ffffff"
-                    alt="GitHub"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/climdl"
-                  target="_blank"
-                  title="LinkedIn"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://bsky.app/profile/climdl.bsky.social"
-                  target="_blank"
-                  title="Bluesky"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/bluesky/ffffff"
-                    alt="Bluesky"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ClimDL_IITD"
-                  target="_blank"
-                  title="X (formerly Twitter)"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/x/ffffff"
-                    alt="X"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
+              <li><a href="#" class="icon brands fa-twitter"></a></li>
+              <li><a href="#" class="icon brands fa-linkedin-in"></a></li>
+              <li><a href="#" class="icon brands fa-github"></a></li>
+              <li><a href="#" class="icon brands fa-researchgate"></a></li>
+              <li><a href="#" class="icon brands fa-google"></a></li>
             </ul>
           </div>
         </div>
@@ -200,6 +195,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Scripts -->
     <script>
       // Hamburger toggle
@@ -216,67 +212,60 @@
         slides[currentSlide].classList.add("active");
       }, 4000);
 
-      // === Carousel ===
-      const reel = document.querySelector(".carousel .reel");
-      const forward = document.querySelector(".carousel .forward");
-      const backward = document.querySelector(".carousel .backward");
-
-      if (reel && forward && backward) {
-        let scrollX = 0;
-        const cardWidth = 360 + 60;
-
-        forward.addEventListener("click", () => {
-          scrollX -= cardWidth;
-          const maxScroll = -(
-            reel.scrollWidth - reel.parentElement.clientWidth
-          );
-          if (scrollX < maxScroll) scrollX = maxScroll;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-
-        backward.addEventListener("click", () => {
-          scrollX += cardWidth;
-          if (scrollX > 0) scrollX = 0;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-      }
-
       // === Loader ===
       window.addEventListener("load", () => {
         document.body.classList.add("loaded");
       });
 
-      // Simple Lightbox JS
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      const lightboxCaption = document.getElementById("lightbox-caption");
-      const galleryItems = document.querySelectorAll(".gallery-item img");
-      const closeBtn = document.querySelector(".close");
+      // Expandable Highlight Cards
+      document
+        .querySelectorAll(".highlight-content.expandable")
+        .forEach((card) => {
+          const toggle = card.querySelector(".toggle-icon");
+          const toggleCard = (e) => {
+            e.stopPropagation(); // Prevent clicks from bubbling
+            const isExpanded = card.classList.toggle("expanded");
+            card.setAttribute("aria-expanded", isExpanded); // Set on card, not toggle
+            console.log("Toggled card, expanded:", isExpanded); // Debug log
+          };
 
-      galleryItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          lightbox.style.display = "block";
-          lightboxImg.src = item.src;
-          lightboxCaption.textContent = item.alt;
+          // Click event for toggle icon
+          if (toggle) {
+            toggle.addEventListener("click", toggleCard);
+            toggle.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === "Space") {
+                e.preventDefault();
+                toggleCard(e);
+              }
+            });
+          }
+
+          // Click event for entire card (excluding full-content)
+          card.addEventListener("click", (e) => {
+            if (!e.target.closest(".full-content")) {
+              toggleCard(e);
+            }
+          });
+
+          // Keyboard event for card
+          card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === "Space") {
+              e.preventDefault();
+              if (!e.target.closest(".full-content")) {
+                toggleCard(e);
+              }
+            }
+          });
         });
-      });
 
-      closeBtn.addEventListener("click", () => {
-        lightbox.style.display = "none";
-      });
-
-      window.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-          lightbox.style.display = "none";
-        }
-      });
+      // Prevent clicks in full-content from toggling the card
+      document
+        .querySelectorAll(".highlight-content .full-content")
+        .forEach((content) => {
+          content.addEventListener("click", (e) => {
+            e.stopPropagation(); // Stop clicks in full-content from reaching highlight-content
+          });
+        });
     </script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
   </body>
 </html>
