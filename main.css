@@ -622,38 +622,45 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px; /* smaller size */
-  height: 40px;
-  background: rgba(234, 58, 115, 0.8);
+  width: 60px;
+  height: 60px;
+  background: white;
   border-radius: 50%;
-  color: white;
+  color: #ea3a73;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 2rem; /* smaller, cuter icon */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* soft shadow */
+  font-size: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   z-index: 5;
 }
 
 .carousel .forward:hover,
 .carousel .backward:hover {
-  background: rgba(195, 43, 92, 0.9);
-  transform: translateY(-50%) scale(1.1); /* subtle grow on hover */
+  background: #ea3a73;
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.carousel .forward i,
+.carousel .backward i {
+  font-weight: 900;
 }
 
 .carousel .forward {
-  right: 10px;
+  right: -20px;
 }
 
 .carousel .backward {
-  left: 10px;
+  left: -20px;
 }
 
 .carousel .forward::after,
 .carousel .backward::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   height: 0;
@@ -682,15 +689,22 @@ body {
 @media (max-width: 768px) {
   .carousel .forward,
   .carousel .backward {
-    display: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
   }
 
   .carousel article {
-    flex: 0 0 90%; /* slightly more space for mobile */
+    flex: 0 0 90%;
+    min-height: 380px;
+  }
+
+  .carousel .image.featured {
+    height: 180px;
   }
 
   .carousel {
-    padding: 0.5em 0;
+    padding: 1em 0;
   }
 }
 
