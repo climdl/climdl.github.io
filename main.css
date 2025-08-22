@@ -651,6 +651,34 @@ body {
   left: 10px;
 }
 
+.carousel .forward::after,
+.carousel .backward::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.carousel .forward::after {
+  border-left-color: #ea3a73;
+  right: -16px;
+}
+
+.carousel .backward::after {
+  border-right-color: #ea3a73;
+  left: -16px;
+}
+
+.carousel .forward:hover::after {
+  border-left-color: white;
+}
+
+.carousel .backward:hover::after {
+  border-right-color: white;
+}
+
 @media (max-width: 768px) {
   .carousel .forward,
   .carousel .backward {
