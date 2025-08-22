@@ -653,30 +653,32 @@ body {
   color: #444;
   line-height: 1.6;
 }
+
 .carousel .forward,
 .carousel .backward {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 60px;
-  height: 60px;
-  background: white;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
   border-radius: 50%;
   color: #ea3a73;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   z-index: 5;
+  border: 2px solid #ea3a73;
 }
 
 .carousel .forward:hover,
 .carousel .backward:hover {
   background: #ea3a73;
-  color: white;
+  color: #ffffff;
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
@@ -687,47 +689,20 @@ body {
 }
 
 .carousel .forward {
-  right: -20px;
+  right: 10px;
 }
 
 .carousel .backward {
-  left: -20px;
-}
-
-.carousel .forward::after,
-.carousel .backward::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.carousel .forward::after {
-  border-left-color: #ea3a73;
-  right: -16px;
-}
-
-.carousel .backward::after {
-  border-right-color: #ea3a73;
-  left: -16px;
-}
-
-.carousel .forward:hover::after {
-  border-left-color: white;
-}
-
-.carousel .backward:hover::after {
-  border-right-color: white;
+  left: 10px;
 }
 
 @media (max-width: 768px) {
   .carousel .forward,
   .carousel .backward {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    border-width: 1.5px;
   }
 
   .carousel article {
