@@ -575,48 +575,84 @@ body {
 .carousel {
   position: relative;
   overflow: hidden;
-  padding: 1em 0;
-  max-width: 1200px; /* or try 1000px, 960px etc. */
-  margin: 0 auto; /* centers the carousel */
+  padding: 2em 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .carousel .reel {
   display: flex;
   gap: 1.5em;
   padding: 1rem 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.carousel article {
-  background: #e6f0ff; /* light blue box */
-  padding: 1em;
-  border-radius: 10px;
-  flex: 0 0 300px; /* fixed card width */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 500px; /* fixed card height */
-  box-sizing: border-box;
-}
-
-.carousel article:hover {
-  transform: translateY(-5px);
+.carousel .image.featured {
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+  height: 200px;
 }
 
 .carousel .image.featured img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.carousel article:hover .image.featured img {
+  transform: scale(1.05);
+}
+
+.carousel article {
+  background: white;
+  padding: 1.5em;
+  border-radius: 16px;
+  flex: 0 0 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .carousel header {
-  padding: 1em;
+  padding: 1em 0;
   text-align: center;
+}
+
+.carousel header h3 {
+  font-size: 1.3rem;
+  color: #002b56;
+  margin-bottom: 0.5em;
+}
+
+.carousel header h3 a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.carousel header h3 a:hover {
+  color: #ea3a73;
 }
 
 .carousel p {
   padding: 0 1em 1em;
-  text-align: justify; /* force justify */
+  text-align: justify;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
 }
-
 .carousel .forward,
 .carousel .backward {
   position: absolute;
