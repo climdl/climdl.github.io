@@ -225,12 +225,12 @@ body {
 /* === Responsive Adjustments === */
 @media (max-width: 768px) {
   .slide figcaption {
-    max-width: 50%; /* Matches mobile banner-text width */
-    padding: 8px 15px;
-    font-size: 0.85rem;
+    max-width: 100%; /* Full width for consistency */
+    padding: 1rem;
+    font-size: 0.9rem;
+    text-align: center; /* Center text for mobile */
   }
 }
-
 
 /* === Banner Text === */
 .banner-text {
@@ -247,7 +247,6 @@ body {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
   color: white;
   padding: 80px 20px;
   display: flex;
@@ -256,6 +255,7 @@ body {
   text-align: left;
   z-index: 2; /* ensures it overlays slideshow */
 }
+
 .banner-text p {
   font-size: 18px;
   font-weight: 200;
@@ -272,6 +272,7 @@ body {
   font-weight: 500;
   margin-top: 10px;
 }
+
 #intro {
   background: #fdfdff;
   max-width: 1800px;
@@ -280,6 +281,7 @@ body {
   padding: 2em 2em;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
+
 #intro header {
   margin: 0 auto;
   padding: 30px 40px 40px 40px;
@@ -323,20 +325,19 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 60px;
+    padding: 1rem; /* Standardized padding */
     transition: left 0.3s ease;
   }
 
   .navbar ul li {
     width: 100%;
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
+    margin: 0.5rem 0;
+    line-height: normal; /* Reset line-height for mobile */
   }
 
   .navbar ul li a {
-    display: block;
-    width: auto;
+    font-size: 1rem; /* Consistent font size */
+    padding: 0.5rem;
   }
 
   .navbar ul.show {
@@ -344,27 +345,43 @@ body {
   }
 
   .banner-text {
-    position: absolute;
-    width: 50%;
-    height: 100%;
+    width: 100%; /* Full width for mobile */
+    padding: 1rem; /* Standardized padding */
     background: linear-gradient(
       to right,
       rgba(234, 58, 115, 0.3),
       rgba(0, 43, 86, 0.2)
     );
-    padding: 20px 20px 20px 20px;
-    text-align: left;
-    color: white;
+    text-align: center; /* Center text for mobile */
   }
+
   .banner-text p {
-    font-size: 10px;
+    font-size: 0.9rem; /* Consistent mobile font size */
+    margin-bottom: 0.5rem;
   }
+
   .banner-text h1 {
-    font-size: 18px;
+    font-size: 1.5rem; /* Consistent mobile heading size */
+    margin: 0.5rem 0;
   }
 
   .banner-text h2 {
-    font-size: 12px;
+    font-size: 1rem; /* Consistent mobile subheading size */
+    margin: 0.5rem 0;
+  }
+
+  #intro {
+    padding: 1rem; /* Standardized padding */
+    margin: 1rem; /* Consistent margin */
+  }
+
+  #intro h2 {
+    font-size: 1.5rem; /* Consistent mobile heading size */
+  }
+
+  #intro header > p {
+    font-size: 0.9rem; /* Consistent mobile font size */
+    line-height: 1.6; /* Tighter line height */
   }
 }
 
@@ -446,7 +463,6 @@ body {
 }
 
 /* === About PI Section === */
-
 .pi-section {
   padding: 4em 1em;
   gap: 2em;
@@ -456,6 +472,7 @@ body {
   padding: 2.5em;
   align-items: center;
 }
+
 .pi-section:hover {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
@@ -700,23 +717,32 @@ body {
 @media (max-width: 768px) {
   .carousel .forward,
   .carousel .backward {
-    width: 40px;
-    height: 40px;
-    font-size: 1.3rem;
-    border-width: 1.5px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    border-width: 1px;
   }
 
   .carousel article {
-    flex: 0 0 90%;
-    min-height: 380px;
+    flex: 0 0 85%;
+    min-height: 360px;
+    padding: 1rem; /* Standardized padding */
   }
 
   .carousel .image.featured {
-    height: 180px;
+    height: 160px;
   }
 
   .carousel {
-    padding: 1em 0;
+    padding: 1rem; /* Standardized padding */
+  }
+
+  .carousel header h3 {
+    font-size: 1.1rem; /* Consistent mobile heading size */
+  }
+
+  .carousel p {
+    font-size: 0.9rem; /* Consistent mobile font size */
   }
 }
 
@@ -765,21 +791,22 @@ body {
 
 @media (max-width: 768px) {
   .wrapper.style2 {
-    padding: 1.5em 2em 1.5em 2em; /* tighter padding for mobile */
-    border-radius: 0; /* optional: full-width on mobile looks cleaner sometimes */
+    padding: 1rem; /* Standardized padding */
+    border-radius: 8px; /* Keep border radius consistent */
   }
 
   .wrapper.style2 .image.featured img {
-    margin-bottom: 1em; /* smaller gap under image */
+    margin-bottom: 0.5rem; /* Consistent margin */
   }
 
   .wrapper.style2 h2 {
-    margin-top: 0;
-    margin-bottom: 0.5em; /* prevent big space */
+    font-size: 1.5rem; /* Consistent mobile heading size */
+    margin: 0.5rem 0;
   }
 
   .wrapper.style2 p {
-    margin-bottom: 1em;
+    font-size: 0.9rem; /* Consistent mobile font size */
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -858,6 +885,7 @@ body {
   width: 24px;
   display: inline-block;
 }
+
 .iconify[data-icon="logos:linkedin-icon"] svg {
   fill: white !important;
   width: 24px;
@@ -911,27 +939,26 @@ body {
   .footer-top {
     flex-direction: column;
     text-align: center;
+    gap: 1rem; /* Consistent gap */
   }
 
   .footer-left,
   .footer-center,
   .footer-right {
     flex: 1 1 100%;
-    margin-bottom: 1.5em;
-    text-align: center;
+    margin-bottom: 1rem; /* Consistent margin */
   }
 
   .footer-left .footer-logo {
-    width: 160px; /* smaller logo for mobile */
-    height: auto;
+    width: 140px; /* Consistent logo size */
   }
 
   .footer-center h3 {
-    font-size: 1rem; /* reduce heading font */
+    font-size: 1.1rem; /* Consistent mobile heading size */
   }
 
   .footer-center p {
-    font-size: 0.9rem; /* reduce paragraph font */
+    font-size: 0.9rem; /* Consistent mobile font size */
   }
 
   .footer-right .icons {
@@ -939,11 +966,11 @@ body {
   }
 
   .footer-right .icons li a {
-    font-size: 1rem; /* slightly smaller icons if needed */
+    font-size: 1.2rem; /* Consistent icon size */
   }
 
   #footer .copyright {
-    font-size: 0.8em; /* smaller copyright text */
+    font-size: 0.85rem; /* Consistent mobile font size */
   }
 }
 
@@ -994,6 +1021,34 @@ body {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  #research-themes .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #research-themes article {
+    width: 90%; /* Consistent width */
+    padding: 1rem; /* Standardized padding */
+  }
+
+  #research-themes header h2 {
+    font-size: 1.5rem; /* Consistent mobile heading size */
+  }
+
+  #research-themes header p {
+    font-size: 0.9rem; /* Consistent mobile font size */
+  }
+
+  #research-themes header h3 {
+    font-size: 1.1rem; /* Consistent mobile heading size */
+  }
+
+  #research-themes p {
+    font-size: 0.9rem; /* Consistent mobile font size */
+  }
+}
+
 /* === General container for each team group === */
 .team-section {
   background: #fff;
@@ -1018,7 +1073,6 @@ body {
 }
 
 /* === Team member card === */
-
 a.team-member-link {
   text-decoration: none;
   display: inline-block;
@@ -1147,23 +1201,50 @@ a.team-member-link * {
   .pi-section {
     flex-direction: column;
     text-align: center;
+    padding: 1rem; /* Standardized padding */
   }
 
   .pi-section .profile-image {
     display: block;
-    margin: 0 auto 1em auto;
-    width: 160px;
-    height: 160px;
+    margin: 0 auto 1rem auto;
+    width: 140px;
+    height: 140px;
+  }
+
+  .pi-section .pi-details h3 {
+    font-size: 1.5rem; /* Consistent mobile heading size */
+  }
+
+  .pi-section .pi-details h4 {
+    font-size: 1rem; /* Consistent mobile subheading size */
+  }
+
+  .pi-section .pi-details .bio {
+    font-size: 0.9rem; /* Consistent mobile font size */
   }
 
   .team-member {
-    flex: 1 1 80%;
-    max-width: 100%;
+    flex: 1 1 90%;
+    max-width: 90%;
+    padding: 1rem; /* Standardized padding */
+    min-height: 400px; /* Adjusted for mobile */
   }
 
   .team-member .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-member h3 {
+    font-size: 1.1rem; /* Consistent mobile heading size */
+  }
+
+  .team-member h4 {
+    font-size: 0.9rem; /* Consistent mobile subheading size */
+  }
+
+  .team-member .bio {
+    font-size: 0.9rem; /* Consistent mobile font size */
   }
 }
 
@@ -1211,7 +1292,7 @@ a.team-member-link * {
   background: #fdfdff;
   border-radius: 8px;
   width: 99%;
-  max-widt: 2600px;
+  max-width: 2600px;
   margin: 0 auto; /* Centers the section */
   overflow: visible;
   box-shadow: 4px 4px 12px 4px rgba(197, 197, 197, 0.08),
@@ -1240,6 +1321,7 @@ a.team-member-link * {
 .pub-list li a {
   text-decoration: none;
 }
+
 .pub-list li a:hover {
   text-decoration: underline;
 }
@@ -1250,10 +1332,25 @@ a.team-member-link * {
 
 @media (max-width: 768px) {
   .pub-section {
-    padding: 1.5em;
+    padding: 1rem; /* Standardized padding */
   }
+
   .pub-section header h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Consistent mobile heading size */
+  }
+
+  .pub-list li {
+    font-size: 0.9rem; /* Consistent mobile font size */
+  }
+
+  .search-container input[type="text"] {
+    width: 100%; /* Full width for mobile */
+    padding: 0.5rem; /* Consistent padding */
+    font-size: 0.9rem; /* Consistent mobile font size */
+  }
+
+  .search-container button {
+    font-size: 1.2rem; /* Consistent icon size */
   }
 }
 
@@ -1280,12 +1377,16 @@ a.team-member-link * {
   .static-hero {
     height: 40vh;
   }
+
   .static-hero + .banner-text {
     height: 40vh;
-    padding: 100px 0 0 100px;
+    padding: 1rem; /* Standardized padding */
+    width: 100%; /* Consistent width */
+    text-align: center; /* Center text for mobile */
   }
+
   .static-hero + .banner-text h1 {
-    font-size: 20px;
+    font-size: 1.5rem; /* Consistent mobile heading size */
   }
 }
 
@@ -1456,7 +1557,6 @@ a.team-member-link * {
   padding: 1.5em 2em;
 }
 
-
 .highlight-content h3 {
   margin: 0 0 0.6em 0;
   font-size: 1.4rem;
@@ -1469,8 +1569,6 @@ a.team-member-link * {
   line-height: 1.6;
   color: #444;
 }
-
-
 
 .highlight-links {
   list-style: none;
@@ -1531,7 +1629,6 @@ a.team-member-link * {
   color: #444;
   line-height: 1.6;
 }
-
 
 /* Expandable Card */
 .highlight-content.expandable {
@@ -1598,6 +1695,35 @@ a.team-member-link * {
   }
 }
 
+@media (max-width: 768px) {
+  .highlights-container {
+    padding: 1rem; /* Standardized padding */
+  }
+
+  .highlight-card {
+    padding: 1rem; /* Standardized padding */
+  }
+
+  .highlight-image {
+    height: 200px; /* Consistent image height */
+  }
+
+  .highlight-content {
+    padding: 1rem; /* Standardized padding */
+  }
+
+  .highlight-content h3 {
+    font-size: 1.2rem; /* Consistent mobile heading size */
+  }
+
+  .highlight-content p {
+    font-size: 0.9rem; /* Consistent mobile font size */
+  }
+
+  .highlight-articles p {
+    font-size: 0.9rem; /* Consistent mobile font size */
+  }
+}
 
 /* === Main Research === */
 .main-focus {
@@ -1696,44 +1822,55 @@ a.team-member-link * {
   .main-focus,
   .research-areas,
   .content-tile {
-    padding: 1.5rem;
+    padding: 1rem; /* Standardized padding */
+    margin: 1rem; /* Consistent margin */
   }
 
   .main-focus h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Consistent mobile heading size */
+  }
+
+  .main-focus p {
+    font-size: 0.9rem; /* Consistent mobile font size */
   }
 
   .research-tile {
-    padding: 1rem;
+    padding: 1rem; /* Standardized padding */
+  }
+
+  .research-tile h3 {
+    font-size: 1.2rem; /* Consistent mobile heading size */
+  }
+
+  .research-tile p {
+    font-size: 0.9rem; /* Consistent mobile font size */
+  }
+
+  .content-tile {
+    padding: 1rem; /* Standardized padding */
   }
 
   .content-tile h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Consistent mobile heading size */
   }
 
-  .project h4 {
-    font-size: 1rem;
-  }
-
-  .project p {
-    font-size: 0.9rem;
+  .content-tile h3 {
+    font-size: 1.1rem; /* Consistent mobile subheading size */
   }
 
   .project {
-    padding: 0.75rem 1rem;
-    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem; /* Standardized padding */
+    margin-bottom: 1rem; /* Consistent margin */
   }
 
   .project h4 {
-    font-size: 1rem;
+    font-size: 1rem; /* Consistent mobile heading size */
   }
 
   .project p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Consistent mobile font size */
   }
 }
-
-
 
 /* === Contact Page Grid === */
 .contact-grid {
@@ -1819,12 +1956,12 @@ a.team-member-link * {
   border-radius: 10px;
   overflow: hidden;
   margin-top: 1rem;
-  width: 130%;
+  width: 100%; /* Adjusted for mobile */
 }
 
 .map-container iframe {
   width: 100%;
-  height: 250px;
+  height: 200px; /* Consistent height */
   border: none;
   border-radius: 10px;
 }
@@ -1832,15 +1969,24 @@ a.team-member-link * {
 /* Responsive */
 @media (max-width: 768px) {
   .contact-card {
-    padding: 1.5rem;
+    padding: 1rem; /* Standardized padding */
   }
 
   .section-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem; /* Consistent mobile heading size */
   }
 
   .contact-item {
-    font-size: 0.95rem;
+    font-size: 0.9rem; /* Consistent mobile font size */
+    margin-bottom: 1rem; /* Consistent margin */
+  }
+
+  .map-container {
+    width: 100%; /* Ensure full width */
+  }
+
+  .map-container iframe {
+    height: 180px; /* Consistent height */
   }
 }
 
@@ -1888,10 +2034,11 @@ body.loaded #loader {
   .wrapper.style1.special .col-8 {
     flex: 1 1 100%;
     text-align: center;
+    padding: 1rem; /* Standardized padding */
   }
 
   .carousel article {
-    flex: 0 0 80%;
+    flex: 0 0 85%; /* Consistent width */
   }
 
   #research-themes .row {
@@ -1900,6 +2047,6 @@ body.loaded #loader {
   }
 
   #research-themes article {
-    width: 80%;
+    width: 90%; /* Consistent width */
   }
 }
