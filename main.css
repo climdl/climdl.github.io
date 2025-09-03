@@ -1209,6 +1209,7 @@ a.team-member-link * {
   width: 95%;
   margin: 2em auto;
   overflow: visible;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pi-section:hover {
