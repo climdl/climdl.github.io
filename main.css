@@ -732,7 +732,7 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -1109,7 +1109,9 @@ body {
   }
 }
 
-/* === General container for each team group === */
+/* === People === */
+
+/* === General Container for Each Team Group === */
 .team-section {
   background: #fff;
   border-radius: 12px;
@@ -1124,7 +1126,7 @@ body {
   color: rgba(195, 43, 92, 0.95);
 }
 
-/* === Shared grid for students/alumni === */
+/* === Shared Grid for Students/Alumni === */
 .team-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1132,8 +1134,7 @@ body {
   justify-content: center;
 }
 
-/* === Team member card === */
-
+/* === Team Member Card Base Styles === */
 a.team-member-link {
   text-decoration: none;
   display: inline-block;
@@ -1143,7 +1144,6 @@ a.team-member-link * {
   text-decoration: none;
 }
 
-/* === Team member card === */
 .team-member {
   background: #fdfdff;
   border-radius: 10px;
@@ -1196,8 +1196,122 @@ a.team-member-link * {
   text-align: justify;
 }
 
-/* Responsive: Mobile */
+/* === PI Section === */
+.pi-section {
+  display: flex;
+  gap: 2.5em;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5em 2em;
+  max-width: 1200px;
+  width: 95%;
+  margin: 2em auto;
+  overflow: visible;
+}
+
+.pi-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pi-section img.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f8ff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pi-section img.profile-image:hover {
+  transform: scale(1.05); /* Fixed: was 1.01 */
+}
+
+.pi-details h3 {
+  font-size: 2rem;
+  margin: 0 0 0.3em 0;
+  color: #002b56;
+  font-weight: 700;
+}
+
+.pi-details h4 {
+  font-size: 1.15rem;
+  color: #555;
+  margin: 0 0 0.8em 0;
+  font-style: italic;
+}
+
+.pi-details .bio {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+.pi-button {
+  display: inline-block;
+  padding: 0.7em 1.4em;
+  background-color: #0051a3;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 81, 163, 0.2);
+  transition: all 0.3s ease; /* Added */
+}
+
+.pi-button:hover {
+  background-color: #003f82;
+  box-shadow: 0 6px 14px rgba(0, 81, 163, 0.3);
+  transform: translateY(-2px); /* Subtle lift */
+}
+
+/* === Highlight Current Role === */
+.highlight-current {
+  color: #0d2c54;
+  font-weight: 600;
+  background-color: #eef3fa;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* === Responsive Adjustments === */
 @media (max-width: 768px) {
+  .pi-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+  }
+
+  .pi-section img.profile-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .pi-details h3 {
+    font-size: 1.8rem;
+  }
+
+  .pi-details h4 {
+    font-size: 1rem;
+  }
+
+  .pi-details .bio {
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .team-member {
     flex: 1 1 80%;
     max-width: 100%;
@@ -1206,128 +1320,6 @@ a.team-member-link * {
   .team-member .profile-image {
     width: 100px;
     height: 100px;
-  }
-}
-.highlight-current {
-  color: #0d2c54; /* Deep blue */
-  font-weight: 600; /* Semi-bold */
-  background-color: #eef3fa; /* Light blue highlight */
-  padding: 2px 6px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-top: 4px;
-}
-
-/* === PI Section === */
-.pi-section {
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 2.5em 2em;
-  max-width: 1200px;
-  margin: 4em auto;
-}
-
-.pi-image {
-  flex-shrink: 0;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #f0f8ff;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.pi-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.pi-image img:hover {
-  transform: scale(1.05);
-}
-
-.pi-content {
-  flex: 1;
-  text-align: left;
-}
-
-.pi-name {
-  font-size: 1.8rem;
-  margin: 0 0 0.4em 0;
-  color: #002b56;
-  font-weight: 700;
-}
-
-.pi-title {
-  font-size: 1.1rem;
-  color: #555;
-  margin: 0 0 0.8em 0;
-  font-style: italic;
-}
-
-.pi-bio {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 1em;
-  text-align: justify;
-}
-
-.pi-subheading {
-  font-size: 1.1rem;
-  color: #1e1e1e;
-  font-weight: 600;
-  margin: 1.5em 0 0.6em 0;
-}
-
-.pi-list {
-  list-style: disc;
-  margin: 0 0 1em 1.5em;
-  padding: 0;
-  color: #3a3a3a;
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-.pi-button {
-  display: inline-block;
-  padding: 0.7em 1.4em;
-  background-color: #0051a3;
-  color: #f9f9fc;
-  border: none;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 81, 163, 0.2);
-  transition: all 0.3s ease;
-}
-
-.pi-button:hover {
-  background-color: #003f82;
-  box-shadow: 0 6px 14px rgba(0, 81, 163, 0.3);
-}
-
-/* Responsive: Stack on mobile */
-@media (max-width: 768px) {
-  .pi-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 2em;
-    gap: 1.5rem;
-  }
-
-  .pi-image {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto;
   }
 }
 
@@ -1829,6 +1821,7 @@ a.team-member-link * {
   padding-bottom: 0.25rem;
 }
 
+/* === Project Status Styling === */
 .project {
   margin-bottom: 2rem;
   padding: 1rem 1rem 1rem 1.25rem;
@@ -1837,17 +1830,14 @@ a.team-member-link * {
   border-radius: 6px;
 }
 
-.project h4 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-  color: #002b56;
+/* Ongoing Projects */
+.project.ongoing {
+  border-left-color: #2e8b57;
 }
 
-.project p {
-  margin: 0;
-  color: #444;
-  line-height: 1.6;
-  font-size: 0.96rem;
+/* Optional: Completed */
+.project.completed {
+  border-left-color: #ea3a72b4;
 }
 
 /* === Mobile === */
