@@ -7,10 +7,12 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  width: 100%;
+  margin: 0;
 }
 
 .wrapper {
@@ -56,7 +58,6 @@ body {
   vertical-align: middle;
 }
 
-/* Adjust icon size in Contact Us */
 .contact-list a .iconify {
   height: 20px !important;
   width: 20px !important;
@@ -1550,10 +1551,9 @@ body.loaded #loader {
   visibility: hidden;
 }
 
-/* === Mobile Styles (Replicating Contact Page) === */
+/* === Mobile Styles (Replicating contact.html) === */
 @media only screen and (max-width: 768px) {
-  /* Force mobile styles with high specificity */
-  html body {
+  html, body {
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
@@ -1631,6 +1631,21 @@ body.loaded #loader {
   html body .banner-text h2 {
     font-size: 1rem !important;
     margin: 0.5rem 0 !important;
+  }
+
+  html body .static-hero {
+    height: 40vh !important;
+  }
+
+  html body .static-hero + .banner-text {
+    height: 40vh !important;
+    padding: 1rem !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  html body .static-hero + .banner-text h1 {
+    font-size: 1.5rem !important;
   }
 
   html body #intro {
@@ -1831,21 +1846,6 @@ body.loaded #loader {
     font-size: 1.2rem !important;
   }
 
-  html body .static-hero {
-    height: 40vh !important;
-  }
-
-  html body .static-hero + .banner-text {
-    height: 40vh !important;
-    padding: 1rem !important;
-    width: 100% !important;
-    text-align: center !important;
-  }
-
-  html body .static-hero + .banner-text h1 {
-    font-size: 1.5rem !important;
-  }
-
   html body .highlights-container {
     padding: 1rem !important;
   }
@@ -1929,6 +1929,11 @@ body.loaded #loader {
   html body .contact-grid {
     gap: 1rem !important;
     margin: 1rem 0 !important;
+  }
+
+  html body .contact-section {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   html body .contact-card {
