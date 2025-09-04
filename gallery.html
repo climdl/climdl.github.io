@@ -22,7 +22,7 @@
         <li><a href="research.html">Research</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a class="active" href>Gallery</a></li>
+        <li><a class="active" href="gallery.html">Gallery</a></li>
         <li><a href="highlights.html">Highlights</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -35,7 +35,7 @@
 
     <!-- Static Hero -->
     <div class="slideshow static-hero">
-      <img src="/images/img2.jpg" alt="People Hero" class="slide active" />
+      <img src="/images/img2.jpg" alt="Gallery Hero" class="slide active" />
     </div>
     <div class="banner-text static-banner">
       <h1>Gallery</h1>
@@ -53,7 +53,7 @@
           </header>
 
           <div class="gallery-grid">
-            <!-- Mock images for testing -->
+            <!-- Gallery Items -->
             <div class="gallery-item">
               <img
                 src="images/Mittal_chair_Aug.jpeg"
@@ -67,7 +67,7 @@
             <div class="gallery-item">
               <img
                 src="images/Lunch_Apr25.jpeg"
-                alt="Team Lunch Apr25"
+                alt="Team Lunch April 2025"
               />
               <div class="caption">
                 Team Lunch April 2025
@@ -75,11 +75,15 @@
               </div>
             </div>
             <div class="gallery-item">
-              <img src="images/Dr. varunesh_Apr24.jpeg" alt="Varunesh's Farewell" />
-              <div class="caption">Varunesh defended his PhD thesis</div>
-              <div class="date">April 2024</div>
+              <img
+                src="images/Dr. varunesh_Apr24.jpeg"
+                alt="Varunesh defended his PhD thesis"
+              />
+              <div class="caption">
+                Varunesh defended his PhD thesis
+                <div class="date">April 2024</div>
+              </div>
             </div>
-            
             <div class="gallery-item">
               <img
                 src="images/rahul_defence.jpg"
@@ -91,23 +95,25 @@
               </div>
             </div>
             <div class="gallery-item">
-              <img src="images/Sai'aFarewell_Mar24.jpeg" alt="Sai's Farewell" />
+              <img
+                src="images/Sai'aFarewell_Mar24.jpeg"
+                alt="Sai's Farewell"
+              />
               <div class="caption">
                 Sai's Farewell
                 <div class="date">March 2024</div>
               </div>
             </div>
             <div class="gallery-item">
-              <img src="images/team_lunch.jpeg" alt="Team Lunch 2024" />
+              <img
+                src="images/team_lunch.jpeg"
+                alt="Team Lunch 2024"
+              />
               <div class="caption">
                 Team Lunch 2024
                 <div class="date">May 2024</div>
               </div>
             </div>
-<!--             <div class="gallery-item">
-              <img src="images/pic04.jpg" alt="Data Analysis Workshop" />
-              <div class="caption">Data Analysis Workshop</div>
-            </div> -->
           </div>
         </div>
       </section>
@@ -121,6 +127,7 @@
       <img class="lightbox-content" id="lightbox-img" alt="Expanded view" />
       <div id="lightbox-caption"></div>
     </div>
+
     <!-- Footer -->
     <footer id="footer">
       <div class="container">
@@ -144,6 +151,8 @@
               <br />
             </p>
           </div>
+
+          <!-- Social Icons Right -->
           <div class="col-4 col-12-mobile footer-right">
             <ul class="icons">
               <li>
@@ -152,20 +161,11 @@
                   title="Email"
                   style="color: white"
                 >
-                  <span
-                    class="iconify"
-                    data-icon="mdi:email"
-                    data-inline="false"
-                  ></span>
+                  <span class="iconify" data-icon="mdi:email"></span>
                 </a>
               </li>
-
               <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
+                <a href="https://github.com/climdl" target="_blank" title="GitHub">
                   <img
                     src="https://cdn.simpleicons.org/github/ffffff"
                     alt="GitHub"
@@ -180,11 +180,7 @@
                   title="LinkedIn"
                   style="color: white"
                 >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                    data-inline="false"
-                  ></span>
+                  <span class="iconify" data-icon="simple-icons:linkedin"></span>
                 </a>
               </li>
               <li>
@@ -239,45 +235,18 @@
       // === Slideshow ===
       const slides = document.querySelectorAll(".slideshow .slide");
       let currentSlide = 0;
-
       setInterval(() => {
         slides[currentSlide].classList.remove("active");
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add("active");
       }, 4000);
 
-      // === Carousel ===
-      const reel = document.querySelector(".carousel .reel");
-      const forward = document.querySelector(".carousel .forward");
-      const backward = document.querySelector(".carousel .backward");
-
-      if (reel && forward && backward) {
-        let scrollX = 0;
-        const cardWidth = 360 + 60;
-
-        forward.addEventListener("click", () => {
-          scrollX -= cardWidth;
-          const maxScroll = -(
-            reel.scrollWidth - reel.parentElement.clientWidth
-          );
-          if (scrollX < maxScroll) scrollX = maxScroll;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-
-        backward.addEventListener("click", () => {
-          scrollX += cardWidth;
-          if (scrollX > 0) scrollX = 0;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-      }
-
       // === Loader ===
       window.addEventListener("load", () => {
         document.body.classList.add("loaded");
       });
 
-      // Simple Lightbox JS
-      // === Simple Lightbox with Navigation ===
+      // === Lightbox with Navigation ===
       const lightbox = document.getElementById("lightbox");
       const lightboxImg = document.getElementById("lightbox-img");
       const lightboxCaption = document.getElementById("lightbox-caption");
@@ -285,45 +254,43 @@
       const closeBtn = document.querySelector(".close");
       const prevBtn = document.querySelector(".prev");
       const nextBtn = document.querySelector(".next");
-
       let currentIndex;
 
-      // Open lightbox with selected image
+      // Open lightbox
       galleryItems.forEach((item, index) => {
         item.addEventListener("click", () => {
           currentIndex = index;
           updateLightbox(index);
           lightbox.style.display = "block";
+          document.body.style.overflow = "hidden"; // Prevent background scroll
         });
       });
 
       // Update lightbox content
       function updateLightbox(index) {
         const img = galleryItems[index];
+        const captionDiv = img.closest(".gallery-item").querySelector(".caption");
         lightboxImg.src = img.src;
-        lightboxCaption.textContent = img.alt;
+        lightboxCaption.textContent = captionDiv.textContent.trim();
       }
 
       // Close lightbox
-      closeBtn.addEventListener("click", () => {
+      function closeLightbox() {
         lightbox.style.display = "none";
-      });
-
+        document.body.style.overflow = ""; // Re-enable scroll
+      }
+      closeBtn.addEventListener("click", closeLightbox);
       window.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-          lightbox.style.display = "none";
-        }
+        if (e.target === lightbox) closeLightbox();
       });
 
-      // Navigation: Previous
+      // Navigation
       prevBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        currentIndex =
-          (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
         updateLightbox(currentIndex);
       });
 
-      // Navigation: Next
       nextBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         currentIndex = (currentIndex + 1) % galleryItems.length;
@@ -333,13 +300,9 @@
       // Keyboard navigation
       document.addEventListener("keydown", (e) => {
         if (lightbox.style.display === "block") {
-          if (e.key === "ArrowLeft") {
-            prevBtn.click();
-          } else if (e.key === "ArrowRight") {
-            nextBtn.click();
-          } else if (e.key === "Escape") {
-            closeBtn.click();
-          }
+          if (e.key === "ArrowLeft") prevBtn.click();
+          else if (e.key === "ArrowRight") nextBtn.click();
+          else if (e.key === "Escape") closeBtn.click();
         }
       });
     </script>
