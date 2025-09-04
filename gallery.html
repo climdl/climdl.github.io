@@ -35,7 +35,7 @@
 
     <!-- Static Hero -->
     <div class="slideshow static-hero">
-      <img src="/images/pic5.png" alt="People Hero" class="slide active" />
+      <img src="/images/img2.jpg" alt="People Hero" class="slide active" />
     </div>
     <div class="banner-text static-banner">
       <h1>Gallery</h1>
@@ -55,22 +55,27 @@
           <div class="gallery-grid">
             <!-- Mock images for testing -->
             <div class="gallery-item">
-              <img src="images/rahul_defence.jpg" alt="Rahul defended his PhD thesis" />
-              <div class="caption">Rahul defended his PhD thesis
-              <div class="date">July 2024</div>
+              <img
+                src="images/rahul_defence.jpg"
+                alt="Rahul defended his PhD thesis"
+              />
+              <div class="caption">
+                Rahul defended his PhD thesis
+                <div class="date">July 2024</div>
               </div>
             </div>
             <div class="gallery-item">
               <img src="images/pic02.jpg" alt="Monsoon Conference 2024" />
               <div class="caption">
-               Monsoon Conference 2024
-               <div class="date">June 2024</div>
+                Monsoon Conference 2024
+                <div class="date">June 2024</div>
               </div>
             </div>
             <div class="gallery-item">
               <img src="images/team_lunch.jpeg" alt="Team Lunch 2024" />
-              <div class="caption">Team Lunch 2024
-              <div class="date">May 2024</div>
+              <div class="caption">
+                Team Lunch 2024
+                <div class="date">May 2024</div>
               </div>
             </div>
             <div class="gallery-item">
@@ -93,6 +98,8 @@
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
       <span class="close">&times;</span>
+      <button class="nav-btn prev"><</button>
+      <button class="nav-btn next">></button>
       <img class="lightbox-content" id="lightbox-img" alt="Expanded view" />
       <div id="lightbox-caption"></div>
     </div>
@@ -252,20 +259,34 @@
       });
 
       // Simple Lightbox JS
+      // === Simple Lightbox with Navigation ===
       const lightbox = document.getElementById("lightbox");
       const lightboxImg = document.getElementById("lightbox-img");
       const lightboxCaption = document.getElementById("lightbox-caption");
       const galleryItems = document.querySelectorAll(".gallery-item img");
       const closeBtn = document.querySelector(".close");
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
 
-      galleryItems.forEach((item) => {
+      let currentIndex;
+
+      // Open lightbox with selected image
+      galleryItems.forEach((item, index) => {
         item.addEventListener("click", () => {
+          currentIndex = index;
+          updateLightbox(index);
           lightbox.style.display = "block";
-          lightboxImg.src = item.src;
-          lightboxCaption.textContent = item.alt;
         });
       });
 
+      // Update lightbox content
+      function updateLightbox(index) {
+        const img = galleryItems[index];
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = img.alt;
+      }
+
+      // Close lightbox
       closeBtn.addEventListener("click", () => {
         lightbox.style.display = "none";
       });
@@ -273,6 +294,34 @@
       window.addEventListener("click", (e) => {
         if (e.target === lightbox) {
           lightbox.style.display = "none";
+        }
+      });
+
+      // Navigation: Previous
+      prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex =
+          (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        updateLightbox(currentIndex);
+      });
+
+      // Navigation: Next
+      nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        updateLightbox(currentIndex);
+      });
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (lightbox.style.display === "block") {
+          if (e.key === "ArrowLeft") {
+            prevBtn.click();
+          } else if (e.key === "ArrowRight") {
+            nextBtn.click();
+          } else if (e.key === "Escape") {
+            closeBtn.click();
+          }
         }
       });
     </script>
