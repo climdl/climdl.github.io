@@ -1041,7 +1041,7 @@ body {
 
 /* Fixed image container */
 #research-themes .image.featured {
-  width: 100%;
+  width: 1400px;
   height: 200px;
   overflow: hidden;
   background: #f5f7fa;
