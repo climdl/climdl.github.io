@@ -44,21 +44,25 @@
     <!-- Main Content -->
     <main id="main-content">
           <!-- Journal Articles Section -->
-          <section class="pub-section">
-            <div class="pub-wrapper">
-              <div class="search-container">
-                <input
-                  type="text"
-                  id="searchInput"
-                  placeholder="Search publications..."
-                  onkeyup="filterPublications()"
-                />
-                <button onclick="clearSearch()" title="Clear search">
-                  <span class="iconify" data-icon="mdi:close-circle-outline"></span>
-                </button>
-              </div>
-            <header><h2>Journal Articles</h2></header>
-            <o1 class="pub-list">
+        <section class="pub-section">
+          <div class="pub-header">
+            <h2>Journal Articles</h2>
+            <div class="search-container">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search publications..."
+                onkeyup="filterPublications()"
+              />
+              <button type="button" class="search-icon-btn" disabled>
+                <span class="iconify" data-icon="mdi:magnify"></span>
+              </button>
+              <button type="button" class="clear-btn" onclick="clearSearch()" title="Clear search">
+                <span class="iconify" data-icon="mdi:close-circle-outline"></span>
+              </button>
+            </div>
+          </div>
+          <ol class="pub-list">
               <o1>
                 <li><strong> Chandra, V., Sandeep, S.</strong>, and K. M. R. Hunt (2025) <a href="https://doi.org/10.1002/asl.123456">Weakening of western disturbances in response to polar sea ice melt in climate model simulations</a>, Atmospheric Science Letters (submitted)</li>
                 <li><strong> Saran, R. and Sandeep, S.</strong> (2025) <a href="https://doi.org/10.1088/2515-7620/ad1234">Increasing Uncertainty in Large Flood and Drought Projections over Central India</a>, Environmental Research Communications (under revision)</li>
@@ -296,6 +300,7 @@ function clearSearch() {
     </script>
   </body>
 </html>
+
 
 
 
