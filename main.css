@@ -1414,38 +1414,73 @@ a.team-member-link * {
   }
 }
 
-/* === Inner Page Hero === */
+/* === Static Hero for Inner Pages === */
 .static-hero {
-  height: 50vh; /* or any smaller height you prefer */
+  width: 100%;
+  height: 50vh;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Optional: Subtle gradient overlay for readability */
+.static-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 43, 86, 0.2),
+    rgba(234, 58, 115, 0.1)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure the image fills the hero */
 .static-hero .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  opacity: 1;
+  z-index: 0;
 }
 
-/* Override banner-text for inner pages */
+/* === Banner Text (NO POSITION CHANGES) === */
 .static-hero + .banner-text {
   height: 50vh;
-  padding: 80px 10px 10px 220px;
+  padding: 80px 10px 10px 220px; /* unchanged — preserves your layout */
 }
 
 .static-hero + .banner-text h1 {
   font-size: 36px;
 }
 
+/* === Responsive: Keep text layout consistent === */
 @media (max-width: 768px) {
   .static-hero {
     height: 40vh;
+    min-height: 250px;
   }
+
   .static-hero + .banner-text {
     height: 40vh;
-    padding: 100px 0 0 100px;
+    padding: 100px 0 0 100px; /* Your original values preserved */
   }
+
   .static-hero + .banner-text h1 {
     font-size: 20px;
   }
 }
-
 /* === Gallery Grid === */
 .gallery-grid {
   display: grid;
