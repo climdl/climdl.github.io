@@ -2037,10 +2037,10 @@ input:not(:placeholder-shown) ~ .clear-btn {
 
 /* Card Styling */
 .contact-card {
-  background: #fff;
+  background: #fff5f9d1;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
