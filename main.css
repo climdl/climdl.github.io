@@ -255,10 +255,6 @@ body {
   transition: transform 0.5s ease;
 }
 
-.banner-text:hover {
-  transform: translateX(10px);
-}
-
 .banner-text p {
   font-size: 1.2rem;
   font-weight: 300;
@@ -356,7 +352,7 @@ body {
 
 .phd-text {
   flex: 1;
-  text-align: left;
+  text-align: justify;
 }
 
 .phd-text h2 {
@@ -945,6 +941,10 @@ body {
     font-size: 1rem;
   }
 
+  .guide-content {
+    text-align: justify;
+  }
+
   .menu-toggle {
     display: flex;
   }
@@ -974,7 +974,6 @@ body {
 
   .guide-section {
     flex-direction: column;
-    text-align: center;
     padding: 2em;
     gap: 1.5rem;
   }
@@ -1032,7 +1031,6 @@ body {
 
   .footer-top {
     flex-direction: column;
-    text-align: center;
   }
 
   .footer-left,
@@ -1040,7 +1038,6 @@ body {
   .footer-right {
     flex: 1 1 100%;
     margin-bottom: 1.5em;
-    text-align: center;
   }
 
   .footer-left .footer-logo {
