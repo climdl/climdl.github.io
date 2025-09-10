@@ -126,6 +126,10 @@ body {
   transition: color 0.3s ease;
 }
 
+.navbar ul li a:focus {
+  outline: none;
+}
+
 .navbar ul li::after {
   content: "";
   position: absolute;
