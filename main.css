@@ -1890,73 +1890,87 @@ input:not(:placeholder-shown) ~ .clear-btn {
 
 /* === Main Research === */
 .main-focus {
-  max-width: 1400px;
-  margin: 3rem auto 2rem;
-  padding: 0 1rem;
-  text-align: justify;
+  max-width: 1200px;
+  margin: 3.5rem auto 3rem;
+  padding: 0 1.5rem;
+  text-align: justify; /* Changed from justify for readability */
 }
 
 .main-focus h2 {
   color: #002b56;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 1.25rem;
+  font-weight: 700;
 }
 
 .main-focus p {
-  line-height: 1.6;
   color: #333;
-  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
 }
 
 /* === Research Area Tiles === */
 .research-areas {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
   max-width: 1200px;
-  margin: 0 auto 3rem;
-  padding: 0 1rem;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
 }
 
 .research-tile {
-  background: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.research-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .research-tile h3 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
   color: #002b56;
+  font-size: 1.4rem;
+  margin: 0 0 0.75rem;
+  font-weight: 600;
 }
 
 .research-tile p {
-  margin: 0;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
 }
 
+/* === Content Tile (Projects) === */
 .content-tile {
-  background: #fff;
+  background: #ffffff;
   padding: 2rem 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   margin: 4rem auto;
   max-width: 1000px;
 }
 
-.content-tile h2,
-.content-tile h3 {
+.content-tile h2 {
   color: #002b56;
-  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .content-tile h3 {
-  margin-top: 2.5rem;
-  font-size: 1.25rem;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.25rem;
+  color: #002b56;
+  font-size: 1.3rem;
+  margin: 2rem 0 0.75rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 /* === Project Status Styling === */
@@ -1997,22 +2011,6 @@ input:not(:placeholder-shown) ~ .clear-btn {
 }
 
 /* === Mobile (Mobile-First Approach) === */
-@media (min-width: 769px) {
-  .research-areas {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-
-  .research-tile {
-    flex: 1 1 calc(33.333% - 1.33rem);
-  }
-
-  .main-focus,
-  .content-tile {
-    padding: 0 2rem;
-  }
-}
 
 @media (max-width: 768px) {
   .main-focus {
@@ -2069,18 +2067,6 @@ input:not(:placeholder-shown) ~ .clear-btn {
   }
 }
 
-/* === Accessibility Enhancements === */
-@media (prefers-reduced-motion: reduce) {
-  .research-tile,
-  .project {
-    transition: none;
-  }
-}
-
-:focus {
-  outline: 2px solid #ea3a73;
-  outline-offset: 2px;
-}
 /* === Contact Page Grid === */
 .contact-grid {
   display: flex;
