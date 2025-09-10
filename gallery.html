@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery | Climate Dynamics Lab</title>
     <link rel="stylesheet" href="main.css" />
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
@@ -61,15 +61,13 @@
                 alt="Prof. Sandeep as Mittal Foundation Chair"
               />
               <div class="caption">
-                Celebrating Prof. Sandeep Sukumaran’s new role as Mittal Foundation Chair
+                Celebrating Prof. Sandeep Sukumaran’s new role as Mittal
+                Foundation Chair
                 <div class="date">August 2025</div>
               </div>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/Lunch_Apr25.jpeg"
-                alt="Team Lunch April 2025"
-              />
+              <img src="images/Lunch_Apr25.jpeg" alt="Team Lunch April 2025" />
               <div class="caption">
                 Team Lunch
                 <div class="date">April 2025</div>
@@ -96,23 +94,17 @@
               </div>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/Sai'aFarewell_Mar24.jpeg"
-                alt="Sai's Farewell"
-              />
-              <div class="caption">
-                Sai's Farewell
-                <div class="date">March 2024</div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img
-                src="images/team_lunch.jpeg"
-                alt="Team Lunch 2024"
-              />
+              <img src="images/team_lunch.jpeg" alt="Team Lunch 2024" />
               <div class="caption">
                 Team Lunch
                 <div class="date">May 2024</div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/Sai'aFarewell_Mar24.jpeg" alt="Sai's Farewell" />
+              <div class="caption">
+                Sai's Farewell
+                <div class="date">March 2024</div>
               </div>
             </div>
           </div>
@@ -166,7 +158,11 @@
                 </a>
               </li>
               <li>
-                <a href="https://github.com/climdl" target="_blank" title="GitHub">
+                <a
+                  href="https://github.com/climdl"
+                  target="_blank"
+                  title="GitHub"
+                >
                   <img
                     src="https://cdn.simpleicons.org/github/ffffff"
                     alt="GitHub"
@@ -181,7 +177,10 @@
                   title="LinkedIn"
                   style="color: white"
                 >
-                  <span class="iconify" data-icon="simple-icons:linkedin"></span>
+                  <span
+                    class="iconify"
+                    data-icon="simple-icons:linkedin"
+                  ></span>
                 </a>
               </li>
               <li>
@@ -270,7 +269,9 @@
       // Update lightbox content
       function updateLightbox(index) {
         const img = galleryItems[index];
-        const captionDiv = img.closest(".gallery-item").querySelector(".caption");
+        const captionDiv = img
+          .closest(".gallery-item")
+          .querySelector(".caption");
         lightboxImg.src = img.src;
         lightboxCaption.textContent = captionDiv.textContent.trim();
       }
@@ -288,7 +289,8 @@
       // Navigation
       prevBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+        currentIndex =
+          (currentIndex - 1 + galleryItems.length) % galleryItems.length;
         updateLightbox(currentIndex);
       });
 
