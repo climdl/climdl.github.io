@@ -1962,64 +1962,125 @@ input:not(:placeholder-shown) ~ .clear-btn {
 /* === Project Status Styling === */
 .project {
   margin-bottom: 2rem;
-  padding: 1rem 1rem 1rem 1.25rem;
-  border-left: 4px solid #ea3a72b4;
+  padding: 1.5rem;
+  border-left: 4px solid #ea3a73;
   background: #f8f9fb;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-/* Ongoing Projects */
+.project:hover {
+  background: #f1f5f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
 .project.ongoing {
   border-left-color: #2e8b57;
 }
 
-/* Optional: Completed */
 .project.completed {
-  border-left-color: #ea3a72b4;
+  border-left-color: #ea3a73;
 }
 
-/* === Mobile === */
-@media (max-width: 768px) {
-  .main-focus,
-  .research-areas,
-  .content-tile {
-    padding: 1.5rem;
-  }
+.project h4 {
+  color: #002b56;
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
 
-  .main-focus h2 {
-    font-size: 1.5rem;
+.project p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* === Mobile (Mobile-First Approach) === */
+@media (min-width: 769px) {
+  .research-areas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 
   .research-tile {
-    padding: 1rem;
+    flex: 1 1 calc(33.333% - 1.33rem);
   }
 
-  .content-tile h2 {
-    font-size: 1.5rem;
+  .main-focus,
+  .content-tile {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-focus {
+    margin: 2.5rem auto;
+    padding: 0 1rem;
   }
 
-  .project h4 {
+  .main-focus h2 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+  }
+
+  .main-focus p {
     font-size: 1rem;
   }
 
-  .project p {
-    font-size: 0.9rem;
+  .research-areas {
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  .research-tile {
+    padding: 1.25rem;
+  }
+
+  .research-tile h3 {
+    font-size: 1.3rem;
+  }
+
+  .content-tile {
+    padding: 1.5rem;
+    margin: 3rem auto;
+  }
+
+  .content-tile h2 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+  }
+
+  .content-tile h3 {
+    font-size: 1.2rem;
   }
 
   .project {
-    padding: 0.75rem 1rem;
+    padding: 1rem;
     margin-bottom: 1.5rem;
   }
 
   .project h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .project p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
+/* === Accessibility Enhancements === */
+@media (prefers-reduced-motion: reduce) {
+  .research-tile,
+  .project {
+    transition: none;
+  }
+}
+
+:focus {
+  outline: 2px solid #ea3a73;
+  outline-offset: 2px;
+}
 /* === Contact Page Grid === */
 .contact-grid {
   display: flex;
