@@ -2,339 +2,122 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Climate Dynamics Lab</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Centralized Stylesheet Engine -->
     <link rel="stylesheet" href="main.css" />
-    <!-- Iconify for SVG icons -->
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Global Icon Engine Script -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+    <!-- Centralized Component Logic Wrapper -->
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- Loader -->
+    <!-- Global Preloader Component -->
     <div id="loader">
-      <img src="/images/icon.svg" alt="Climate Dynamics Lab Logo" />
+      <img src="images/icon.svg" alt="Climate Dynamics Lab Loader Icon" />
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a href="index.html">
-        <img class="logo" src="/images/logo_top.svg" alt="Logo" />
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="people.html">People</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="highlights.html">Highlights</a></li>
-        <li><a class="active" href>Contact</a></li>
-      </ul>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="wrapper">
+      <!-- Decoupled Shared Navigation Web Component -->
+      <lab-navbar></lab-navbar>
+
+      <!-- Static Page Hero Layout Container -->
+      <div class="hero-container" style="height: 45vh; min-height: 320px;">
+        <div class="slideshow">
+          <div class="slide active">
+            <img src="images/pic4.png" alt="Atmospheric monitoring stations and satellite tracking systems overview" />
+          </div>
+        </div>
+        <div class="banner-text">
+          <p>Connect With Us</p>
+          <h1 style="font-size: clamp(2rem, 4vw, 2.8rem);">Contact</h1>
+          <h2 style="font-size: clamp(1rem, 2vw, 1.25rem);">Reach Out to Our Researchers or Visit the Laboratory Location</h2>
+        </div>
       </div>
-    </nav>
 
-    <!-- Static Hero -->
-    <div class="slideshow static-hero">
-      <img src="/images/pic4.png" alt="People Hero" class="slide active" />
-    </div>
-    <div class="banner-text static-banner">
-      <h1>Contact</h1>
-    </div>
+      <!-- Core Content Matrix -->
+      <main id="main-content" style="padding: 4rem 0;">
+        <section class="container">
+          <div class="contact-grid">
+            
+            <!-- Left Grid: Digital Communications Card -->
+            <div class="contact-section">
+              <div class="contact-card">
+                <h2 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 2rem; position: relative; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border);">Get in Touch!</h2>
 
-    <!-- Main Content -->
-    <main id="main-content">
-      <div class="container contact-grid">
-        <!-- top Contact Section -->
-        <div class="contact-section">
-          <div class="contact-card">
-            <h2 class="section-title">Get in Touch!</h2>
+                <div class="contact-item">
+                  <span class="iconify" data-icon="mdi:email" aria-hidden="true"></span>
+                  <div>
+                    <span style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase;">Email Correspondence</span>
+                    <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">sandeep.sukumaran [at] cas.iitd.ac.in</a>
+                  </div>
+                </div>
 
-            <div class="contact-list">
-              <div class="contact-item">
-                <span
-                  class="iconify"
-                  data-icon="mdi:email"
-                  style="color: #002b56"
-                ></span>
-                <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in"> sandeep.sukumaran [at] cas.iitd.ac.in </a>
-              </div>
+                <div class="contact-item">
+                  <span class="iconify" data-icon="mdi:phone" aria-hidden="true"></span>
+                  <div>
+                    <span style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase;">Telephony Office Line</span>
+                    <a href="tel:+911126591387">+91-11-2659-1387</a>
+                  </div>
+                </div>
 
-              <div class="contact-item">
-                <span
-                  class="iconify"
-                  data-icon="mdi:phone"
-                  style="color: #002b56"
-                ></span>
-                <a href="tel:+911126591387">+91-11-2659-1387</a>
-              </div>
-
-              <div class="contact-item">
-                <span
-                  class="iconify"
-                  data-icon="mdi:account-multiple"
-                  style="color: #002b56"
-                ></span>
-                <div class="social-links">
-                  <a
-                    href="https://github.com/climdl"
-                    target="_blank"
-                    title="GitHub"
-                  >
-                    <img
-                      src="https://cdn.simpleicons.org/github/002b56"
-                      alt="GitHub"
-                    />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/climdl"
-                    target="_blank"
-                    title="LinkedIn"
-                  >
-                    <span
-                      class="iconify"
-                      data-icon="simple-icons:linkedin"
-                    ></span>
-                  </a>
-                  <a
-                    href="https://bsky.app/profile/climdl.bsky.social"
-                    target="_blank"
-                    title="Bluesky"
-                  >
-                    <img
-                      src="https://cdn.simpleicons.org/bluesky/002b56"
-                      alt="Bluesky"
-                    />
-                  </a>
-                  <a
-                    href="https://x.com/ClimDL_IITD"
-                    target="_blank"
-                    title="X (formerly Twitter)"
-                  >
-                    <img src="https://cdn.simpleicons.org/x/002b56" alt="X" />
-                  </a>
+                <div class="contact-item">
+                  <span class="iconify" data-icon="mdi:account-multiple" aria-hidden="true"></span>
+                  <div>
+                    <span style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">Digital Networks</span>
+                    <div class="social-links" style="display: flex; gap: 1rem; align-items: center;">
+                      <a href="https://github.com/climdl" target="_blank" rel="noopener noreferrer" title="GitHub Code Repositories">
+                        <img src="https://cdn.simpleicons.org/github/002b56" alt="GitHub Logo" style="width: 22px; height: 22px;" />
+                      </a>
+                      <a href="https://www.linkedin.com/company/climdl" target="_blank" rel="noopener noreferrer" title="LinkedIn Corporate Hub">
+                        <span class="iconify" data-icon="simple-icons:linkedin" style="font-size: 22px; color: #002b56;"></span>
+                      </a>
+                      <a href="https://bsky.app/profile/climdl.bsky.social" target="_blank" rel="noopener noreferrer" title="Bluesky Network Stream">
+                        <img src="https://cdn.simpleicons.org/bluesky/002b56" alt="Bluesky Logo" style="width: 22px; height: 22px;" />
+                      </a>
+                      <a href="https://x.com/ClimDL_IITD" target="_blank" rel="noopener noreferrer" title="X Broadcast Feed">
+                        <img src="https://cdn.simpleicons.org/x/002b56" alt="X Logo" style="width: 20px; height: 20px;" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <br/>
-        <br/>
-        <!-- bottom Contact Section -->
-        <div class="contact-section">
-          <div class="contact-card">
-            <h2 class="section-title">Come Say Hello!</h2>
+            <!-- Right Grid: Physical Infrastructure Location Card -->
+            <div class="contact-section">
+              <div class="contact-card">
+                <h2 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 2rem; position: relative; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border);">Come Say Hello!</h2>
 
-            <div class="contact-list">
-              <div class="contact-item">
-                <span
-                  class="iconify"
-                  data-icon="mdi:map-marker"
-                  style="color: #002b56"
-                ></span>
-                <address>
-                  Climate Dynamics Lab<br />
-                  Centre for Atmospheric Sciences, IIT Delhi<br />
-                  Hauz Khas, New Delhi – 110016, India
-                </address>
-              </div>
-              <div class="contact-item map-item">
+                <div class="contact-item">
+                  <span class="iconify" data-icon="mdi:map-marker" aria-hidden="true"></span>
+                  <div>
+                    <span style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase;">Laboratory Address</span>
+                    <address style="font-style: normal; line-height: 1.6; color: var(--color-text-main);">
+                      Climate Dynamics Lab<br />
+                      Centre for Atmospheric Sciences, IIT Delhi<br />
+                      Hauz Khas, New Delhi – 110016, India
+                    </address>
+                  </div>
+                </div>
+
                 <div class="map-container">
                   <iframe
                     src="https://maps.google.com/maps?q=IIT%20Delhi&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                    title="Google Map of IIT Delhi"
+                    title="Google Interactive Map Placement Tracking IIT Delhi Campus"
                     loading="lazy"
                     allowfullscreen
                   ></iframe>
                 </div>
               </div>
             </div>
+
           </div>
-        </div>
-      </div>
-    </main>
+        </section>
+      </main>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-top row">
-          <!-- Logo Left -->
-          <div class="col-4 col-12-mobile footer-left">
-            <img
-              src="/images/logo_footer.svg"
-              alt="Climate Dynamics Lab Logo"
-              class="footer-logo"
-            />
-          </div>
-
-          <!-- Contact Middle -->
-          <div class="col-4 col-12-mobile footer-center">
-            <h3>Climate Dynamics Lab</h3>
-            <br />
-            <p>
-              Centre for Atmospheric Sciences, IIT Delhi<br />
-              Hauz Khas, New Delhi - 110016, India<br />
-              <br />
-            </p>
-          </div>
-          <div class="col-4 col-12-mobile footer-right">
-            <ul class="icons">
-              <li>
-                <a
-                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  title="Email"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="mdi:email"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/github/ffffff"
-                    alt="GitHub"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/climdl"
-                  target="_blank"
-                  title="LinkedIn"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://bsky.app/profile/climdl.bsky.social"
-                  target="_blank"
-                  title="Bluesky"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/bluesky/ffffff"
-                    alt="Bluesky"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ClimDL_IITD"
-                  target="_blank"
-                  title="X (formerly Twitter)"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/x/ffffff"
-                    alt="X"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <hr />
-
-        <!-- Copyright -->
-        <div class="copyright">
-          <ul class="menu">
-            <li>
-              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-      // Hamburger toggle
-      document.querySelector(".menu-toggle").onclick = () =>
-        document.querySelector(".navbar ul").classList.toggle("show");
-
-      // === Slideshow ===
-      const slides = document.querySelectorAll(".slideshow .slide");
-      let currentSlide = 0;
-
-      setInterval(() => {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add("active");
-      }, 4000);
-
-      // === Carousel ===
-      const reel = document.querySelector(".carousel .reel");
-      const forward = document.querySelector(".carousel .forward");
-      const backward = document.querySelector(".carousel .backward");
-
-      if (reel && forward && backward) {
-        let scrollX = 0;
-        const cardWidth = 360 + 60;
-
-        forward.addEventListener("click", () => {
-          scrollX -= cardWidth;
-          const maxScroll = -(
-            reel.scrollWidth - reel.parentElement.clientWidth
-          );
-          if (scrollX < maxScroll) scrollX = maxScroll;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-
-        backward.addEventListener("click", () => {
-          scrollX += cardWidth;
-          if (scrollX > 0) scrollX = 0;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-      }
-
-      // === Loader ===
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-
-      // Simple Lightbox JS
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      const lightboxCaption = document.getElementById("lightbox-caption");
-      const galleryItems = document.querySelectorAll(".gallery-item img");
-      const closeBtn = document.querySelector(".close");
-
-      galleryItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          lightbox.style.display = "block";
-          lightboxImg.src = item.src;
-          lightboxCaption.textContent = item.alt;
-        });
-      });
-
-      closeBtn.addEventListener("click", () => {
-        lightbox.style.display = "none";
-      });
-
-      window.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-          lightbox.style.display = "none";
-        }
-      });
-    </script>
+      <!-- Decoupled Shared Footer Web Component -->
+      <lab-footer></lab-footer>
+    </div>
   </body>
 </html>
