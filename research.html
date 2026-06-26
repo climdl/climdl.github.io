@@ -2,307 +2,154 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Research | Climate Dynamics Lab</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- Loader -->
     <div id="loader">
-      <img src="/images/icon.svg" alt="Climate Dynamics Lab Logo" />
-      <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+      <img src="images/icon.svg" alt="Climate Dynamics Lab Loader Icon" />
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a href="index.html">
-        <img class="logo" src="/images/logo_top.svg" alt="Logo" />
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="research.html">Research</a></li>
-        <li><a href="people.html">People</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="highlights.html">Highlights</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+    <div class="wrapper">
+      <lab-navbar></lab-navbar>
 
-    <!-- Static Hero -->
-    <div class="slideshow static-hero">
-      <img src="/images/research2.png" alt="People Hero" class="slide active" />
-    </div>
-    <div class="banner-text static-banner">
-      <h1>Research</h1>
-    </div>
-
-    <main id="main-content">
-      <!-- Main Research Focus (Simple Block) -->
-      <section class="main-focus">
-        <header>
-          <h2>Current Research Focus</h2>
-        </header>
-        <p>
-          Our lab focuses on the dynamics of the Indian summer monsoon,
-          exploring its variability, long-term changes, and impacts using
-          advanced climate models, data analysis, and machine learning
-          approaches. We investigate phenomena such as monsoon low-pressure
-          systems, dry air intrusions, climate change impacts, and develop
-          AI-based prediction systems to enhance forecasting skill and climate
-          resilience.
-        </p>
-      </section>
-
-      <!-- Research Areas (Simple Vertical Tiles) -->
-      <section class="research-areas">
-        <div class="research-tile">
-          <h3>Monsoon Dynamics</h3>
-          <p>
-            Investigating the physical processes governing the Indian summer
-            monsoon, including intraseasonal variability, monsoon breaks, and
-            the role of large-scale circulation patterns.
-          </p>
-        </div>
-
-        <div class="research-tile">
-          <h3>Climate Change & Future Projections</h3>
-          <p>
-            Assessing how global warming affects monsoon characteristics and
-            developing regional climate scenarios to understand future changes
-            in precipitation patterns.
-          </p>
-        </div>
-
-        <div class="research-tile">
-          <h3>AI/ML in Atmospheric Sciences</h3>
-          <p>
-            Developing machine learning algorithms for weather prediction,
-            climate model emulation, and extreme event detection to enhance
-            traditional approaches.
-          </p>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section class="content-tile">
-        <header>
-          <h2>Projects</h2>
-        </header>
-
-        <h3>Ongoing</h3>
-        <div class="project ongoing">
-          <h4>
-            Understanding the Genesis Mechanisms of Monsoon Low Pressure Systems
-          </h4>
-          <p>
-            PI: Sandeep Sukumaran | Co-PI: Suhas Ettammal (IISER Pune)<br />
-            Funding: MoES | Budget: ₹49.3L | Duration: 2022–2025
-          </p>
-        </div>
-
-        <div class="project ongoing">
-          <h4>
-            Prediction of Indian Summer Monsoon Active and Break Cycles Using
-            AI/ML
-          </h4>
-          <p>
-            PI: Hariprasad Kodamana | Co-PI: Sandeep Sukumaran<br />
-            Funding: MoES | Budget: ₹25.4L | Duration: 2022–2025
-          </p>
-        </div>
-
-        <div class="project ongoing">
-          <h4>IMproving FORcasts with MAchine Learning (IMFORMAL)</h4>
-          <p>
-            PI: Krishna AchutaRao | Co-PIs: S. Sukumaran, H. Kodamana, S. B.
-            Roy<br />
-            Funding: MoES | Budget: ₹84.17L | Duration: 2022–2025
-          </p>
-        </div>
-
-        <h3>Completed</h3>
-        <div class="project completed">
-          <h4>
-            Investigation of Dry Air Intrusion over the Arabian Sea and Its
-            Implications on Indian Summer Monsoon
-          </h4>
-          <p>
-            PI: Sandeep Sukumaran<br />
-            Funding: SERB | Budget: ₹14.65L | Duration: 2019–2021
-          </p>
-        </div>
-
-        <div class="project completed">
-          <h4>Implications of Arctic Sea Ice Melting on Tropical Climate</h4>
-          <p>
-            PI: Sandeep Sukumaran | Co-PI: Dilip Ganguly<br />
-            Funding: NCPOR (MoES) | Budget: ₹41.3L | Duration: 2019–2022
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-top row">
-          <!-- Logo Left -->
-          <div class="col-4 col-12-mobile footer-left">
-            <img
-              src="/images/logo_footer.svg"
-              alt="Climate Dynamics Lab Logo"
-              class="footer-logo"
-            />
-          </div>
-
-          <!-- Contact Middle -->
-          <div class="col-4 col-12-mobile footer-center">
-            <h3>Climate Dynamics Lab</h3>
-            <br />
-            <p>
-              Centre for Atmospheric Sciences, IIT Delhi<br />
-              Hauz Khas, New Delhi - 110016, India<br />
-              <br />
-            </p>
-          </div>
-          <div class="col-4 col-12-mobile footer-right">
-            <ul class="icons">
-              <li>
-                <a
-                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  title="Email"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="mdi:email"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/github/ffffff"
-                    alt="GitHub"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/climdl"
-                  target="_blank"
-                  title="LinkedIn"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://bsky.app/profile/climdl.bsky.social"
-                  target="_blank"
-                  title="Bluesky"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/bluesky/ffffff"
-                    alt="Bluesky"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ClimDL_IITD"
-                  target="_blank"
-                  title="X (formerly Twitter)"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/x/ffffff"
-                    alt="X"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-            </ul>
+      <div class="hero-container">
+        <div class="slideshow">
+          <div class="slide active">
+            <img src="images/research2.png" alt="Complex multi-scale atmospheric simulation maps" />
           </div>
         </div>
-
-        <hr />
-
-        <!-- Copyright -->
-        <div class="copyright">
-          <ul class="menu">
-            <li>
-              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
-            </li>
-          </ul>
+        <div class="banner-text">
+          <p>Our Endeavors</p>
+          <h1>Research Initiatives</h1>
+          <h2>Unraveling Climate Mechanisms and Predictability Bounds</h2>
         </div>
       </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script>
-      // Hamburger toggle
-      document.querySelector(".menu-toggle").onclick = () =>
-        document.querySelector(".navbar ul").classList.toggle("show");
+      <main id="main-content">
+        
+        <section class="container">
+          <div class="guide-section" style="box-shadow: none; border: none; background: transparent; padding: 1rem 0; margin-bottom: 1.5rem;">
+            <div class="guide-content">
+              <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Current Research Focus</h2>
+              <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-main); text-align: justify;">
+                Our lab focuses on the dynamics of the Indian summer monsoon, exploring its variability, 
+                long-term changes, and impacts using advanced climate models, multi-source spaceborne data analysis, 
+                and physics-guided machine learning approaches. We deep-dive into fundamental processes such as 
+                monsoon low-pressure systems, synoptic dry air intrusions, and polar-tropical climate teleconnections, 
+                while developing hybrid AI-based predictive frameworks to expand forecasting leads and optimize 
+                regional atmospheric climate resilience.
+              </p>
+            </div>
+          </div>
+        </section>
 
-      // === Slideshow ===
-      const slides = document.querySelectorAll(".slideshow .slide");
-      let currentSlide = 0;
+        <section class="container" style="margin-bottom: 4rem;">
+          <div class="research-grid">
+            <article class="research-tile">
+              <h3>Monsoon Dynamics</h3>
+              <p>
+                Investigating the core physical mechanics governing the Indian summer monsoon, 
+                mapping sub-seasonal precipitation oscillations, tracking structural breakout bounds, 
+                and identifying the thermodynamic parameters driving changes across scales.
+              </p>
+            </article>
 
-      setInterval(() => {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add("active");
-      }, 4000);
+            <article class="research-tile">
+              <h3>Climate Change & Projections</h3>
+              <p>
+                Quantifying global thermal atmospheric acceleration impacts on tropical climate signatures. 
+                We isolate downscaled regional projection variants to track ongoing modifications in flash flood metrics 
+                and long-term drought severity projections.
+              </p>
+            </article>
 
-      // === Carousel ===
-      const reel = document.querySelector(".carousel .reel");
-      const forward = document.querySelector(".carousel .forward");
-      const backward = document.querySelector(".carousel .backward");
+            <article class="research-tile">
+              <h3>AI/ML in Atmospheric Sciences</h3>
+              <p>
+                Developing physics-constrained neural computing operators for faster sub-seasonal forecast conversions, 
+                building deep numerical simulation emulators, and optimizing severe tropical cyclone detection frameworks.
+              </p>
+            </article>
+          </div>
+        </section>
 
-      if (reel && forward && backward) {
-        let scrollX = 0;
-        const cardWidth = 360 + 60;
+        <section class="container" style="margin-bottom: 2rem;">
+          <header class="major" style="text-align: left; margin-bottom: 3rem;">
+            <h2 style="display: block; text-align: left; padding-bottom: 0.5rem; margin-left: 0;">Sponsored Projects</h2>
+            <p style="text-align: left; margin-top: 0.5rem;">Active external grants and completed portfolios funding our investigative journeys.</p>
+          </header>
 
-        forward.addEventListener("click", () => {
-          scrollX -= cardWidth;
-          const maxScroll = -(
-            reel.scrollWidth - reel.parentElement.clientWidth
-          );
-          if (scrollX < maxScroll) scrollX = maxScroll;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
+          <div class="project-suite">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: #10b981; display: flex; align-items: center; gap: 0.5rem;">
+              <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span> Active Commitments
+            </h3>
 
-        backward.addEventListener("click", () => {
-          scrollX += cardWidth;
-          if (scrollX > 0) scrollX = 0;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-      }
+            <article class="project-card ongoing">
+              <h4>Understanding the Genesis Mechanisms of Monsoon Low Pressure Systems</h4>
+              <div class="project-meta">
+                <span><strong>PI:</strong> Prof. Sandeep Sukumaran</span>
+                <span><strong>Co-PI:</strong> Dr. Suhas Ettammal (IISER Pune)</span>
+                <span><strong>Funding Agency:</strong> MoES</span>
+                <span><strong>Budget:</strong> ₹49.3L</span>
+                <span><strong>Duration:</strong> 2022–2025</span>
+              </div>
+            </article>
 
-      // === Loader ===
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-    </script>
+            <article class="project-card ongoing">
+              <h4>Prediction of Indian Summer Monsoon Active and Break Cycles Using AI/ML</h4>
+              <div class="project-meta">
+                <span><strong>PI:</strong> Prof. Hariprasad Kodamana</span>
+                <span><strong>Co-PI:</strong> Prof. Sandeep Sukumaran</span>
+                <span><strong>Funding Agency:</strong> MoES</span>
+                <span><strong>Budget:</strong> ₹25.4L</span>
+                <span><strong>Duration:</strong> 2022–2025</span>
+              </div>
+            </article>
+
+            <article class="project-card ongoing">
+              <h4>IMproving FORcasts with MAchine Learning (IMFORMAL)</h4>
+              <div class="project-meta">
+                <span><strong>PI:</strong> Prof. Krishna AchutaRao</span>
+                <span><strong>Co-PIs:</strong> P. Sukumaran, H. Kodamana, S. B. Roy</span>
+                <span><strong>Funding Agency:</strong> MoES</span>
+                <span><strong>Budget:</strong> ₹84.17L</span>
+                <span><strong>Duration:</strong> 2022–2025</span>
+              </div>
+            </article>
+
+            <h3 style="font-size: 1.3rem; mt-4: 3.5rem; margin-top: 3.5rem; margin-bottom: 1.5rem; color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+              <span style="width: 8px; height: 8px; background: var(--color-primary); border-radius: 50%;"></span> Historic Portfolios
+            </h3>
+
+            <article class="project-card completed">
+              <h4>Investigation of Dry Air Intrusion over the Arabian Sea and Its Implications on Indian Summer Monsoon</h4>
+              <div class="project-meta">
+                <span><strong>PI:</strong> Prof. Sandeep Sukumaran</span>
+                <span><strong>Funding Agency:</strong> SERB</span>
+                <span><strong>Budget:</strong> ₹14.65L</span>
+                <span><strong>Duration:</strong> 2019–2021</span>
+              </div>
+            </article>
+
+            <article class="project-card completed">
+              <h4>Implications of Arctic Sea Ice Melting on Tropical Climate</h4>
+              <div class="project-meta">
+                <span><strong>PI:</strong> Prof. Sandeep Sukumaran</span>
+                <span><strong>Co-PI:</strong> Dr. Dilip Ganguly</span>
+                <span><strong>Funding Agency:</strong> NCPOR (MoES)</span>
+                <span><strong>Budget:</strong> ₹41.3L</span>
+                <span><strong>Duration:</strong> 2019–2022</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <lab-footer></lab-footer>
+    </div>
   </body>
 </html>
-
