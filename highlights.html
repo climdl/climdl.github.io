@@ -2,87 +2,252 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Highlights | Climate Dynamics Lab</title>
+    <!-- Centralized Stylesheet Engine -->
     <link rel="stylesheet" href="main.css" />
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Global Icon Engine Script -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+    <!-- Centralized Component and Expansion Logic Wrapper -->
+    <script src="main.js" defer></script>
+    <style>
+      /* --- Sleek & Curated Feed Constraints --- */
+      .curated-feed-container {
+        max-width: 840px; /* Tighter containment for an elegant reading profile */
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      
+      .highlights-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem; /* Tighter element margins */
+        margin-top: 1.5rem;
+      }
+      
+      .highlight-card {
+        background: #ffffff;
+        border-radius: 10px; /* Sleeker, slightly tighter corner radius */
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        border: 1px solid var(--color-border);
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition-smooth);
+      }
+      .highlight-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 43, 86, 0.08);
+      }
+      
+      /* --- Downscaled Header Banner Crop --- */
+      .highlight-image {
+        width: 100%;
+        height: 220px; /* Compact landscape aspect crop */
+        position: relative;
+        overflow: hidden;
+        background-color: var(--color-bg-light);
+      }
+      .highlight-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      /* --- Sleek Data Tag --- */
+      .highlight-date {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        background: var(--color-accent);
+        color: white;
+        padding: 0.25rem 0.65rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+        letter-spacing: 0.2px;
+      }
+      
+      /* --- Tighter Card Typography Metrics --- */
+      .highlight-content {
+        padding: 1.5rem; /* Downscaled container interior spacing */
+        padding-bottom: 3rem;
+        text-align: justify;
+        position: relative;
+      }
+      .highlight-content h3 {
+        font-size: 1.25rem; /* Tighter heading footprint */
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+        padding-right: 2rem;
+        font-weight: 600;
+      }
+      .highlight-content p {
+        font-size: 0.925rem; /* Crisper standard sizing */
+        line-height: 1.6;
+        color: var(--color-text-main);
+      }
+      
+      /* --- Adaptive Interaction States --- */
+      .highlight-content .full-content {
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0.75rem;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out, opacity 0.35s ease-out;
+      }
+      .highlight-content.expanded .full-content {
+        max-height: 1500px;
+        opacity: 1;
+      }
+      
+      /* --- Sleek Integrated Interaction Toggle Button --- */
+      .highlight-content::after {
+        content: "Show More ▼";
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--color-accent);
+        position: absolute;
+        bottom: 1rem;
+        right: 1.5rem;
+        cursor: pointer;
+        transition: var(--transition-smooth);
+      }
+      .highlight-content.expanded::after {
+        content: "Show Less ▲";
+        color: var(--color-accent-hover);
+      }
+      
+      /* --- Mini Nested News Articles Feed --- */
+      .highlight-articles {
+        list-style: none;
+        margin-top: 1.25rem;
+        border-top: 1px solid var(--color-border);
+        padding-top: 1.25rem;
+      }
+      .highlight-articles li {
+        margin-bottom: 1.25rem;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 0.75rem;
+      }
+      .highlight-articles li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .highlight-articles a {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 0.15rem;
+      }
+      .highlight-articles a:hover {
+        color: var(--color-accent);
+      }
+      .highlight-articles p {
+        font-size: 0.875rem;
+        color: var(--color-text-muted);
+        line-height: 1.5;
+      }
+      
+      /* --- Proportional Aspect Fluid Video Framework --- */
+      .youtube-embed {
+        position: relative;
+        padding-bottom: 56.25%; /* Golden 16:9 Ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 1.25rem 0 0.5rem;
+        border-radius: 6px;
+        border: 1px solid var(--color-border);
+      }
+      .youtube-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
   </head>
   <body>
-    <!-- Loader -->
+    <!-- Global Preloader Component -->
     <div id="loader">
-      <img src="/images/icon.svg" alt="Climate Dynamics Lab Logo" />
+      <img src="images/icon.svg" alt="Climate Dynamics Lab Loader Icon" />
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a href="index.html">
-        <img class="logo" src="/images/logo_top.svg" alt="Logo" />
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="people.html">People</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a class="active" href>Highlights</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="wrapper">
+      <!-- Decoupled Shared Navigation Web Component -->
+      <lab-navbar></lab-navbar>
+
+      <!-- Static Page Hero Layout Container -->
+      <div class="hero-container" style="height: 45vh; min-height: 320px;">
+        <div class="slideshow">
+          <div class="slide active">
+            <img src="images/pic7.png" alt="Laboratory celebrations and scientific announcements banner" />
+          </div>
+        </div>
+        <div class="banner-text">
+          <p>Latest News</p>
+          <h1 style="font-size: clamp(2rem, 4vw, 2.8rem);">Highlights</h1>
+          <h2 style="font-size: clamp(1rem, 2vw, 1.25rem);">Notable Moments, Awards, and Media Coverages</h2>
+        </div>
       </div>
-    </nav>
 
-    <!-- Static Hero -->
-    <div class="slideshow static-hero">
-      <img src="/images/pic7.png" alt="People Hero" class="slide active" />
-    </div>
-    <div class="banner-text static-banner">
-      <h1>Highlights</h1>
-    </div>
-
-    <!-- Main Content -->
-    <main id="main-content">
-      <section class="wrapper style1">
-        <div class="container highlights-container">
-          <header class="major">
-            <h2>Highlights</h2>
-            <br/>
-            <p>Latest news and notable moments from our lab.</p>
+      <!-- Core Content Matrix -->
+      <main id="main-content" style="padding: 3rem 0;">
+        <section class="container curated-feed-container">
+          <header class="major" style="text-align: left; margin-bottom: 2rem;">
+            <h2 style="display: block; text-align: left; padding-bottom: 0.35rem; font-size: 1.75rem; margin-left: 0;">Lab Highlights</h2>
+            <p style="text-align: left; margin-top: 0.25rem; font-size: 0.95rem;">Stay updated with the latest milestones from our research group.</p>
           </header>
+
           <div class="highlights-grid">
-            <!-- Highlight: Chair Professor Appointment -->
+            <!-- Highlight: EGU 2026 General Assembly -->
             <div class="highlight-card">
               <div class="highlight-image">
-                <img
-                  src="images/highlight_mittal.png"
-                  alt="Offer of Chair Professor Position"
-                  loading="lazy"
-                />
-                <div class="highlight-date">August 2025</div>
+                <img src="images/highlights_egu26.png" alt="Climate Dynamics Lab at EGU General Assembly 2026 Photo Collage" loading="lazy" />
+                <div class="highlight-date">April 2026</div>
               </div>
-              <div class="highlight-content expandable">
-                <h3
-                  class="toggle-icon"
-                  tabindex="0"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  Prof. Sandeep appointed Mittal Foundation Chair in Climate Sciences
-                </h3>
+              <div class="highlight-content expandable" role="button" aria-expanded="false" tabindex="0">
+                <h3>Climate Dynamics Lab at EGU 2026</h3>
                 <p>
-                  We are delighted to share that Prof. Sandeep Sukumaran has been
-                  appointed as the <em>Mittal Foundation Chair Professor in Climate
-                  Sciences</em> at IIT Delhi. The appointment is for a period of three
-                  years, beginning July 2025.
+                  Research scholars from the Climate Dynamics Lab represented the Centre for Atmospheric Sciences (CAS) at the prestigious 
+                  <strong>EGU General Assembly 2026</strong>, held at the Austria Center Vienna in <strong>Vienna, Austria</strong>. The delegation 
+                  engaged with global geoscience experts, showcasing the laboratory's latest advancements in tropical monsoon physics and data-driven atmospheric diagnostics.
                 </p>
                 <div class="full-content">
                   <p>
-                    This recognition by the IIT Delhi Board of Governors highlights his
-                    contributions to advancing tropical climate dynamics and monsoon
-                    research. The Chair will support further innovation in monsoon
-                    forecasting and climate science initiatives at the lab.
+                    The participating scholars, <strong>Alice Jeeva P. J., Pankaj Lal Sahu, Anirudh K. M., Charudatt Puri, and Sanya Narbar</strong>, presented 
+                    their research findings across multiple technical sessions. Their contributions spanned critical atmospheric sub-domains, including scale interaction 
+                    dynamics, AI/ML implementations for tracking extreme weather anomalies, sub-seasonal monsoonal variations, and aerosol circulation forcings, 
+                    fostering meaningful scientific dialogues and technical exchanges with international collaborators.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Highlight: Chair Professor Appointment -->
+            <div class="highlight-card">
+              <div class="highlight-image">
+                <img src="images/highlight_mittal.png" alt="Official Offer Letter of Chair Professor Position" loading="lazy" />
+                <div class="highlight-date">August 2025</div>
+              </div>
+              <div class="highlight-content expandable" role="button" aria-expanded="false" tabindex="0">
+                <h3>Prof. Sandeep appointed Mittal Foundation Chair in Climate Sciences</h3>
+                <p>
+                  We are delighted to share that Prof. Sandeep Sukumaran has been appointed as the 
+                  <em>Mittal Foundation Chair Professor in Climate Sciences</em> at IIT Delhi. The appointment 
+                  is for a distinguished period of three years, beginning July 2025.
+                </p>
+                <div class="full-content">
+                  <p>
+                    This recognition by the IIT Delhi Board of Governors highlights his exceptional contributions 
+                    to advancing tropical climate dynamics and monsoon research bounds. The Chair framework will support 
+                    further computational acceleration and innovation in operational monsoon forecasting models 
+                    and climate science initiatives at the laboratory.
                   </p>
                 </div>
               </div>
@@ -91,92 +256,42 @@
             <!-- Highlight: AI Transforming Meteorological Prediction -->
             <div class="highlight-card">
               <div class="highlight-image">
-                <img
-                  src="images/article1.png"
-                  alt="AI-based Monsoon Forecasting"
-                  loading="lazy"
-                />
+                <img src="images/article1.png" alt="AI-based Monsoonal Forecasting Interface" loading="lazy" />
                 <div class="highlight-date">June 2025</div>
               </div>
-              <div class="highlight-content expandable">
-                <h3
-                  class="toggle-icon"
-                  tabindex="0"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  AI transforming meteorological prediction
-                </h3>
+              <div class="highlight-content expandable" role="button" aria-expanded="false" tabindex="0">
+                <h3>AI Transforming Meteorological Prediction Through Innovation</h3>
                 <p>
-                  Our recent research on tropical cyclones and Monsoon
-                  Intraseasonal Oscillations (MISO), conducted under the guidance
-                  of Professors Sandeep Sukumaran and Hairprasad Kodamana, has
-                  garnered widespread attention. The studies have been published
-                  in the
-                  <em
-                    >Journal of Geophysical Research: Machine Learning and
-                    Computation</em
-                  >
-                  and featured in several prominent national media outlets.
+                  Our recent milestone research focusing on severe tropical cyclones and Monsoon Intraseasonal Oscillations (MISO), 
+                  engineered under the joint guidance of Professors Sandeep Sukumaran and Hariprasad Kodamana, has garnered widespread national attention. 
+                  The dual studies have been published in the high-impact <em>Journal of Geophysical Research: Machine Learning and Computation</em> 
+                  and heavily featured across prominent national mainstream media streams.
                 </p>
                 <div class="full-content">
                   <ul class="highlight-articles">
                     <li>
-                      <strong>The Times of India</strong><br />
-                      <a
-                        href="https://timesofindia.indiatimes.com/city/delhi/cloud-computing-iit-delhi-ai-model-forecasts-monsoon-18-days-in-advance/articleshow/122053574.cms"
-                        target="_blank"
-                      >
-                        IIT-Delhi AI model forecasts monsoon 18 days in advance ↗
+                      <a href="https://timesofindia.indiatimes.com/city/delhi/cloud-computing-iit-delhi-ai-model-forecasts-monsoon-18-days-in-advance/articleshow/122053574.cms" target="_blank" rel="noopener noreferrer">
+                        The Times of India — IIT-Delhi AI model forecasts monsoon 18 days in advance ↗
                       </a>
-                      <p>
-                        One study predicts monsoon patterns 18 days ahead and
-                        tracks cyclones within 200km up to four days
-                        early—offering faster, cheaper, and more reliable
-                        forecasts.
-                      </p>
+                      <p>Our deep model tracks spatial monsoon variables 18 days ahead and maps tropical cyclone trajectories down within a 200km scale up to four days early.</p>
                     </li>
                     <li>
-                      <strong>Business Standard</strong><br />
-                      <a
-                        href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html"
-                        target="_blank"
-十七
-                        AI transforming meteorological prediction ↗
+                      <a href="https://www.business-standard.com/india-news/ai-transforming-meteorological-prediction-through-innovation-iit-delhi-125062400677_1.html" target="_blank" rel="noopener noreferrer">
+                        Business Standard — AI transforming meteorological prediction ↗
                       </a>
-                      <p>
-                        The study uses transformer neural networks trained on 25
-                        years of satellite data, enabling 18-day lead time
-                        predictions for monsoon intraseasonal oscillations.
-                      </p>
+                      <p>Detailing how transformer neural networks trained across 25 years of multi-source spaceborne observations decode complex monsoon physics natively.</p>
                     </li>
                     <li>
-                      <strong>The Week (PTI)</strong><br />
-                      <a
-                        href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html"
-                        target="_blank"
-                      >
-                        IIT AI model improves weather accuracy ↗
+                      <a href="https://www.theweek.in/wire-updates/national/2025/06/24/lst2-iit-ai-meterological-prediction.html" target="_blank" rel="noopener noreferrer">
+                        The Week (PTI) — IIT AI model improves weather accuracy ↗
                       </a>
-                      <p>
-                        Two recent studies demonstrate how AI is transforming
-                        forecasting approaches to tropical cyclones and monsoon
-                        behavior.
-                      </p>
+                      <p>Demonstrating actionable data pipelines where deep neural layers augment traditional numerical fluid mechanics to reduce forecasting errors.</p>
                     </li>
                     <li>
-                      <strong>ABP News</strong><br />
-                      <a
-                        href="https://www.abplive.com/education/iit-delhi-ai-model-weather-prediction-tool-monsoon-mood-18-days-in-advance-ann-2969393"
-                        target="_blank"
-                      >
-                        अब 18 दिन पहले ही पता चल जाएगा मॉनसून का मूड ↗
+                      <a href="https://www.abplive.com/education/iit-delhi-ai-model-weather-prediction-tool-monsoon-mood-18-days-in-advance-ann-2969393" target="_blank" rel="noopener noreferrer">
+                        ABP News — अब 18 दिन पहले ही पता चल जाएगा मॉनसून का मूड ↗
                       </a>
-                      <p>
-                        IIT दिल्ली के वैज्ञानिकों ने नया AI मॉडल तैयार किया है, जो
-                        मॉनसून का पूर्वानुमान 18 दिन पहले ही दे सकता है—यह मौजूदा
-                        तकनीकों से अधिक तेज़ और प्रभावी है।
-                      </p>
+                      <p>IIT दिल्ली के वैज्ञानिकों ने नया AI मॉडल तैयार किया है, जो मॉनसून का पूर्वानुमान 18 दिन पहले ही दे सकता है—यह मौजूदा तकनीकों से अधिक तेज़ और प्रभावी है।</p>
                     </li>
                   </ul>
                 </div>
@@ -186,32 +301,20 @@
             <!-- Highlight: Monsoon Lecture -->
             <div class="highlight-card">
               <div class="highlight-image">
-                <img
-                  src="images/lecture1.png"
-                  alt="Monsoon Lecture Thumbnail"
-                  loading="lazy"
-                />
+                <img src="images/lecture1.png" alt="Global ML Weather Prediction Models Video Thumbnail" loading="lazy" />
                 <div class="highlight-date">November 2024</div>
               </div>
-              <div class="highlight-content expandable">
-                <h3
-                  class="toggle-icon"
-                  tabindex="0"
-                  role="button"
-                  aria-expanded="false"
-                >
-                  Global ML Weather Models for Monsoon Forecasting
-                </h3>
+              <div class="highlight-content expandable" role="button" aria-expanded="false" tabindex="0">
+                <h3>Global ML Weather Models for Monsoon Forecasting</h3>
                 <p>
-                  Sandeep Sukumaran discusses opportunities and challenges in
-                  using global ML weather models for monsoon prediction at
-                  SCDLDS, Ashoka University.
+                  Prof. Sandeep Sukumaran unpacks technical opportunities, constraints, and predictability parameters 
+                  encountered when deploying global ML weather models for long-range monsoon tracking at SCDLDS, Ashoka University.
                 </p>
                 <div class="full-content">
                   <div class="youtube-embed">
                     <iframe
                       src="https://www.youtube.com/embed/djXO-zJKeVg"
-                      title="Global ML Weather Prediction Models for Monsoon Forecasting"
+                      title="Global ML Weather Prediction Models for Monsoon Forecasting Lecture Video"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen
@@ -221,237 +324,12 @@
               </div>
             </div>
 
-            <!-- Commented-out Highlights -->
-            <!-- <div class="highlight-card">
-              <div class="highlight-image">
-                <img
-                  src="images/highlight1.jpg"
-                  alt="Lab Grant Announcement"
-                  loading="lazy"
-                />
-                <div class="highlight-date">July 2025</div>
-              </div>
-              <div class="highlight-content">
-                <h3>Lab Receives Major Grant</h3>
-                <p>
-                  We secured major funding to expand our research initiatives.
-                </p>
-              </div>
-            </div>
-
-            <div class="highlight-card">
-              <div class="highlight-image">
-                <img
-                  src="images/highlight2.jpg"
-                  alt="International Collaboration"
-                  loading="lazy"
-                />
-                <div class="highlight-date">June 2025</div>
-              </div>
-              <div class="highlight-content">
-                <h3>International Collaboration</h3>
-                <p>Partnering with global universities for monsoon research.</p>
-              </div>
-            </div>
-
-            <div class="highlight-card">
-              <div class="highlight-image">
-                <img
-                  src="images/highlight04.jpg"
-                  alt="Invited Talk at International Climate Symposium"
-                  loading="lazy"
-                />
-                <div class="highlight-date">Jan 2025</div>
-              </div>
-              <div class="highlight-content">
-                <h3>Invited Talk</h3>
-                <p>
-                  Dr. Sandeep delivered a keynote lecture on climate dynamics at
-                  the International Climate Symposium in Berlin.
-                </p>
-              </div>
-            </div> -->
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-top row">
-          <!-- Logo Left -->
-          <div class="col-4 col-12-mobile footer-left">
-            <img
-              src="/images/logo_footer.svg"
-              alt="Climate Dynamics Lab Logo"
-              class="footer-logo"
-            />
-          </div>
-
-          <!-- Contact Middle -->
-          <div class="col-4 col-12-mobile footer-center">
-            <h3>Climate Dynamics Lab</h3>
-            <p>
-              Centre for Atmospheric Sciences, IIT Delhi<br />
-              Hauz Khas, New Delhi - 110016, India<br />
-            </p>
-          </div>
-          <div class="col-4 col-12-mobile footer-right">
-            <ul class="icons">
-              <li>
-                <a
-                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  title="Email"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="mdi:email"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/github/ffffff"
-                    alt="GitHub"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/climdl"
-                  target="_blank"
-                  title="LinkedIn"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://bsky.app/profile/climdl.bsky.social"
-                  target="_blank"
-                  title="Bluesky"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/bluesky/ffffff"
-                    alt="Bluesky"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ClimDL_IITD"
-                  target="_blank"
-                  title="X (formerly Twitter)"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/x/ffffff"
-                    alt="X"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <hr />
-
-        <!-- Copyright -->
-        <div class="copyright">
-          <ul class="menu">
-            <li>
-              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-      // Hamburger toggle
-      document.querySelector(".menu-toggle").onclick = () =>
-        document.querySelector(".navbar ul").classList.toggle("show");
-
-      // === Slideshow ===
-      const slides = document.querySelectorAll(".slideshow .slide");
-      let currentSlide = 0;
-
-      setInterval(() => {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add("active");
-      }, 4000);
-
-      // === Loader ===
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-
-      // Expandable Highlight Cards
-      document
-        .querySelectorAll(".highlight-content.expandable")
-        .forEach((card) => {
-          const toggle = card.querySelector(".toggle-icon");
-          const toggleCard = (e) => {
-            e.stopPropagation(); // Prevent clicks from bubbling
-            const isExpanded = card.classList.toggle("expanded");
-            card.setAttribute("aria-expanded", isExpanded); // Set on card, not toggle
-            console.log("Toggled card, expanded:", isExpanded); // Debug log
-          };
-
-          // Click event for toggle icon
-          if (toggle) {
-            toggle.addEventListener("click", toggleCard);
-            toggle.addEventListener("keydown", (e) => {
-              if (e.key === "Enter" || e.key === "Space") {
-                e.preventDefault();
-                toggleCard(e);
-              }
-            });
-          }
-
-          // Click event for entire card (excluding full-content)
-          card.addEventListener("click", (e) => {
-            if (!e.target.closest(".full-content")) {
-              toggleCard(e);
-            }
-          });
-
-          // Keyboard event for card
-          card.addEventListener("keydown", (e) => {
-            if (e.key === "Enter" || e.key === "Space") {
-              e.preventDefault();
-              if (!e.target.closest(".full-content")) {
-                toggleCard(e);
-              }
-            }
-          });
-        });
-
-      // Prevent clicks in full-content from toggling the card
-      document
-        .querySelectorAll(".highlight-content .full-content")
-        .forEach((content) => {
-          content.addEventListener("click", (e) => {
-            e.stopPropagation(); // Stop clicks in full-content from reaching highlight-content
-          });
-        });
-    </script>
+      <!-- Decoupled Shared Footer Web Component -->
+      <lab-footer></lab-footer>
+    </div>
   </body>
 </html>
