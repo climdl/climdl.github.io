@@ -4,310 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery | Climate Dynamics Lab</title>
+    <!-- Centralized Stylesheet Engine -->
     <link rel="stylesheet" href="main.css" />
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Global Icon Engine Script -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+    <!-- Centralized Component and Immersive Lightbox Logic Wrapper -->
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- Loader -->
+    <!-- Global Preloader Component -->
     <div id="loader">
-      <img src="/images/icon.svg" alt="Climate Dynamics Lab Logo" />
+      <img src="images/icon.svg" alt="Climate Dynamics Lab Loader Icon" />
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a href="index.html">
-        <img class="logo" src="/images/logo_top.svg" alt="Logo" />
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="people.html">People</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a class="active" href="gallery.html">Gallery</a></li>
-        <li><a href="highlights.html">Highlights</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="wrapper">
+      <!-- Decoupled Shared Navigation Web Component -->
+      <lab-navbar></lab-navbar>
+
+      <!-- Static Page Hero Layout Container -->
+      <div class="hero-container" style="height: 45vh; min-height: 320px;">
+        <div class="slideshow">
+          <div class="slide active">
+            <img src="images/img2.jpg" alt="Gallery Overlook Hero Background Banner" />
+          </div>
+        </div>
+        <div class="banner-text">
+          <p>Lab Life</p>
+          <h1 style="font-size: clamp(2rem, 4vw, 2.8rem);">Photo Gallery</h1>
+          <h2 style="font-size: clamp(1rem, 2vw, 1.25rem);">Snapshots from our research, fieldwork, and lab moments</h2>
+        </div>
       </div>
-    </nav>
 
-    <!-- Static Hero -->
-    <div class="slideshow static-hero">
-      <img src="/images/img2.jpg" alt="Gallery Hero" class="slide active" />
-    </div>
-    <div class="banner-text static-banner">
-      <h1>Gallery</h1>
-    </div>
-
-    <!-- Main Content -->
-    <main id="main-content">
-      <section class="wrapper style1">
-        <div class="container">
-          <header class="major">
-            <h2>Photo Gallery</h2>
-            <br />
-            <p>Snapshots from our research, fieldwork, and lab moments.</p>
-            <br />
+      <!-- Core Content Matrix -->
+      <main id="main-content" style="padding: 3rem 0;">
+        <section class="container">
+          <header class="major" style="text-align: left; margin-bottom: 3rem;">
+            <h2 style="display: block; text-align: left; padding-bottom: 0.35rem; font-size: 1.75rem; margin-left: 0;">Captured Moments</h2>
+            <p style="text-align: left; margin-top: 0.25rem; font-size: 0.95rem;">A visual archive of our convocations, defenses, and group outings.</p>
           </header>
 
+          <!-- Core Image Grid Framework -->
           <div class="gallery-grid">
-            <!-- Gallery Items -->
+            
             <div class="gallery-item">
-              <img
-                src="images/MIttal_chair_Aug.jpeg"
-                alt="Prof. Sandeep as Mittal Foundation Chair"
-              />
+              <img src="images/MIttal_chair_Aug.jpeg" alt="Celebrating Prof. Sandeep Sukumaran’s new role as Mittal Foundation Chair" />
               <div class="caption">
-                Celebrating Prof. Sandeep Sukumaran’s new role as Mittal
-                Foundation Chair
+                Celebrating Prof. Sandeep Sukumaran’s new role as Mittal Foundation Chair
                 <div class="date">August 2025</div>
               </div>
             </div>
+
             <div class="gallery-item">
-              <img src="images/Lunch_Apr25.jpeg" alt="Team Lunch April 2025" />
+              <img src="images/Lunch_Apr25.jpeg" alt="Team Lunch gathering" />
               <div class="caption">
                 Team Lunch
                 <div class="date">April 2025</div>
               </div>
             </div>
+
             <div class="gallery-item">
-              <img
-                src="images/Dr. varunesh_Apr24.jpeg"
-                alt="Varunesh defended his PhD thesis"
-              />
+              <img src="images/Dr. varunesh_Apr24.jpeg" alt="Varunesh receiving his degree at the IIT Delhi convocation ceremony" />
               <div class="caption">
                 Varunesh received his degree at the convocation
                 <div class="date">August 2024</div>
               </div>
             </div>
+
             <div class="gallery-item">
-              <img
-                src="images/rahul_defence.jpg"
-                alt="Rahul defended his PhD thesis"
-              />
+              <img src="images/rahul_defence.jpg" alt="Rahul successfully defending his PhD thesis project presentation" />
               <div class="caption">
                 Rahul defended his PhD thesis
                 <div class="date">July 2024</div>
               </div>
             </div>
+
             <div class="gallery-item">
-              <img src="images/team_lunch.jpeg" alt="Team Lunch 2024" />
+              <img src="images/team_lunch.jpeg" alt="Climate Dynamics Lab group team lunch celebration" />
               <div class="caption">
                 Team Lunch
                 <div class="date">May 2024</div>
               </div>
             </div>
+
             <div class="gallery-item">
-              <img src="images/Sai'aFarewell_Mar24.jpeg" alt="Sai's Farewell" />
+              <img src="images/Sai'aFarewell_Mar24.jpeg" alt="Group gathering for Sai's academic farewell celebration" />
               <div class="caption">
                 Sai's Farewell
                 <div class="date">March 2024</div>
               </div>
             </div>
+
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-      <span class="close">&times;</span>
-      <button class="nav-btn prev"><</button>
-      <button class="nav-btn next">></button>
-      <img class="lightbox-content" id="lightbox-img" alt="Expanded view" />
-      <div id="lightbox-caption"></div>
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-top row">
-          <!-- Logo Left -->
-          <div class="col-4 col-12-mobile footer-left">
-            <img
-              src="/images/logo_footer.svg"
-              alt="Climate Dynamics Lab Logo"
-              class="footer-logo"
-            />
-          </div>
-
-          <!-- Contact Middle -->
-          <div class="col-4 col-12-mobile footer-center">
-            <h3>Climate Dynamics Lab</h3>
-            <br />
-            <p>
-              Centre for Atmospheric Sciences, IIT Delhi<br />
-              Hauz Khas, New Delhi - 110016, India<br />
-              <br />
-            </p>
-          </div>
-
-          <!-- Social Icons Right -->
-          <div class="col-4 col-12-mobile footer-right">
-            <ul class="icons">
-              <li>
-                <a
-                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  title="Email"
-                  style="color: white"
-                >
-                  <span class="iconify" data-icon="mdi:email"></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/github/ffffff"
-                    alt="GitHub"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/climdl"
-                  target="_blank"
-                  title="LinkedIn"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://bsky.app/profile/climdl.bsky.social"
-                  target="_blank"
-                  title="Bluesky"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/bluesky/ffffff"
-                    alt="Bluesky"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ClimDL_IITD"
-                  target="_blank"
-                  title="X (formerly Twitter)"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/x/ffffff"
-                    alt="X"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <hr />
-
-        <!-- Copyright -->
-        <div class="copyright">
-          <ul class="menu">
-            <li>
-              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
-            </li>
-          </ul>
-        </div>
+      <!-- Immersive Lightbox Modal View Panel (Targeted dynamically by central script engine) -->
+      <div id="lightbox" class="lightbox" role="dialog" aria-label="Expanded Image Showcase Panel" aria-modal="true">
+        <span class="close" role="button" aria-label="Close modal interface">&times;</span>
+        <button class="nav-btn prev" aria-label="View previous image in index catalog">&lt;</button>
+        <button class="nav-btn next" aria-label="View next image in index catalog">&gt;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="Expanded immersive visual preview frame" />
+        <div id="lightbox-caption"></div>
       </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script>
-      // Hamburger toggle
-      document.querySelector(".menu-toggle").onclick = () =>
-        document.querySelector(".navbar ul").classList.toggle("show");
-
-      // === Slideshow ===
-      const slides = document.querySelectorAll(".slideshow .slide");
-      let currentSlide = 0;
-      setInterval(() => {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add("active");
-      }, 4000);
-
-      // === Loader ===
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-
-      // === Lightbox with Navigation ===
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      const lightboxCaption = document.getElementById("lightbox-caption");
-      const galleryItems = document.querySelectorAll(".gallery-item img");
-      const closeBtn = document.querySelector(".close");
-      const prevBtn = document.querySelector(".prev");
-      const nextBtn = document.querySelector(".next");
-      let currentIndex;
-
-      // Open lightbox
-      galleryItems.forEach((item, index) => {
-        item.addEventListener("click", () => {
-          currentIndex = index;
-          updateLightbox(index);
-          lightbox.style.display = "block";
-          document.body.style.overflow = "hidden"; // Prevent background scroll
-        });
-      });
-
-      // Update lightbox content
-      function updateLightbox(index) {
-        const img = galleryItems[index];
-        const captionDiv = img
-          .closest(".gallery-item")
-          .querySelector(".caption");
-        lightboxImg.src = img.src;
-        lightboxCaption.textContent = captionDiv.textContent.trim();
-      }
-
-      // Close lightbox
-      function closeLightbox() {
-        lightbox.style.display = "none";
-        document.body.style.overflow = ""; // Re-enable scroll
-      }
-      closeBtn.addEventListener("click", closeLightbox);
-      window.addEventListener("click", (e) => {
-        if (e.target === lightbox) closeLightbox();
-      });
-
-      // Navigation
-      prevBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        currentIndex =
-          (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-        updateLightbox(currentIndex);
-      });
-
-      nextBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        currentIndex = (currentIndex + 1) % galleryItems.length;
-        updateLightbox(currentIndex);
-      });
-
-      // Keyboard navigation
-      document.addEventListener("keydown", (e) => {
-        if (lightbox.style.display === "block") {
-          if (e.key === "ArrowLeft") prevBtn.click();
-          else if (e.key === "ArrowRight") nextBtn.click();
-          else if (e.key === "Escape") closeBtn.click();
-        }
-      });
-    </script>
+      <!-- Decoupled Shared Footer Web Component -->
+      <lab-footer></lab-footer>
+    </div>
   </body>
 </html>
