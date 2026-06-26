@@ -2,115 +2,104 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>People | Climate Dynamics Lab</title>
+    <!-- Centralized Stylesheet Engine -->
     <link rel="stylesheet" href="main.css" />
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Global Icon Engine Script -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+    <!-- Centralized Component Logic Wrapper -->
+    <script src="main.js" defer></script>
+    <style>
+      /* Targeted fix to guarantee the PI section scales flawlessly across platforms */
+      .pi-link-wrapper {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        width: 100%;
+      }
+      .pi-section img.profile-image {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0; /* Prevents the image from squishing on medium/tablet screens */
+        border: 4px solid #ffffff;
+        box-shadow: var(--shadow-lg);
+      }
+      @media (max-width: 768px) {
+        .pi-section {
+          flex-direction: column;
+          text-align: center;
+          padding: 2rem 1.5rem;
+        }
+        .pi-section img.profile-image {
+          width: 180px;
+          height: 180px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Loader -->
+    <!-- Global Preloader Component -->
     <div id="loader">
-      <img src="/images/icon.svg" alt="Climate Dynamics Lab Logo" />
+      <img src="images/icon.svg" alt="Climate Dynamics Lab Loader Icon" />
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a href="index.html">
-        <img class="logo" src="/images/logo_top.svg" alt="Logo" />
-      </a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a class="active" href="people.html">People</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="highlights.html">Highlights</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="menu-toggle"><span></span><span></span><span></span></div>
-    </nav>
+    <div class="wrapper">
+      <!-- Decoupled Shared Navigation Web Component -->
+      <lab-navbar></lab-navbar>
 
-    <!-- Static Hero -->
-    <div class="slideshow static-hero">
-      <img src="/images/people.png" alt="People Hero" class="slide active" />
-    </div>
-    <div class="banner-text static-banner">
-      <h1>Our Team</h1>
-    </div>
+      <!-- Static Page Hero Layout Container -->
+      <div class="hero-container">
+        <div class="slideshow">
+          <div class="slide active">
+            <img src="images/people.png" alt="Climate Dynamics Lab Team Group Banner" />
+          </div>
+        </div>
+        <div class="banner-text">
+          <p>The Scientists</p>
+          <h1>Our Team</h1>
+          <h2>Researchers and Scholars Driving Climate Science Forward</h2>
+        </div>
+      </div>
 
-    <!-- Main Content -->
-    <main id="main-content">
-      <section class="wrapper style1">
+      <!-- Core Content Matrix -->
+      <main id="main-content">
         <div class="container">
-          <header class="major">
-            <h2>Meet Our Team</h2>
-            <br />
-            <p>Researchers and scholars driving climate science forward.</p>
-          </header>
-
-          <!-- Principal Investigator -->
-          <a
-            href="profiles/prof_sandeep.html"
-            class="team-member-link"
-            style="text-decoration: none; color: inherit"
-          >
-            <section class="pi-section">
-              <img
-                src="images/prof_sandeeps.jpg"
-                alt="Dr. S. Sandeep"
-                class="profile-image"
-                style="
-                  width: 250px !important;
-                  height: 250px !important;
-                  object-fit: cover;
-                "
-              />
-              <div class="pi-details">
-                <h3>Prof. Sandeep Sukumaran</h3>
-                <h4>Associate Professor, CAS, IIT Delhi</h4>
-                <h4>Mittal Foundation Chair in Climate Sciences</h4>
-                <p class="bio">
-                  Dr. Sandeep leads the Climate Dynamics Lab and specializes in
-                  Indian monsoon dynamics, climate modeling, and AI applications
-                  in atmospheric science. He is currently an Associate Professor
-                  at the Centre for Atmospheric Sciences, IIT Delhi, a position
-                  he has held since December 2022. He joined the Centre as an
-                  Assistant Professor in November 2017.
-                </p>
-              </div>
-            </section>
-          </a>
-
-          <!-- Ph.D. Students -->
-          <!-- Ph.D. Students -->
-          <section class="team-section">
-            <header><h3>Ph.D. Students</h3></header>
-
-            <div class="team-grid">
-              <a href="profiles/saran.html" class="team-member-link">
-                <div class="team-member">
-                  <img
-                    src="images/saran.jpeg"
-                    alt="Saran Ranrajendran"
-                    class="profile-image"
-                  />
-                  <h3>Saran Ranrajendran</h3>
-                  <h4>Ph.D. Scholar</h4>
+          
+          <!-- Principal Investigator Showcase (Scaled Fix) -->
+          <section style="margin-bottom: 4rem;">
+            <a href="profiles/prof_sandeep.html" class="pi-link-wrapper">
+              <section class="pi-section">
+                <img src="images/prof_sandeeps.jpg" alt="Prof. Sandeep Sukumaran Portrait" class="profile-image" />
+                <div class="pi-details">
+                  <h3>Prof. Sandeep Sukumaran</h3>
+                  <h4>Associate Professor, CAS, IIT Delhi</h4>
+                  <h4>Mittal Foundation Chair in Climate Sciences</h4>
                   <p class="bio">
-                    Interannual Variability of Indian Summer Monsoon: The Role
-                    of Ocean-Atmosphere Coupling, Teleconnection and Internal
-                    Variability.
+                    Dr. Sandeep leads the Climate Dynamics Lab and specializes in
+                    Indian monsoon dynamics, climate modeling, and AI applications
+                    in atmospheric science. He is currently an Associate Professor
+                    at the Centre for Atmospheric Sciences, IIT Delhi, a position
+                    he has held since December 2022. He joined the Centre as an
+                    Assistant Professor in November 2017.
                   </p>
                 </div>
-              </a>
+              </section>
+            </a>
+          </section>
 
+          <!-- Ph.D. Students Matrix Group -->
+          <section class="team-section">
+            <header class="major" style="text-align: left; margin-bottom: 2rem;">
+              <h3 style="display: block; text-align: left; padding-bottom: 0.5rem; margin-left: 0;">Ph.D. Scholars</h3>
+            </header>
+
+            <div class="team-grid">
               <a href="profiles/alice.html" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/Alice.jpg"
-                    alt="Alice Jeeva PJ"
-                    class="profile-image"
-                  />
+                  <img src="images/Alice.jpg" alt="Alice Jeeva PJ" class="profile-image" />
                   <h3>Alice Jeeva PJ</h3>
                   <h4>Ph.D. Scholar</h4>
                   <p class="bio">
@@ -122,11 +111,7 @@
 
               <a href="profiles/pankaj.html" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/pankaj.jpg"
-                    alt="Pankaj Lal Sahu"
-                    class="profile-image"
-                  />
+                  <img src="images/pankaj.jpg" alt="Pankaj Lal Sahu" class="profile-image" />
                   <h3>Pankaj Lal Sahu</h3>
                   <h4>Ph.D. Scholar</h4>
                   <p class="bio">
@@ -139,11 +124,7 @@
 
               <a href="profiles/charudatt.html" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/charu.jpg"
-                    alt="Charudatt Puri"
-                    class="profile-image"
-                  />
+                  <img src="images/charu.jpg" alt="Charudatt Puri" class="profile-image" />
                   <h3>Charudatt Puri</h3>
                   <h4>Ph.D. Scholar</h4>
                   <p class="bio">
@@ -156,11 +137,7 @@
 
               <a href="profiles/anirudh.html" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/anirudh.jpg"
-                    alt="Anirudh K M"
-                    class="profile-image"
-                  />
+                  <img src="images/anirudh.jpg" alt="Anirudh K M" class="profile-image" />
                   <h3>Anirudh K M</h3>
                   <h4>Ph.D. Scholar</h4>
                   <p class="bio">
@@ -174,11 +151,7 @@
 
               <a href="profiles/sanya.html" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/sanya.jpg"
-                    alt="Sanya Narbar"
-                    class="profile-image"
-                  />
+                  <img src="images/sanya.jpg" alt="Sanya Narbar" class="profile-image" />
                   <h3>Sanya Narbar</h3>
                   <h4>Ph.D. Scholar</h4>
                   <p class="bio">
@@ -189,11 +162,7 @@
 
               <a href="profiles/gobinda.html" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/gobinda.jpg"
-                    alt="Gobinda Manna"
-                    class="profile-image"
-                  />
+                  <img src="images/gobinda.jpg" alt="Gobinda Manna" class="profile-image" />
                   <h3>Gobinda Manna</h3>
                   <h4>Ph.D. Scholar</h4>
                   <p class="bio">
@@ -205,284 +174,83 @@
             </div>
           </section>
 
-          <!-- Alumni -->
-          <section class="team-section">
-            <header><h3>Alumni</h3></header>
+          <!-- Alumni Matrix Group (Saran Appended Here) -->
+          <section class="team-section" style="margin-top: 4rem;">
+            <header class="major" style="text-align: left; margin-bottom: 2rem;">
+              <h3 style="display: block; text-align: left; padding-bottom: 0.5rem; margin-left: 0;">Alumni</h3>
+            </header>
+            
             <div class="team-grid">
+              <!-- Saran Ranrajendran - Updated and Relocated Profile -->
+              <a href="profiles/saran.html" class="team-member-link">
+                <div class="team-member">
+                  <img src="images/saran.jpeg" alt="Saran Ranrajendran" class="profile-image" />
+                  <h3>Saran Ranrajendran</h3>
+                  <h4>Ph.D. Graduate</h4>
+                  <p class="bio">
+                    Defended: 6 May 2026<br />
+                    Interannual Variability of Indian Summer Monsoon.
+                  </p>
+                  <span class="highlight-current">Project Scientist, IITM Pune</span>
+                </div>
+              </a>
+
               <a href="profiles/dombo.html" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/dombo.jpg"
-                    alt="Tomviezebe Cephas Dombo"
-                    class="profile-image"
-                  />
+                  <img src="images/dombo.jpg" alt="Tomviezebe Cephas Dombo" class="profile-image" />
                   <h3>Tomviezebe Cephas Dombo</h3>
+                  <h4>Ph.D. Graduate</h4>
                   <p class="bio">
                     Defended: 27 Nov 2024<br />
-                    Joint supervision with Prof. Krishna AchutaRao<br />
-                    <span class="highlight-current"
-                      >Current: Scientist, Nigerian Meteorological Agency</span
-                    >
+                    Joint supervision with Prof. Krishna AchutaRao
                   </p>
+                  <span class="highlight-current">Scientist, Nigerian Meteorological Agency</span>
                 </div>
               </a>
 
-              <a
-                href="https://climateengineering.uchicago.edu/people/rahul-singh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="team-member-link"
-              >
+              <a href="https://climateengineering.uchicago.edu/people/rahul-singh/" target="_blank" rel="noopener noreferrer" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/rahul.jpg"
-                    alt="Rahul Singh"
-                    class="profile-image"
-                  />
+                  <img src="images/rahul.jpg" alt="Rahul Singh" class="profile-image" />
                   <h3>Rahul Singh</h3>
+                  <h4>Ph.D. Graduate</h4>
                   <p class="bio">
-                    Defended: 10 Jul 2024<br />
-                    <span class="highlight-current"
-                      >Current: Postdoc, University of Chicago</span
-                    >
+                    Defended: 10 Jul 2024
                   </p>
+                  <span class="highlight-current">Postdoc, University of Chicago</span>
                 </div>
               </a>
 
-              <a
-                href="https://sites.google.com/view/ksssaisrujan/home"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="team-member-link"
-              >
+              <a href="https://sites.google.com/view/ksssaisrujan/home" target="_blank" rel="noopener noreferrer" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/sai.jpg"
-                    alt="K S S S Sai Srujan"
-                    class="profile-image"
-                  />
+                  <img src="images/sai.jpg" alt="K S S S Sai Srujan" class="profile-image" />
                   <h3>K S S S Sai Srujan</h3>
+                  <h4>Ph.D. Graduate</h4>
                   <p class="bio">
                     Defended: 13 Mar 2024<br />
-                    Joint supervision with Prof. Hariprasad Kodamana (Chemical
-                    Engg.)<br />
-                    <span class="highlight-current"
-                      >Current: Postdoc, Columbia University</span
-                    >
+                    Joint supervision with Prof. Hariprasad Kodamana
                   </p>
+                  <span class="highlight-current">Postdoc, Columbia University</span>
                 </div>
               </a>
 
-              <a
-                href="https://www.pmel.noaa.gov/people/dr-varunesh-chandra"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="team-member-link"
-              >
+              <a href="https://www.pmel.noaa.gov/people/dr-varunesh-chandra" target="_blank" rel="noopener noreferrer" class="team-member-link">
                 <div class="team-member">
-                  <img
-                    src="images/varunesh.jpg"
-                    alt="Varunesh Chandra"
-                    class="profile-image"
-                  />
+                  <img src="images/varunesh.jpg" alt="Varunesh Chandra" class="profile-image" />
                   <h3>Varunesh Chandra</h3>
+                  <h4>Ph.D. Graduate</h4>
                   <p class="bio">
-                    Defended: 17 Oct 2023<br />
-                    <span class="highlight-current"
-                      >Current: Postdoc, University of Washington / PMEL</span
-                    >
+                    Defended: 17 Oct 2023
                   </p>
+                  <span class="highlight-current">Postdoc, University of Washington / PMEL</span>
                 </div>
               </a>
             </div>
           </section>
         </div>
-      </section>
-    </main>
+      </main>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-top row">
-          <!-- Logo Left -->
-          <div class="col-4 col-12-mobile footer-left">
-            <img
-              src="/images/logo_footer.svg"
-              alt="Climate Dynamics Lab Logo"
-              class="footer-logo"
-            />
-          </div>
-
-          <!-- Contact Middle -->
-          <div class="col-4 col-12-mobile footer-center">
-            <h3>Climate Dynamics Lab</h3>
-            <br />
-            <p>
-              Centre for Atmospheric Sciences, IIT Delhi<br />
-              Hauz Khas, New Delhi - 110016, India<br />
-              <br />
-            </p>
-          </div>
-          <div class="col-4 col-12-mobile footer-right">
-            <ul class="icons">
-              <li>
-                <a
-                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  title="Email"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="mdi:email"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/github/ffffff"
-                    alt="GitHub"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/climdl"
-                  target="_blank"
-                  title="LinkedIn"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://bsky.app/profile/climdl.bsky.social"
-                  target="_blank"
-                  title="Bluesky"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/bluesky/ffffff"
-                    alt="Bluesky"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ClimDL_IITD"
-                  target="_blank"
-                  title="X (formerly Twitter)"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/x/ffffff"
-                    alt="X"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <hr />
-
-        <!-- Copyright -->
-        <div class="copyright">
-          <ul class="menu">
-            <li>
-              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-      // Hamburger toggle
-      document.querySelector(".menu-toggle").onclick = () =>
-        document.querySelector(".navbar ul").classList.toggle("show");
-
-      // === Slideshow ===
-      const slides = document.querySelectorAll(".slideshow .slide");
-      let currentSlide = 0;
-
-      setInterval(() => {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add("active");
-      }, 4000);
-
-      // === Carousel ===
-      const reel = document.querySelector(".carousel .reel");
-      const forward = document.querySelector(".carousel .forward");
-      const backward = document.querySelector(".carousel .backward");
-
-      if (reel && forward && backward) {
-        let scrollX = 0;
-        const cardWidth = 360 + 60;
-
-        forward.addEventListener("click", () => {
-          scrollX -= cardWidth;
-          const maxScroll = -(
-            reel.scrollWidth - reel.parentElement.clientWidth
-          );
-          if (scrollX < maxScroll) scrollX = maxScroll;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-
-        backward.addEventListener("click", () => {
-          scrollX += cardWidth;
-          if (scrollX > 0) scrollX = 0;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-      }
-
-      // === Loader ===
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-
-      // Simple Lightbox JS
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-      const lightboxCaption = document.getElementById("lightbox-caption");
-      const galleryItems = document.querySelectorAll(".gallery-item img");
-      const closeBtn = document.querySelector(".close");
-
-      galleryItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          lightbox.style.display = "block";
-          lightboxImg.src = item.src;
-          lightboxCaption.textContent = item.alt;
-        });
-      });
-
-      closeBtn.addEventListener("click", () => {
-        lightbox.style.display = "none";
-      });
-
-      window.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-          lightbox.style.display = "none";
-        }
-      });
-    </script>
+      <!-- Decoupled Shared Footer Web Component -->
+      <lab-footer></lab-footer>
+    </div>
   </body>
 </html>
-
-
-
-
