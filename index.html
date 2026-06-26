@@ -2,509 +2,237 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClimDL | CAS IITD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climate Dynamics Lab | CAS IIT Delhi</title>
     <link rel="stylesheet" href="main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+    <script src="main.js" defer></script>
   </head>
 
   <body>
-    <!-- Loader -->
     <div id="loader">
-      <img src="/images/icon.svg" alt="Climate Dynamics Lab Logo" />
+      <img src="images/icon.svg" alt="Climate Dynamics Lab Loader Icon" />
     </div>
 
-    <!-- Wrapper -->
     <div class="wrapper">
-      <nav class="navbar">
-        <a href="index.html">
-          <img class="logo" src="/images/logo_top.svg" alt="Logo" />
-        </a>
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="people.html">People</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="highlights.html">Highlights</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
+      <lab-navbar></lab-navbar>
+
+      <div class="hero-container">
+        <div class="slideshow">
+          <figure class="slide active">
+            <img src="images/bluemarble.png" alt="Blue Marble view of Earth from space" />
+            <figcaption>Blue Marble view of Earth from space</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/earthview.png" alt="Global atmospheric circulation patterns" />
+            <figcaption>Global atmospheric circulation from NASA Worldview</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/darby.jpg" alt="Tropical storm over the Indian Ocean" />
+            <figcaption>Hurricane Darby (2016)</figcaption>
+          </figure>
         </div>
-      </nav>
 
-      <!-- Slideshow background -->
-      <div class="slideshow">
-        <figure class="slide active">
-          <img
-            src="/images/bluemarble.png"
-            alt="Blue Marble view of Earth from space"
-          />
-          <figcaption>Blue Marble view of Earth from space</figcaption>
-        </figure>
-        <figure class="slide">
-          <img
-            src="/images/earthview.png"
-            alt="Global atmospheric circulation patterns"
-          />
-          <figcaption>
-            Global atmospheric circulation from NASA Worldview
-          </figcaption>
-        </figure>
-        <figure class="slide">
-          <img
-            src="/images/darby.jpg"
-            alt="Tropical storm over the Indian Ocean"
-          />
-          <figcaption>Hurricane Darby (2016)</figcaption>
-        </figure>
+        <div class="banner-text">
+          <p>Welcome</p>
+          <h1>Climate Dynamics Lab</h1>
+          <h2>Centre for Atmospheric Sciences, IIT Delhi</h2>
+        </div>
       </div>
 
-      <!-- Banner text -->
-      <div class="banner-text">
-        <p>Welcome!</p>
-        <br />
-        <h1>Climate Dynamics Lab</h1>
-        <h2>Centre for Atmospheric Sciences, IIT Delhi</h2>
-      </div>
+      <main>
+        <section id="intro">
+          <div class="container">
+            <header class="major">
+              <h2>Exploring the Atmosphere, Charting Modern Frontiers</h2>
+            </header>
+            <div class="intro-text">
+              <p>
+                At the Climate Dynamics Lab, we study the dynamics of the Earth’s climate system, 
+                with a particular focus on the Indian summer monsoon, which shapes millions of lives 
+                across South Asia. Led by Prof. Sandeep Sukumaran at the Centre for Atmospheric Sciences, 
+                IIT Delhi, our research integrates observations, climate models, and machine learning to 
+                investigate the ISM, low-pressure systems, dry air intrusions, and the physical 
+                processes and energetics driving changes across scales. By combining physics-based 
+                understanding with data-driven approaches, we aim to improve forecasts, detect extreme events, 
+                and develop tools that support disaster preparedness and climate resilience. Our work seeks to 
+                unravel the mechanisms behind monsoon behavior and broader climate patterns, providing insights 
+                into both regional and global climate systems in a changing planet.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="container">
+          <div class="phd-announcement">
+            <div class="phd-content">
+              <div class="phd-icon" aria-hidden="true">🎓</div>
+              <div class="phd-text">
+                <h2>PhD Opportunity at Climate Dynamics Lab</h2>
+                <p>
+                  We are inviting applications from <strong>motivated PhD aspirants</strong> with a valid 
+                  <strong>CSIR/UGC Fellowship</strong> to join our research group. If you're passionate about 
+                  atmospheric science and want to tackle real-world environmental challenges, 
+                  <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">get in touch</a> with us or explore our active timelines.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container">
+          <div class="guide-section">
+            <div class="guide-image">
+              <a href="people.html">
+                <img src="images/prof_sandeeps.jpg" alt="Prof. Sandeep Sukumaran Portrait" />
+              </a>
+            </div>
+            <div class="guide-content">
+              <h3 class="guide-name">Prof. Sandeep Sukumaran</h3>
+              <h4 class="guide-title">Associate Professor, CAS, IIT Delhi</h4>
+              <h4 class="guide-title">Mittal Foundation Chair in Climate Sciences</h4>
+              <p class="guide-bio">
+                Prof. Sandeep is an atmospheric scientist specializing in climate dynamics. He earned his PhD 
+                from IIT Kharagpur and conducted deep-field advanced atmospheric postdoctoral research positions at IISc Bangalore, 
+                University of Oslo, and NYU Abu Dhabi.
+              </p>
+              <h4 class="guide-subheading">Core Research Domains:</h4>
+              <ul class="guide-list">
+                <li>Climate system dynamics</li>
+                <li>Global climate change & monsoon system variability</li>
+                <li>AI/ML physical applications in predictive weather models</li>
+              </ul>
+              <a href="people.html" class="guide-button">View Profile Profile</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="container">
+          <div class="wrapper style2">
+            
+            <!-- Reinstated & Modernized Lab Group Image Panel -->
+            <div style="max-width: 760px; margin: 0 auto 2.5rem; border-radius: var(--radius-md); overflow: hidden; border: 3px solid rgba(255, 255, 255, 0.15); box-shadow: var(--shadow-lg);">
+              <img src="images/group_pic1.jpg" alt="Climate Dynamics Lab Team Group Photo" style="width: 100%; height: auto; display: block; object-fit: cover;" />
+            </div>
+
+            <h2>Our Mission</h2>
+            <p>
+              The Climate Dynamics Lab at IIT Delhi is dedicated to unraveling the complex mechanisms 
+              governing the Indian monsoon system and its response to climate change.[cite: 9]
+              We employ an agile, multidisciplinary approach combining high-resolution numerical climate modeling, 
+              satellite observational analysis frameworks, and deep physics-guided neural computing architectures 
+              to address core unknowns about climate resilience across South Asia.
+            </p>
+            <a href="research.html" class="button">Explore Our Research</a>
+          </div>
+        </section>
+        </section>
+
+        <section class="container" style="padding-top: 2rem;">
+          <header class="major">
+            <h2>Research Themes</h2>
+            <p>Key investigative focus areas within our research frameworks</p>
+          </header>
+          
+          <div class="research-grid">
+            <article class="research-tile">
+              <h3>Monsoon Dynamics</h3>
+              <p>
+                Investigating the fundamental physical mechanics governing the Indian summer monsoon, 
+                mapping intraseasonal precipitation oscillations, structural monsoon breaks, and teleconnection circulation patterns.
+              </p>
+            </article>
+
+            <article class="research-tile">
+              <h3>Climate Change & Projections</h3>
+              <p>
+                Quantifying global thermal atmospheric acceleration impacts on regional monsoon signatures 
+                and downscaling global coupled projections to calibrate local extreme weather anomalies.
+              </p>
+            </article>
+
+            <article class="research-tile">
+              <h3>AI/ML in Atmospheric Sciences</h3>
+              <p>
+                Engineering specialized data-driven deep networks for weather event prediction, structural climate model 
+                emulation wrappers, and localized deep extreme event classification.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="container" style="margin-bottom: 4rem;">
+          <div class="carousel" aria-label="Research Highlights Feed Display">
+            <span class="backward" role="button" aria-label="Scroll Backwards">&lt;</span>
+            <div class="reel">
+              
+              <article>
+                <div class="image featured">
+                  <img src="images/highlight_egu26.png" alt="Climate Dynamics Lab Team Collage at EGU 2026 General Assembly in Vienna" />
+                </div>
+                <header>
+                  <h3><a href="highlights.html">Lab at EGU 2026</a></h3>
+                </header>
+                <p>Research scholars from the Climate Dynamics Lab represented the Centre for Atmospheric Sciences (CAS) at the prestigious 
+                  <strong>EGU General Assembly 2026</strong>, <strong>Vienna, Austria</strong>.</p>
+              </article>
+
+              <article>
+                <div class="image featured">
+                  <img src="images/highlights_mittal_chair.png" alt="Prof. Sandeep Sukumaran Appointed Mittal Foundation Chair Announcement" />
+                </div>
+                <header>
+                  <h3><a href="highlights.html">Chair Professor Appointment</a></h3>
+                </header>
+                <p>Prof. Sandeep Sukumaran has been selected as the prestigious <em>Mittal Foundation Chair in Climate Sciences</em> at IIT Delhi.</p>
+              </article>
+
+              <article>
+                <div class="image featured">
+                  <img src="images/genesis_monsoon_lps.png" alt="Monsoon Low Pressure System Synoptic Map Visualization" />
+                </div>
+                <header>
+                  <h3><a href="publications.html">Genesis of Monsoon LPS</a></h3>
+                </header>
+                <p>Investigating convective trigger boundaries and the internal lifecycle mechanics of depression formations across the Bay of Bengal.</p>
+              </article>
+
+              <article>
+                <div class="image featured">
+                  <img src="images/dry_air_intrusion.png" alt="Atmospheric cross-section showing dry air intrusion models into monsoon zones" />
+                </div>
+                <header>
+                  <h3><a href="publications.html">Dynamics of Dry Air Intrusion</a></h3>
+                </header>
+                <p>Dissecting how mid-latitude mid-tropospheric dry air vectors break monsoon equilibrium regimes and alter seasonal precipitation metrics.</p>
+              </article>
+
+              <article>
+                <div class="image featured">
+                  <img src="images/future_monsoon.png" alt="Advanced multi-model ensembles projecting century-scale monsoon paths" />
+                </div>
+                <header>
+                  <h3><a href="publications.html">Future of Indian Summer Monsoon</a></h3>
+                </header>
+                <p>Simulating and assessing century-scale system shifts in tropical monsoon metrics using high-order CMIP6 simulation tracks.</p>
+              </article>
+
+              <article>
+                <div class="image featured">
+                  <img src="images/DL_for_monsoon.png" alt="Neural network diagnostic visualizer graphing monsoon trend arrays" />
+                </div>
+                <header>
+                  <h3><a href="publications.html">Deep Learning Frameworks</a></h3>
+                </header>
+                <p>Developing data-driven predictive networks to improve baseline simulation skills across key sub-seasonal forecast milestones.</p>
+              </article>
+            </div>
+            <span class="forward" role="button" aria-label="Scroll Forwards">&gt;</span>
+          </div>
+        </section>
+      </main>
+
+      <lab-footer></lab-footer>
     </div>
-
-    <section id="intro">
-      <header>
-        <h2>Exploring the Atmosphere, Charting Modern Frontiers!</h2>
-        <p>
-          At the Climate Dynamics Lab, we study the dynamics of the Earth’s climate system, 
-          with a particular focus on the Indian summer monsoon, which shapes millions of lives 
-          across South Asia. Led by Prof. Sandeep Sukumaran at the Centre for Atmospheric Sciences, 
-          IIT Delhi, our research integrates observations, climate models, and machine learning to 
-          investigate the ISM, low-pressure systems, dry air intrusions, and the physical 
-          processes and energetics driving changes across scales. By combining physics-based 
-          understanding with data-driven approaches, we aim to improve forecasts, detect extreme events, 
-          and develop tools that support disaster preparedness and climate resilience. Our work seeks to 
-          unravel the mechanisms behind monsoon behavior and broader climate patterns, providing insights 
-          into both regional and global climate systems in a changing planet.
-        </p>
-      </header>
-    </section>
-
-    <!-- PhD Vacancy Announcement -->
-    <section class="phd-announcement">
-      <div class="phd-content">
-        <div class="phd-icon">🎓</div>
-        <div class="phd-text">
-          <h2>PhD Opportunity at Climate Dynamics Lab</h2>
-          <p>
-            We are inviting applications from
-            <strong>motivated PhD aspirants</strong> with a valid
-            <strong>CSIR/UGC Fellowship</strong> to join our research group. If
-            you're passionate about atmospheric science and want to work on
-            real-world challenges,
-            <a href="mailto:sandeep.sukumaran@cas.iitd.ac.in">get in touch</a>
-            or explore our work.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Content -->
-    <main id="main-content">
-      <!-- About PI -->
-      <section class="guide-section">
-        <div class="guide-image">
-          <a href="people.html#pi">
-            <img src="images/prof_sandeeps.jpg" alt="Prof. Sandeep Sukumaran" />
-          </a>
-        </div>
-        <div class="guide-content">
-          <h3 class="guide-name">Prof. Sandeep Sukumaran</h3>
-          <h4 class="guide-title">Associate Professor, CAS, IIT Delhi</h4>
-          <h4 class="guide-title">
-            Mittal Foundation Chair in Climate Sciences
-          </h4>
-          <p class="guide-bio">
-            Prof. Sandeep is an atmospheric scientist specializing in climate
-            dynamics. He earned his PhD from IIT Kharagpur and held postdoctoral
-            positions at IISc Bangalore, University of Oslo, and NYU Abu Dhabi.
-          </p>
-          <h4 class="guide-subheading">Research Areas:</h4>
-          <ul class="guide-list">
-            <li>Climate dynamics</li>
-            <li>Climate change and monsoon variability</li>
-            <li>AI/ML applications in weather and climate</li>
-          </ul>
-          <a href="people.html#pi" class="guide-button">Full Profile</a>
-        </div>
-      </section>
-    </main>
-
-    <!-- Mission -->
-    <section class="wrapper style2">
-      <article class="container special">
-        <a href="research.html" class="image featured">
-          <img src="images/group_pic1.jpg" alt="Lab Team" />
-        </a>
-        <header>
-          <h2>Our Mission</h2>
-          <p>
-            Advancing understanding of tropical climate dynamics through
-            cutting-edge research.
-          </p>
-        </header>
-        <p>
-          The Climate Dynamics Lab at IIT Delhi is dedicated to unraveling the
-          complex mechanisms governing the Indian monsoon system and its
-          response to climate change. We employ a multidisciplinary approach
-          combining high-resolution climate modeling, observational data
-          analysis, and machine learning techniques to address fundamental
-          questions about monsoon variability, extreme weather events, and
-          long-term climate trends. Our research aims to improve predictive
-          understanding of the monsoon system and contribute to climate
-          resilience in the region.
-        </p>
-        <footer>
-          <a href="research.html" class="button">Explore Our Research</a>
-        </footer>
-      </article>
-    </section>
-    <br /><br /><br />
-
-    <!-- Research Themes -->
-    <section class="wrapper style1">
-      <div class="container special" id="research-themes">
-        <header>
-          <h2>Research Themes</h2>
-          <h4>Key areas of investigation in our laboratory</h4>
-        </header>
-        <div class="row">
-          <article class="col-4 col-12-mobile special">
-            <a href="research.html#monsoon-dynamics" class="image featured">
-              <img
-                src="images/img2.jpg"
-                alt="Animation of monsoon winds and precipitation patterns over South Asia"
-              />
-            </a>
-            <header>
-              <h3>
-                <a href="research.html#monsoon-dynamics">Monsoon Dynamics</a>
-              </h3>
-            </header>
-            <p>
-              Investigating the physical processes governing the Indian summer
-              monsoon, including intraseasonal variability, monsoon breaks, and
-              the role of large-scale circulation patterns.
-            </p>
-          </article>
-          <article class="col-4 col-12-mobile special">
-            <a href="research.html#climate-change" class="image featured">
-              <img
-                src="images/img3.jpg"
-                alt="Graph showing global temperature trends and projected monsoon changes"
-              />
-            </a>
-            <header>
-              <h3>
-                <a href="research.html#climate-change"
-                  >Climate Change & Future Projections</a
-                >
-              </h3>
-            </header>
-            <p>
-              Assessing how global warming affects monsoon characteristics and
-              developing regional climate scenarios to understand future changes
-              in precipitation patterns.
-            </p>
-          </article>
-          <article class="col-4 col-12-mobile special">
-            <a href="research.html#ai-applications" class="image featured">
-              <img
-                src="images/ai_ml_research.png"
-                alt="Machine learning model applied to weather prediction data visualization"
-              />
-            </a>
-            <header>
-              <h3>
-                <a href="research.html#ai-applications"
-                  >AI/ML in Atmospheric Sciences</a
-                >
-              </h3>
-            </header>
-            <p>
-              Developing machine learning algorithms for weather prediction,
-              climate model emulation, and extreme event detection to enhance
-              traditional approaches.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Carousel -->
-    <section class="carousel" aria-label="Research Highlights">
-      <span class="backward"><i class="fas fa-chevron-left"></i></span>
-      <div class="reel">
-        <article>
-          <a href="highlights.html" class="image featured">
-            <img
-              src="images/highlights_mittal_chair.png"
-              alt="Prof. Sandeep Sukumaran appointed Mittal Foundation Chair"
-            />
-          </a>
-          <header>
-            <h3>
-              <a href="highlights.html"> Chair Professor Appointment </a>
-            </h3>
-          </header>
-          <p>
-            Prof. Sandeep Sukumaran has been appointed as the
-            <em>Mittal Foundation Chair in Climate Sciences</em> at IIT Delhi
-            (July 2025).
-          </p>
-        </article>
-        <article>
-          <a href="research.html" class="image featured">
-            <img src="images/genesis_monsoon_lps.png" alt="Monsoon Systems" />
-          </a>
-          <header>
-            <h3>
-              <a href="publications.html">Genesis of Monsoon LPS</a>
-            </h3>
-          </header>
-          <p>
-            Investigating the formation and evolution of monsoon depressions
-            that drive rainfall variability.
-          </p>
-        </article>
-        <article>
-          <a href="publications.html" class="image featured">
-            <img
-              src="images/dry_air_intrusion.png"
-              alt="Atmospheric cross-section showing dry air intrusion into monsoon region"
-            />
-          </a>
-          <header>
-            <h3>
-              <a href="publications.html">Dynamics of Dry Air Intrusion</a>
-            </h3>
-          </header>
-          <p>
-            Examining how mid-latitude dry air affects monsoon convection and
-            rainfall patterns.
-          </p>
-        </article>
-        <article>
-          <a href="publications.html" class="image featured">
-            <img
-              src="images/future_monsoon.png"
-              alt="Climate model projections showing future changes in monsoon rainfall patterns"
-            />
-          </a>
-          <header>
-            <h3>
-              <a href="publications.html">Future of Indian Summer Monsoon</a>
-            </h3>
-          </header>
-          <p>
-            Assessing monsoon response to global warming using climate model
-            projections.
-          </p>
-        </article>
-        <article>
-          <a
-            href="publications.html#AI/ML in Atmospheric Sciences"
-            class="image featured"
-          >
-            <img
-              src="images/DL_for_monsoon.png"
-              alt="Neural network architecture diagram for monsoon prediction system"
-            />
-          </a>
-          <header>
-            <h3>
-              <a href="publications.html#ai-monsoo"
-                >Deep Learning for Monsoon Prediction</a
-              >
-            </h3>
-          </header>
-          <p>
-            Developing AI-based techniques to improve monsoon forecasting skill.
-          </p>
-        </article>
-        <article>
-          <a href="publications.html#cyclone-monsoon" class="image featured">
-            <img
-              src="images/TC_monsoon.jpg"
-              alt="Satellite image showing tropical cyclone embedded in monsoon circulation"
-            />
-          </a>
-          <header>
-            <h3>
-              <a href="publications.html#cyclone-monsoon"
-                >Tropical Cyclone-Monsoon Interaction</a
-              >
-            </h3>
-          </header>
-          <p>
-            Understanding how cyclones modulate large-scale monsoon circulation.
-          </p>
-        </article>
-      </div>
-      <span class="forward"><i class="fas fa-chevron-right"></i></span>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-top row">
-          <div class="col-4 col-12-mobile footer-left">
-            <img
-              src="/images/logo_footer.svg"
-              alt="Climate Dynamics Lab Logo"
-              class="footer-logo"
-            />
-          </div>
-          <div class="col-4 col-12-mobile footer-center">
-            <h3>Climate Dynamics Lab</h3>
-            <br />
-            <p>
-              Centre for Atmospheric Sciences, IIT Delhi<br />
-              Hauz Khas, New Delhi - 110016, India<br />
-              <br />
-            </p>
-          </div>
-          <div class="col-4 col-12-mobile footer-right">
-            <ul class="icons">
-              <li>
-                <a
-                  href="mailto:sandeep.sukumaran@cas.iitd.ac.in"
-                  title="Email"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="mdi:email"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/climdl"
-                  target="_blank"
-                  title="GitHub"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/github/ffffff"
-                    alt="GitHub"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/climdl"
-                  target="_blank"
-                  title="LinkedIn"
-                  style="color: white"
-                >
-                  <span
-                    class="iconify"
-                    data-icon="simple-icons:linkedin"
-                    data-inline="false"
-                  ></span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://bsky.app/profile/climdl.bsky.social"
-                  target="_blank"
-                  title="Bluesky"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/bluesky/ffffff"
-                    alt="Bluesky"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/ClimDL_IITD"
-                  target="_blank"
-                  title="X (formerly Twitter)"
-                >
-                  <img
-                    src="https://cdn.simpleicons.org/x/ffffff"
-                    alt="X"
-                    style="height: 24px; width: 24px"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr />
-        <div class="copyright">
-          <ul class="menu">
-            <li>
-              &copy; Climate Dynamics Lab, IIT Delhi. All rights reserved.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-      // Hamburger toggle
-      document.querySelector(".menu-toggle").onclick = () =>
-        document.querySelector(".navbar ul").classList.toggle("show");
-
-      // Slideshow
-      const slides = document.querySelectorAll(".slideshow .slide");
-      let currentSlide = 0;
-
-      setInterval(() => {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add("active");
-      }, 4000);
-
-      // Carousel
-      const reel = document.querySelector(".carousel .reel");
-      const forward = document.querySelector(".carousel .forward");
-      const backward = document.querySelector(".carousel .backward");
-
-      if (reel && forward && backward) {
-        let scrollX = 0;
-        const cardWidth = 340 + 24; // Updated for modern card width + gap (1.5em ~24px)
-
-        forward.addEventListener("click", () => {
-          scrollX -= cardWidth;
-          const maxScroll = -(
-            reel.scrollWidth - reel.parentElement.clientWidth
-          );
-          if (scrollX < maxScroll) scrollX = maxScroll;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-
-        backward.addEventListener("click", () => {
-          scrollX += cardWidth;
-          if (scrollX > 0) scrollX = 0;
-          reel.style.transform = `translateX(${scrollX}px)`;
-        });
-      }
-
-      // Loader
-      window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-      });
-    </script>
   </body>
 </html>
