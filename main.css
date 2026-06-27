@@ -780,7 +780,7 @@ header.major p {
   border-radius: var(--radius-md);
 }
 
-/* --- PI Segment Layout Override & Polish --- */
+/* PI Segment Layout Override & Polish */
 .pi-link-wrapper {
   text-decoration: none;
   color: inherit;
@@ -848,37 +848,30 @@ header.major p {
   margin-top: 0;
 }
 
-@media (max-width: 768px) {
-  .pi-details h4:last-of-type::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
 /* ==========================================================================
    PUBLICATIONS & ENGINES
    ========================================================================== */
 
-/* Clean bold display configuration tracking laboratory authors */
+/* 1. Simplified clean bold look for Lab Members (No background tints) */
 .pub-list li strong.lab-member {
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-primary); /* Keeps author lists cleanly integrated */
   background: none !important;
   padding: 0 !important;
   border-radius: 0 !important;
 }
 
-/* Differentiated tone assigned to highlight text manuscript title rows */
+/* 2. Custom color assignment to highlight manuscript titles */
 .pub-list li .pub-title {
-  color: #0284c7; /* Oceanic Sky Blue */
+  color: #0284c7; /* Deep climate/oceanic sky blue to anchor the entry */
   font-weight: 600;
 }
-
+/* Ensure hyperlink variants retain their clear underline indicators on hover */
 .pub-list li a:hover .pub-title {
   text-decoration: underline;
 }
 
-/* Base interactive context indicator labels */
+/* 3. Base layout for interaction status badges */
 .pub-status {
   font-size: 0.75rem;
   font-weight: 700;
@@ -891,23 +884,23 @@ header.major p {
   letter-spacing: 0.5px;
 }
 
-/* High contrast layout style tags assigned to Accepted tracks */
+/* 4. Emerald Green style configuration for Accepted tracks */
 .status-in-press, 
 .status-accepted {
   color: #065f46;
-  background-color: #d1fae5; /* Emerald Accent Tint */
+  background-color: #d1fae5;
 }
 
-/* High contrast layout style tags assigned to Submitted cycles */
+/* 5. Premium Indigo/Blue style configuration for Submitted cycles */
 .status-submitted {
-  color: #1e40af;
-  background-color: #e0e7ff; /* Indigo/Royal Blue Tint */
+  color: #1e40af; /* High contrast Royal Blue text */
+  background-color: #e0e7ff; /* Soft Indigo background tint */
 }
 
-/* High contrast layout style tags assigned to Pending review loops */
+/* 6. Amber color fallback option for Under Review items */
 .status-under-review {
   color: #92400e;
-  background-color: #fef3c7; /* Warning Amber Tint */
+  background-color: #fef3c7;
 }
 
 .pub-section {
@@ -1237,6 +1230,28 @@ header.major p {
   box-shadow: var(--shadow-md);
   border: 1px solid var(--color-border);
   height: 100%;
+  transition: var(--transition-smooth);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(0, 43, 86, 0.15);
+}
+
+.contact-card h2 {
+  position: relative;
+}
+
+.contact-card h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
 }
 
 .contact-item {
@@ -1256,10 +1271,41 @@ header.major p {
 .contact-item a {
   color: var(--color-text-main);
   text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
   transition: var(--transition-smooth);
 }
 
 .contact-item a:hover { color: var(--color-accent); }
+
+/* Unified Interactive Circular Social Links */
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(0, 43, 86, 0.05);
+  transition: var(--transition-smooth);
+}
+
+.social-links a:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.social-links a img {
+  transition: var(--transition-smooth);
+}
+
+.social-links a:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.social-links a:hover .iconify {
+  color: #ffffff !important;
+}
 
 .map-container {
   width: 100%;
@@ -1267,6 +1313,12 @@ header.major p {
   overflow: hidden;
   border: 1px solid var(--color-border);
   margin-top: 1rem;
+  transition: var(--transition-smooth);
+}
+
+.contact-card:hover .map-container {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 43, 86, 0.15);
 }
 
 .map-container iframe {
@@ -1421,6 +1473,11 @@ body.loaded #loader {
   
   .pub-header { flex-direction: column; align-items: flex-start; }
   .search-container { max-width: 100%; }
+  
+  .pi-details h4:last-of-type::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
