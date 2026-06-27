@@ -4,16 +4,7 @@
     "year": 2026,
     "title": "Predicting Extreme Precipitation using Global Machine Learning Models over India",
     "journal": "JGR: Machine Learning and Computation",
-    "status": "Submitted",
-    "doi": "",
-    "url": ""
-  },
-  {
-    "authors": "Manna, G., S. Sandeep, and N. Chen",
-    "year": 2026,
-    "title": "Linking mean-state biases to ENSO diversity in climate models: The key role of westerly wind burst suppression",
-    "journal": "Climate Dynamics",
-    "status": "Submitted",
+    "status": "Under Revision",
     "doi": "",
     "url": ""
   },
@@ -31,9 +22,18 @@
     "year": 2026,
     "title": "Contrasting Effects of Aerosols and Greenhouse Gases on Subseasonal Variability of the Indian Summer Monsoon",
     "journal": "JGR: Atmospheres",
-    "status": "Submitted",
+    "status": "Accepted",
     "doi": "",
     "url": ""
+  },
+    {
+    "authors": "Manna, G., S. Sandeep, and N. Chen",
+    "year": 2026,
+    "title": "Linking mean-state biases to ENSO diversity in climate models: The key role of westerly wind burst suppression",
+    "journal": "Climate Dynamics",
+    "status": "Published",
+    "doi": "10.1007/s00382-026-08227-8",
+    "url": "https://link.springer.com/article/10.1007/s00382-026-08227-8"
   },
   {
     "authors": "Dombo, T. C., S. Sandeep, and K. AchutaRao",
@@ -41,8 +41,8 @@
     "title": "Translation Speed of Easterly Waves Controls Precipitation Maxima over Western Africa",
     "journal": "Environmental Research Letters",
     "status": "Submitted",
-    "doi": "",
-    "url": ""
+    "doi": "10.1088/1748-9326/ae6b9f ",
+    "url": "https://iopscience.iop.org/article/10.1088/1748-9326/ae6b9f"
   },
   {
     "authors": "Dixit, J., H. Kodamana, S. Sandeep, and K. AchutaRao",
