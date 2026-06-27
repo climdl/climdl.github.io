@@ -38,6 +38,62 @@
           height: 180px;
         }
       }
+
+      /* 1. Add interaction response to the giant card wrapper link */
+      .pi-link-wrapper .pi-section {
+        transition: var(--transition-smooth); /* Leverages main.css animation logic */
+      }
+      .pi-link-wrapper:hover .pi-section {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: rgba(0, 43, 86, 0.15);
+      }
+
+      /* 2. Establish vertical rhythm across headings */
+      .pi-details h3 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem; /* Unsquish the name from titles */
+      }
+      .pi-details h4 {
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: var(--color-text-muted);
+        margin-bottom: 0.25rem; /* Tight but distinct space between role & chair title */
+        line-height: 1.4;
+      }
+
+      /* 3. Create a clean dividing line to gracefully separate headers from the bio */
+      .pi-details h4:last-of-type {
+        margin-bottom: 1.5rem; 
+        position: relative;
+        padding-bottom: 1.25rem;
+      }
+      .pi-details h4:last-of-type::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: var(--color-accent); /* Blends with your coral brand color */
+        border-radius: 1px;
+      }
+      /* Center the divider line on mobile layouts */
+      @media (max-width: 768px) {
+        .pi-details h4:last-of-type::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      /* 4. Decompress the biography text layout */
+      .pi-details .bio {
+        font-size: 1.025rem;
+        line-height: 1.75; /* Drastically improves multi-line reading flow */
+        color: var(--color-text-main);
+        text-align: justify;
+        margin-top: 0;
+      }
     </style>
   </head>
   <body>
@@ -249,7 +305,6 @@
         </div>
       </main>
 
-      <!-- Decoupled Shared Footer Web Component -->
       <lab-footer></lab-footer>
     </div>
   </body>
