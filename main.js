@@ -343,14 +343,14 @@ function initPublicationsEngine() {
     "Srujan, K. S. S.", "Varunesh Chandra", "Chandra, V."
   ];
 
-  const highlightLabMembers = (authorString) => {
+const highlightLabMembers = (authorString) => {
     let output = authorString;
     labMembers.forEach(member => {
-      // Escape punctuation cleanly to ensure literal dots are evaluated securely
+      // Escapes periods safely and creates a case-insensitive 'gi' regex boundary
       const safeMember = member.replace(/\./g, '\\.');
       const regex = new RegExp(`\\b${safeMember}\\b`, 'gi');
       
-      // Callback preserves layout syntax variations from database source file
+      // Uses a callback to preserve the original JSON casing perfectly
       output = output.replace(regex, (match) => `<strong class="lab-member">${match}</strong>`);
     });
     return output;
@@ -364,23 +364,23 @@ function initPublicationsEngine() {
     .then(data => {
       data.sort((a, b) => b.year - a.year);
 
-      const renderList = (dataset) => {
-        container.innerHTML = dataset.map(pub => {
-          const formattedAuthors = highlightLabMembers(pub.authors);
-          const statusClass = pub.status ? pub.status.toLowerCase().replace(/\s+/g, '-') : '';
-          const statusTag = (pub.status && pub.status !== "Published") 
-            ? ` <span class="pub-status status-${statusClass}">${pub.status}</span>` 
-            : '';
+const renderList = (dataset) => {
+    container.innerHTML = dataset.map(pub => {
+      const formattedAuthors = highlightLabMembers(pub.authors);
+      const statusClass = pub.status ? pub.status.toLowerCase().replace(/\s+/g, '-') : '';
+      const statusTag = (pub.status && pub.status !== "Published") 
+        ? ` <span class="pub-status status-${statusClass}">${pub.status}</span>` 
+        : '';
           
           // Isolated item title structure into designated CSS classification tag
           const publicationBody = `${formattedAuthors} (${pub.year}) <span class="pub-title">${pub.title}</span>, <em>${pub.journal}</em>${statusTag}`;
-          
-          if (pub.url) {
-            return `<li><a href="${pub.url}" target="_blank" rel="noopener noreferrer">${publicationBody}</a></li>`;
-          }
-          return `<li>${publicationBody}</li>`;
-        }).join('');
-      };
+      
+      if (pub.url) {
+        return `<li><a href="${pub.url}" target="_blank" rel="noopener noreferrer">${publicationBody}</a></li>`;
+      }
+      return `<li>${publicationBody}</li>`;
+    }).join('');
+  };
 
       renderList(data);
 
