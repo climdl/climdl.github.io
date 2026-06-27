@@ -780,7 +780,24 @@ header.major p {
   border-radius: var(--radius-md);
 }
 
-/* PI Segment Layout Override */
+/* --- PI Segment Layout Override & Polish --- */
+.pi-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+.pi-link-wrapper .pi-section {
+  transition: var(--transition-smooth);
+}
+
+.pi-link-wrapper:hover .pi-section {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(0, 43, 86, 0.15);
+}
+
 .pi-section {
   display: flex;
   gap: 3rem;
@@ -793,75 +810,106 @@ header.major p {
   align-items: center;
 }
 
+.pi-details h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.pi-details h4 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.pi-details h4:last-of-type {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.pi-details h4:last-of-type::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 1px;
+}
+
+.pi-details .bio {
+  font-size: 1.025rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+  text-align: justify;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .pi-details h4:last-of-type::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 /* ==========================================================================
    PUBLICATIONS & ENGINES
    ========================================================================== */
 
-/* Distinct, readable style for Lab Group Authors */
+/* Clean bold display configuration tracking laboratory authors */
 .pub-list li strong.lab-member {
   font-weight: 700;
-  color: #1d4ed8; /* Vibrant Royal Blue distinct from generic text layers */
-  background-color: rgba(29, 78, 216, 0.07); /* Ultra-subtle background tint */
-  padding: 0.1rem 0.35rem;
-  border-radius: 4px;
+  color: var(--color-primary);
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
 }
 
-/* Base status badge template configuration */
+/* Differentiated tone assigned to highlight text manuscript title rows */
+.pub-list li .pub-title {
+  color: #0284c7; /* Oceanic Sky Blue */
+  font-weight: 600;
+}
+
+.pub-list li a:hover .pub-title {
+  text-decoration: underline;
+}
+
+/* Base interactive context indicator labels */
 .pub-status {
-  font-size: 0.775rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-left: 6px;
-  padding: 0.2rem 0.55rem;
-  border-radius: 12px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
   display: inline-block;
   vertical-align: middle;
   letter-spacing: 0.5px;
 }
 
-/* Color state configurations mapping common manuscript cycles */
-.status-under-review {
-  color: #d97706; /* Warning Amber */
-  background-color: #fef3c7;
-}
-
-/* 1. Shift the magnifying glass to the left side without modifying HTML tags */
-.search-container .search-icon-btn {
-  order: -1; 
-  margin-right: 0.5rem;
-  color: var(--color-text-muted);
-}
-
-/* 2. Keep long typed text from running underneath the clear button position */
-.search-container input[type="text"] {
-  padding-right: 2.25rem; 
-}
-
-/* 3. Hide the clear button entirely when the search input box is empty */
-.search-container .clear-btn {
-  position: absolute;
-  right: 1rem;
-  opacity: 0;
-  pointer-events: none; /* Disables clicking while invisible */
-  transition: var(--transition-smooth);
-}
-
-/* 4. Smart Toggle: Show the clear button ONLY when text is present */
-.search-container input[type="text"]:not(:placeholder-shown) ~ .clear-btn {
-  opacity: 1;
-  pointer-events: auto; /* Restores button interactivity when visible */
-}
-
+/* High contrast layout style tags assigned to Accepted tracks */
 .status-in-press, 
 .status-accepted {
-  color: #059669; /* Success Emerald Green */
-  background-color: #d1fae5;
+  color: #065f46;
+  background-color: #d1fae5; /* Emerald Accent Tint */
 }
 
+/* High contrast layout style tags assigned to Submitted cycles */
 .status-submitted {
-  color: #4b5563; /* Neutral Slate Grey */
-  background-color: #f3f4f6;
+  color: #1e40af;
+  background-color: #e0e7ff; /* Indigo/Royal Blue Tint */
 }
+
+/* High contrast layout style tags assigned to Pending review loops */
+.status-under-review {
+  color: #92400e;
+  background-color: #fef3c7; /* Warning Amber Tint */
+}
+
 .pub-section {
   background: var(--color-bg-card);
   border-radius: var(--radius-lg);
@@ -880,6 +928,7 @@ header.major p {
   gap: 2rem;
 }
 
+/* --- Upgraded Publication Filtering Systems --- */
 .search-container {
   display: flex;
   align-items: center;
@@ -892,10 +941,17 @@ header.major p {
   position: relative;
 }
 
+.search-container .search-icon-btn {
+  order: -1; 
+  margin-right: 0.5rem;
+  color: var(--color-text-muted);
+}
+
 .search-container input[type="text"] {
   border: none;
   background: transparent;
   padding: 0.6rem 0.5rem;
+  padding-right: 2.25rem; 
   font-size: 0.95rem;
   width: 100%;
   color: var(--color-text-main);
@@ -918,6 +974,14 @@ header.major p {
 .search-container .clear-btn {
   position: absolute;
   right: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+
+.search-container input[type="text"]:not(:placeholder-shown) ~ .clear-btn {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .pub-list {
@@ -1230,7 +1294,6 @@ header.major p {
   gap: 2rem;
 }
 
-/* Find this section in your main.css and replace it: */
 .footer-logo {
   width: 190px;       /* Restored to a prominent, readable layout profile */
   height: auto;       /* Permits natural vector aspect ratio scaling */
