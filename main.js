@@ -340,11 +340,11 @@ function initPublicationsEngine() {
     "Srujan, K. S. S.", "Varunesh Chandra", "Chandra, V."
   ];
 
-  const highlightLabMembers = (authorString) => {
+const highlightLabMembers = (authorString) => {
     let output = authorString;
     labMembers.forEach(member => {
       const regex = new RegExp(`\\b${member}\\b`, 'g');
-      output = output.replace(regex, `<strong>${member}</strong>`);
+      output = output.replace(regex, `<strong class="lab-member">${member}</strong>`);
     });
     return output;
   };
@@ -360,7 +360,8 @@ function initPublicationsEngine() {
       const renderList = (dataset) => {
         container.innerHTML = dataset.map(pub => {
           const formattedAuthors = highlightLabMembers(pub.authors);
-          const statusTag = (pub.status && pub.status !== "Published") ? ` <span style="font-size:0.85rem; font-weight:600; color:var(--color-accent); text-transform:uppercase; margin-left:4px;">(${pub.status})</span>` : '';
+	  const statusClass = pub.status ? pub.status.toLowerCase().replace(/\s+/g, '-') : '';
+  	  const statusTag = (pub.status && pub.status !== "Published")? ` <span class="pub-status status-${statusClass}">${pub.status}</span>` : '';
           const publicationBody = `${formattedAuthors} (${pub.year}) ${pub.title}, <em>${pub.journal}</em>${statusTag}`;
           
           if (pub.url) {
