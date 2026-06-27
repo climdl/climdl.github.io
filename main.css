@@ -898,9 +898,10 @@ header.major p {
 }
 
 /* 6. Amber color fallback option for Under Review items */
-.status-under-review {
+.status-under-review,
+.status-under-revision {
   color: #92400e;
-  background-color: #fef3c7;
+  background-color: #fef3c7; /* Warning Amber Tint */
 }
 
 .pub-section {
