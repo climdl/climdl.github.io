@@ -319,6 +319,9 @@ function initExpandableCardEngine() {
   });
 }
 
+// ==========================================================================
+// PUBLICATIONS FILTERING AND DATABASE RENDERING ENGINE
+// ==========================================================================
 function initPublicationsEngine() {
   const container = document.getElementById("publicationsContainer");
   const searchInput = document.getElementById("searchInput");
@@ -340,11 +343,15 @@ function initPublicationsEngine() {
     "Srujan, K. S. S.", "Varunesh Chandra", "Chandra, V."
   ];
 
-const highlightLabMembers = (authorString) => {
+  const highlightLabMembers = (authorString) => {
     let output = authorString;
     labMembers.forEach(member => {
-      const regex = new RegExp(`\\b${member}\\b`, 'g');
-      output = output.replace(regex, `<strong class="lab-member">${member}</strong>`);
+      // Escape punctuation cleanly to ensure literal dots are evaluated securely
+      const safeMember = member.replace(/\./g, '\\.');
+      const regex = new RegExp(`\\b${safeMember}\\b`, 'gi');
+      
+      // Callback preserves layout syntax variations from database source file
+      output = output.replace(regex, (match) => `<strong class="lab-member">${match}</strong>`);
     });
     return output;
   };
@@ -360,9 +367,13 @@ const highlightLabMembers = (authorString) => {
       const renderList = (dataset) => {
         container.innerHTML = dataset.map(pub => {
           const formattedAuthors = highlightLabMembers(pub.authors);
-	  const statusClass = pub.status ? pub.status.toLowerCase().replace(/\s+/g, '-') : '';
-  	  const statusTag = (pub.status && pub.status !== "Published")? ` <span class="pub-status status-${statusClass}">${pub.status}</span>` : '';
-          const publicationBody = `${formattedAuthors} (${pub.year}) ${pub.title}, <em>${pub.journal}</em>${statusTag}`;
+          const statusClass = pub.status ? pub.status.toLowerCase().replace(/\s+/g, '-') : '';
+          const statusTag = (pub.status && pub.status !== "Published") 
+            ? ` <span class="pub-status status-${statusClass}">${pub.status}</span>` 
+            : '';
+          
+          // Isolated item title structure into designated CSS classification tag
+          const publicationBody = `${formattedAuthors} (${pub.year}) <span class="pub-title">${pub.title}</span>, <em>${pub.journal}</em>${statusTag}`;
           
           if (pub.url) {
             return `<li><a href="${pub.url}" target="_blank" rel="noopener noreferrer">${publicationBody}</a></li>`;
