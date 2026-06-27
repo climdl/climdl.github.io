@@ -873,9 +873,9 @@ header.major p {
 
 /* 3. Base layout for interaction status badges */
 .pub-status {
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-left: 6px;
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
@@ -884,24 +884,24 @@ header.major p {
   letter-spacing: 0.5px;
 }
 
-/* 4. Emerald Green style configuration for Accepted tracks */
+/* Emerald Green style configuration for Accepted / In-Press tracks */
 .status-in-press, 
 .status-accepted {
-  color: #065f46;
-  background-color: #d1fae5;
+  color: #065f46 !important;
+  background-color: #d1fae5 !important;
 }
 
-/* 5. Premium Indigo/Blue style configuration for Submitted cycles */
+/* Premium Indigo/Blue style configuration for Submitted cycles */
 .status-submitted {
-  color: #1e40af; /* High contrast Royal Blue text */
-  background-color: #e0e7ff; /* Soft Indigo background tint */
+  color: #1e40af !important;
+  background-color: #e0e7ff !important;
 }
 
-/* 6. Amber color fallback option for Under Review items */
+/* Amber color fallback option for Under Review / Revision items */
 .status-under-review,
 .status-under-revision {
-  color: #92400e;
-  background-color: #fef3c7; /* Warning Amber Tint */
+  color: #92400e !important;
+  background-color: #fef3c7 !important;
 }
 
 .pub-section {
