@@ -796,6 +796,72 @@ header.major p {
 /* ==========================================================================
    PUBLICATIONS & ENGINES
    ========================================================================== */
+
+/* Distinct, readable style for Lab Group Authors */
+.pub-list li strong.lab-member {
+  font-weight: 700;
+  color: #1d4ed8; /* Vibrant Royal Blue distinct from generic text layers */
+  background-color: rgba(29, 78, 216, 0.07); /* Ultra-subtle background tint */
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+/* Base status badge template configuration */
+.pub-status {
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 6px;
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: 0.5px;
+}
+
+/* Color state configurations mapping common manuscript cycles */
+.status-under-review {
+  color: #d97706; /* Warning Amber */
+  background-color: #fef3c7;
+}
+
+/* 1. Shift the magnifying glass to the left side without modifying HTML tags */
+.search-container .search-icon-btn {
+  order: -1; 
+  margin-right: 0.5rem;
+  color: var(--color-text-muted);
+}
+
+/* 2. Keep long typed text from running underneath the clear button position */
+.search-container input[type="text"] {
+  padding-right: 2.25rem; 
+}
+
+/* 3. Hide the clear button entirely when the search input box is empty */
+.search-container .clear-btn {
+  position: absolute;
+  right: 1rem;
+  opacity: 0;
+  pointer-events: none; /* Disables clicking while invisible */
+  transition: var(--transition-smooth);
+}
+
+/* 4. Smart Toggle: Show the clear button ONLY when text is present */
+.search-container input[type="text"]:not(:placeholder-shown) ~ .clear-btn {
+  opacity: 1;
+  pointer-events: auto; /* Restores button interactivity when visible */
+}
+
+.status-in-press, 
+.status-accepted {
+  color: #059669; /* Success Emerald Green */
+  background-color: #d1fae5;
+}
+
+.status-submitted {
+  color: #4b5563; /* Neutral Slate Grey */
+  background-color: #f3f4f6;
+}
 .pub-section {
   background: var(--color-bg-card);
   border-radius: var(--radius-lg);
